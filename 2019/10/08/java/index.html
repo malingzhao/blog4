@@ -66,7 +66,11 @@
 <meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/08/java/1570586893596.png">
 <meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/08/java/1570586960929.png">
 <meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/08/java/1570588573269.png">
-<meta property="og:updated_time" content="2019-10-09T03:16:25.492Z">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/08/java/jj/1570592319214.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/08/java/jj/1570595858589.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/08/java/1570595998815.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/08/java/1570596204056.png">
+<meta property="og:updated_time" content="2019-10-09T06:59:26.134Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java">
 <meta name="twitter:description" content="1 各大厂的面试题1.1 蚂蚁花呗一个小时 1.2美团的一面 垃圾回收器 1.3 百度 java集合类 synchronized   什么是对象锁 什么是全局锁 1.4 头条 1.5 美团的面试汇总 1.6  蚂蚁金服二面 1.7 讲解1 关于2018.12 月份 ，。互联网公司大规模的缩招 裁员 缩招不是不招聘 而是招聘更多的优质的咖啡啊工程师 2 将最近半年的大厂面试题进行了整理和划分  1">
@@ -353,11 +357,41 @@
 <p><img src="/blog4/2019/10/08/java/1570588573269.png" alt="1570588573269"></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.mlz.study.read;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * @创建人: MaLingZhao</span></span><br><span class="line"><span class="comment"> * @创建时间: 2019/10/9</span></span><br><span class="line"><span class="comment"> * @描述：</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javafx.scene.SnapshotParameters;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">* 单机版的单线程</span></span><br><span class="line"><span class="comment">* */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SingleDemo</span> </span>&#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    * 保证在多线程的指令不重排</span></span><br><span class="line"><span class="comment">    * */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">volatile</span>   SingleDemo  instance=<span class="keyword">null</span>;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">SingleDemo</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(Thread.currentThread().getName()+<span class="string">"\t 我是构造方法Singledemo()"</span> );</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">//DCL 模式   Double  Check Lock  双端检索机制</span></span><br><span class="line">    <span class="comment">//加锁前判断</span></span><br><span class="line">    <span class="comment">//加锁判断</span></span><br><span class="line">    <span class="comment">//在多线程的条件下 底层有指令重排</span></span><br><span class="line">    <span class="comment">//如果没有控制好指令重排</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span>  <span class="keyword">static</span> SingleDemo <span class="title">getInstance</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (instance == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">synchronized</span> (SingleDemo.class) &#123;</span><br><span class="line">                <span class="keyword">if</span> (instance == <span class="keyword">null</span>) &#123;</span><br><span class="line">                    instance = <span class="keyword">new</span> SingleDemo();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> instance;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line"><span class="comment">//        System.out.println(SingleDemo.getInstance()==SingleDemo.getInstance());</span></span><br><span class="line"><span class="comment">//        System.out.println(SingleDemo.getInstance()==SingleDemo.getInstance());</span></span><br><span class="line"><span class="comment">//        System.out.println(SingleDemo.getInstance()==SingleDemo.getInstance());</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">//        System.out.println();</span></span><br><span class="line"><span class="comment">//        System.out.println();</span></span><br><span class="line"><span class="comment">//        System.out.println();</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;<span class="number">10</span> ; i++) &#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">new</span> Thread(()-&gt; &#123;</span><br><span class="line">                SingleDemo.getInstance();</span><br><span class="line">            &#125;,String.valueOf(i)).start();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<p><img src="/blog4/2019/10/08/java/jj/1570592319214.png" alt="1570592319214"></p>
+<p>先获得  再去加</p>
+<p>i++</p>
+<h2 id="2-2-CAS"><a href="#2-2-CAS" class="headerlink" title="2.2 CAS"></a>2.2 CAS</h2><p>比较并交换</p>
+<p>什么是比较和交换呢</p>
+<p>期望值和物理内存的真实值一样  修改为更新值</p>
+<p>期望值和物理内存的真实值不一样  重新获得真实值</p>
+<p><img src="/blog4/2019/10/08/java/jj/1570595858589.png" alt="1570595858589"></p>
+<h3 id="CASDemo源码"><a href="#CASDemo源码" class="headerlink" title="CASDemo源码"></a>CASDemo源码</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.mlz.study.read;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * @创建人: MaLingZhao</span></span><br><span class="line"><span class="comment"> * @创建时间: 2019/10/9</span></span><br><span class="line"><span class="comment"> * @描述：</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">* CAS 是什么？ ==》》 compare and set</span></span><br><span class="line"><span class="comment">* 先比较后交换</span></span><br><span class="line"><span class="comment">*  比较并交换</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">* */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.concurrent.atomic.AtomicInteger;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CASDemo</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        AtomicInteger atomicInteger=<span class="keyword">new</span> AtomicInteger(<span class="number">5</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//劳动成果写进主物理内存</span></span><br><span class="line">        System.out.println(atomicInteger.compareAndSet(<span class="number">5</span>,<span class="number">2019</span> )+<span class="string">"\t current data:"</span>+atomicInteger.get());</span><br><span class="line">        System.out.println();</span><br><span class="line"></span><br><span class="line">        System.out.println(atomicInteger.compareAndSet(<span class="number">5</span>,<span class="number">1024</span> )+<span class="string">"\t current data:"</span>+atomicInteger.get());</span><br><span class="line">        System.out.println();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>结果</p>
+<p><img src="/blog4/2019/10/08/java/1570595998815.png" alt="1570595998815"></p>
+<p>compare and set</p>
+<p>同  修改成功 </p>
+<p>不同  修改失败</p>
+<p>为什么用synchronized 不用CAS</p>
+<p>CAS原理  </p>
+<p>Unsafe</p>
+<p><img src="/blog4/2019/10/08/java/1570596204056.png" alt="1570596204056"></p>
+<p>native 本地方法栈</p>
+<p>CAS问题</p>
+<p>ABA问题</p>
+<p>CAS —-》》 Unsafe —–&gt;&gt; CAS的底层思想 —-》》 ABA  —-》》 原子引用更新</p>
+<p>如何规避ABA问题</p>
+<p>CAS会导致ABA问题</p>
+<p>取出内存中某个时刻的数据</p>
+<p>当下时间比较并替换</p>
+<p>那么在这个时间差异会导致数据的变化</p>
+<p>one取出A  two取出A  two进行了一些操作把B改成了A  又把A放回去</p>
+<p>如何解决ABA问题</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://malingzhao.github.io/blog4/2019/10/08/java/" data-id="ck1iqocxt0002b8v1axiw8t8s" class="article-share-link">Share</a>
+      <a data-url="https://malingzhao.github.io/blog4/2019/10/08/java/" data-id="ck1j1tag600049cv1tsa2ovzi" class="article-share-link">Share</a>
       
       
     </footer>
@@ -415,6 +449,14 @@
       <ul>
         
           <li>
+            <a href="/blog4/2019/10/09/Kylin/">Kylin</a>
+          </li>
+        
+          <li>
+            <a href="/blog4/2019/10/09/zookeeper/">zookeeper</a>
+          </li>
+        
+          <li>
             <a href="/blog4/2019/10/09/dianshangtuijianxitong/">dianshangtuijianxitong</a>
           </li>
         
@@ -424,10 +466,6 @@
         
           <li>
             <a href="/blog4/2019/10/08/springcloud/">springcloud</a>
-          </li>
-        
-          <li>
-            <a href="/blog4/2019/10/08/dubbo/">dubbo</a>
           </li>
         
       </ul>

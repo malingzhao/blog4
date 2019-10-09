@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>zookeeper | 我的个人博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1 zookeeper入门1.1概述开源  为分布式应用提供协调服 Zookeeper=文件系统+通知机制 1.2 特点Leader  follower 半数机制 每个server保存的数据一致（数据备份） 实时性 更新请求顺序执行 1.3 数据结构unix文件系统 形结构 1.4 应用场景统一的配置管理和配置服务 1.5下载地址https://zookeeper.apache.org/ 2 zo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="zookeeper">
+<meta property="og:url" content="https://malingzhao.github.io/blog4/2019/10/09/zookeeper/index.html">
+<meta property="og:site_name" content="我的个人博客">
+<meta property="og:description" content="1 zookeeper入门1.1概述开源  为分布式应用提供协调服 Zookeeper=文件系统+通知机制 1.2 特点Leader  follower 半数机制 每个server保存的数据一致（数据备份） 实时性 更新请求顺序执行 1.3 数据结构unix文件系统 形结构 1.4 应用场景统一的配置管理和配置服务 1.5下载地址https://zookeeper.apache.org/ 2 zo">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-10-09T08:35:18.654Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="zookeeper">
+<meta name="twitter:description" content="1 zookeeper入门1.1概述开源  为分布式应用提供协调服 Zookeeper=文件系统+通知机制 1.2 特点Leader  follower 半数机制 每个server保存的数据一致（数据备份） 实时性 更新请求顺序执行 1.3 数据结构unix文件系统 形结构 1.4 应用场景统一的配置管理和配置服务 1.5下载地址https://zookeeper.apache.org/ 2 zo">
+  
+    <link rel="alternate" href="/blog4/atom.xml" title="我的个人博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/blog4/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/blog4/" id="logo">我的个人博客</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/blog4/">Home</a>
+        
+          <a class="main-nav-link" href="/blog4/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/blog4/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://malingzhao.github.io/blog4"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-zookeeper" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog4/2019/10/09/zookeeper/" class="article-date">
+  <time datetime="2019-10-09T08:01:36.000Z" itemprop="datePublished">2019-10-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      zookeeper
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="1-zookeeper入门"><a href="#1-zookeeper入门" class="headerlink" title="1 zookeeper入门"></a>1 zookeeper入门</h1><h2 id="1-1概述"><a href="#1-1概述" class="headerlink" title="1.1概述"></a>1.1概述</h2><p>开源  为分布式应用提供协调服</p>
+<p>Zookeeper=文件系统+通知机制</p>
+<h2 id="1-2-特点"><a href="#1-2-特点" class="headerlink" title="1.2 特点"></a>1.2 特点</h2><p>Leader  follower</p>
+<p>半数机制</p>
+<p>每个server保存的数据一致（数据备份）</p>
+<p>实时性</p>
+<p>更新请求顺序执行</p>
+<h2 id="1-3-数据结构"><a href="#1-3-数据结构" class="headerlink" title="1.3 数据结构"></a>1.3 数据结构</h2><p>unix文件系统 形结构</p>
+<h2 id="1-4-应用场景"><a href="#1-4-应用场景" class="headerlink" title="1.4 应用场景"></a>1.4 应用场景</h2><p>统一的配置管理和配置服务</p>
+<h3 id="1-5下载地址"><a href="#1-5下载地址" class="headerlink" title="1.5下载地址"></a>1.5下载地址</h3><p><a href="https://zookeeper.apache.org/" target="_blank" rel="noopener">https://zookeeper.apache.org/</a></p>
+<h1 id="2-zookeeper的安装"><a href="#2-zookeeper的安装" class="headerlink" title="2 zookeeper的安装"></a>2 zookeeper的安装</h1><h2 id="2-1-本地模式"><a href="#2-1-本地模式" class="headerlink" title="2.1 本地模式"></a>2.1 本地模式</h2><p>zoo.cfg</p>
+<p>bin/zksSrver.sh start|status|stop</p>
+<p>出现bash4.1</p>
+<p>.bash_profile 每次登陆</p>
+<p>.bashrc    每次进入新的bash环境</p>
+<p>.bash_logout  每次退出登录</p>
+<p>.bash_history  每用户注销前使用的命令</p>
+<p>进入root用户</p>
+<p>cp .bash_profile .bashrc .bash_logout  .bash_profile  /home/user</p>
+<p>问题得到解决</p>
+<h2 id="2-2-配置参数的解读"><a href="#2-2-配置参数的解读" class="headerlink" title="2.2 配置参数的解读"></a>2.2 配置参数的解读</h2><p>tickTime 2000</p>
+<p>initLimit 10</p>
+<p>syncLimit  </p>
+<p>dataDir</p>
+<p>clientPort</p>
+<h2 id="3-Zookeeper的内部的原理"><a href="#3-Zookeeper的内部的原理" class="headerlink" title="3 Zookeeper的内部的原理"></a>3 Zookeeper的内部的原理</h2><h2 id="3-1-选举机制"><a href="#3-1-选举机制" class="headerlink" title="3.1 选举机制"></a>3.1 选举机制</h2><p>半数机制，适合安装奇数台服务器</p>
+<p>没有mater和slave，但是zookeeper在工作的时候</p>
+<p>一个leader 其他的都是follower</p>
+<h1 id="4-zookeeper的实战"><a href="#4-zookeeper的实战" class="headerlink" title="4 zookeeper的实战"></a>4 zookeeper的实战</h1><h2 id="分布式部署安装"><a href="#分布式部署安装" class="headerlink" title="分布式部署安装"></a>分布式部署安装</h2><p>zoo.cfg</p>
+<p>myid</p>
+<p>zkData</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">dataDir=/opt/module/zookeeper-3.4.10/zkData</span><br><span class="line"><span class="comment">#######################cluster##########################</span></span><br><span class="line">server.2=hadoop102:2888:3888</span><br><span class="line">server.3=hadoop103:2888:3888</span><br><span class="line">server.4=hadoop104:2888:3888</span><br></pre></td></tr></table></figure>
+
+<p>server.A=B:C:D</p>
+<p>A  myid</p>
+<p>B 主机名称</p>
+<p>C 与Leader交换信息</p>
+<p>D 一但leader挂掉 选举出新的leader</p>
+<h2 id="4-2-API操作"><a href="#4-2-API操作" class="headerlink" title="4.2 API操作"></a>4.2 API操作</h2><h1 id="5-面试"><a href="#5-面试" class="headerlink" title="5 面试"></a>5 面试</h1><h2 id="zookeeper的选举机制"><a href="#zookeeper的选举机制" class="headerlink" title="zookeeper的选举机制"></a>zookeeper的选举机制</h2><h2 id="zookeeper的监听原理"><a href="#zookeeper的监听原理" class="headerlink" title="zookeeper的监听原理"></a>zookeeper的监听原理</h2><p>main方法</p>
+<p>connect线程和listener线程</p>
+<p>connect 将监听的事件发送给zookeeper </p>
+<p>zookeeper在监控l列表上添加事件</p>
+<p> listener线程监听到事件变化</p>
+<p>zookeeper调用process方法</p>
+<h2 id="zookeeper的部署的方式"><a href="#zookeeper的部署的方式" class="headerlink" title="zookeeper的部署的方式"></a>zookeeper的部署的方式</h2><p>本地部署</p>
+<p>分布式部署</p>
+<h2 id="zookeeper的常用命令"><a href="#zookeeper的常用命令" class="headerlink" title="zookeeper的常用命令"></a>zookeeper的常用命令</h2><p>ls  create  get  delete  set</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://malingzhao.github.io/blog4/2019/10/09/zookeeper/" data-id="ck1j1tafr00039cv1v2j9wade" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/blog4/2019/10/09/Kylin/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Kylin
+        
+      </div>
+    </a>
+  
+  
+    <a href="/blog4/2019/10/09/dianshangtuijianxitong/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">dianshangtuijianxitong</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog4/archives/2019/10/">October 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/blog4/2019/10/09/Kylin/">Kylin</a>
+          </li>
+        
+          <li>
+            <a href="/blog4/2019/10/09/zookeeper/">zookeeper</a>
+          </li>
+        
+          <li>
+            <a href="/blog4/2019/10/09/dianshangtuijianxitong/">dianshangtuijianxitong</a>
+          </li>
+        
+          <li>
+            <a href="/blog4/2019/10/08/java/">java</a>
+          </li>
+        
+          <li>
+            <a href="/blog4/2019/10/08/springcloud/">springcloud</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 MaLingZhao<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/blog4/" class="mobile-nav-link">Home</a>
+  
+    <a href="/blog4/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/blog4/fancybox/jquery.fancybox.css">
+  <script src="/blog4/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/blog4/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
