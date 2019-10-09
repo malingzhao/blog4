@@ -1,171 +1,402 @@
 <!DOCTYPE html>
-<html lang="en">
 
-<!-- Head tag -->
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
 <head><meta name="generator" content="Hexo 3.9.0">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="欢迎大家共同交流学习">
-    <meta name="keyword" content>
-    <meta name="theme-color" content="#600090">
-    <meta name="msapplication-navbutton-color" content="#600090">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="#600090">
-    <link rel="shortcut icon" href="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-person-128.png">
-    <link rel="alternate" type="application/atom+xml" title="我的个人博客" href="/atom.xml">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
-    <title>
-        
-        dianshangtuijianxitong｜undefined
-        
-    </title>
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
 
-    <link rel="canonical" href="https://malingzhao.github.io/blog4/blog4/2019/10/09/dianshangtuijianxitong/">
 
-    <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="/blog4/css/bootstrap.min.css">
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="/blog4/css/blog-style.css">
 
-    <!-- Pygments Github CSS -->
-    <link rel="stylesheet" href="/blog4/css/syntax.css">
-</head>
 
-<style>
 
-    header.intro-header {
-        background-image: url('')
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/blog4/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/blog4/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/blog4/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog4/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog4/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog4/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/blog4/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="1 电商推荐系统的简介1.1 项目的架构设计1.1.2 亚马逊推荐系统的贡献 比例达到了20%到25% 在亚马逊的页面上 推荐列表占了很大的比例 真实的业务架构 构建真正的系统 基于统计的模块 实时 自定义的推荐模块 设计到机器学习 和推荐系统的相关知识 电影推荐系统 切换不同的业务场景 一通百通  对大数据的工具有一个更深刻的理解、 做的是电商推荐系统 推荐系统的具体的应用 1.1.2 分析项目">
+<meta property="og:type" content="article">
+<meta property="og:title" content="dianshangtuijianxitong">
+<meta property="og:url" content="https://malingzhao.github.io/blog4/2019/10/09/dianshangtuijianxitong/index.html">
+<meta property="og:site_name" content="我的个人博客">
+<meta property="og:description" content="1 电商推荐系统的简介1.1 项目的架构设计1.1.2 亚马逊推荐系统的贡献 比例达到了20%到25% 在亚马逊的页面上 推荐列表占了很大的比例 真实的业务架构 构建真正的系统 基于统计的模块 实时 自定义的推荐模块 设计到机器学习 和推荐系统的相关知识 电影推荐系统 切换不同的业务场景 一通百通  对大数据的工具有一个更深刻的理解、 做的是电商推荐系统 推荐系统的具体的应用 1.1.2 分析项目">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/09/dianshangtuijianxitong/1569759343305.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/09/dianshangtuijianxitong/1569759457620.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/09/dianshangtuijianxitong/1569759823192.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/09/dianshangtuijianxitong/1569760571432.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/09/dianshangtuijianxitong/1569760648495.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/09/dianshangtuijianxitong/1569760749110.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/09/dianshangtuijianxitong/1569760766549.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/09/dianshangtuijianxitong/1569760953275.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/09/dianshangtuijianxitong/1569761082133.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/09/dianshangtuijianxitong/1569761210671.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/09/dianshangtuijianxitong/1569761353102.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/09/dianshangtuijianxitong/1569761425689.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/09/dianshangtuijianxitong/1569761553444.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/09/dianshangtuijianxitong/1569761745239.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/09/dianshangtuijianxitong/1569761959400.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/09/dianshangtuijianxitong/1569762118490.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/09/dianshangtuijianxitong/1569762288455.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/09/dianshangtuijianxitong/1569762461618.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/09/dianshangtuijianxitong/1569762524019.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/09/dianshangtuijianxitong/1569762501426.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/09/dianshangtuijianxitong/1569762667138.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/09/dianshangtuijianxitong/1569762770366.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/09/dianshangtuijianxitong/1569762973252.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/09/dianshangtuijianxitong/1569763098769.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/09/dianshangtuijianxitong/1569763141158.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/09/dianshangtuijianxitong/1569763184110.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/09/dianshangtuijianxitong/1569763282845.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/09/dianshangtuijianxitong/1569763507681.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/09/dianshangtuijianxitong/1569763975451.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/09/dianshangtuijianxitong/1569764191713.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/09/dianshangtuijianxitong/1569764569337.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/09/dianshangtuijianxitong/1569764618993.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/09/dianshangtuijianxitong/1569803227227.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/09/dianshangtuijianxitong/1569803240342.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/09/dianshangtuijianxitong/1569803519925.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/09/dianshangtuijianxitong/1569803676229.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/09/dianshangtuijianxitong/1569803749827.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/09/dianshangtuijianxitong/1569807269270.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/09/dianshangtuijianxitong/1569807530411.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/09/dianshangtuijianxitong/1569807637842.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/09/dianshangtuijianxitong/1569807701437.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/09/dianshangtuijianxitong/1569807845242.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/09/dianshangtuijianxitong/1569807879696.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/09/dianshangtuijianxitong/1569807962877.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/09/dianshangtuijianxitong/1569810018191.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/09/dianshangtuijianxitong/1569814952741.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/09/dianshangtuijianxitong/1569815830550.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/09/dianshangtuijianxitong/1569815937008.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/09/dianshangtuijianxitong/1569815920370.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/09/dianshangtuijianxitong/1569816223395.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/09/dianshangtuijianxitong/1569816336236.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/09/dianshangtuijianxitong/1569826604564.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/09/dianshangtuijianxitong/1569839246855.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/09/dianshangtuijianxitong/1569843029776.png">
+<meta property="og:updated_time" content="2019-10-09T03:53:41.950Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="dianshangtuijianxitong">
+<meta name="twitter:description" content="1 电商推荐系统的简介1.1 项目的架构设计1.1.2 亚马逊推荐系统的贡献 比例达到了20%到25% 在亚马逊的页面上 推荐列表占了很大的比例 真实的业务架构 构建真正的系统 基于统计的模块 实时 自定义的推荐模块 设计到机器学习 和推荐系统的相关知识 电影推荐系统 切换不同的业务场景 一通百通  对大数据的工具有一个更深刻的理解、 做的是电商推荐系统 推荐系统的具体的应用 1.1.2 分析项目">
+<meta name="twitter:image" content="https://malingzhao.github.io/blog4/2019/10/09/dianshangtuijianxitong/1569759343305.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/blog4/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     }
-</style>
-<!-- hack iOS CSS :active style -->
-<body ontouchstart="" class="animated fadeIn">
-<!-- Navigation -->
-<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost = "true" data-istags="false
-" data-ishome = "false" >
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header page-scroll">
-            <button type="button" class="navbar-toggle">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand animated pulse" href="/blog4/">
-                <span class="brand-logo">
-                    我的个人博客
-                </span>
-                's Blog
-            </a>
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <!-- Known Issue, found by Hux:
-            <nav>'s height woule be hold on by its content.
-            so, when navbar scale out, the <nav> will cover tags.
-            also mask any touch event of tags, unfortunately.
-        -->
-        <!-- /.navbar-collapse -->
-        <div id="huxblog_navbar">
-            <div class="navbar-collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="/blog4/">Home</a>
-                    </li>
-					
-                    
-					
-					
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!-- /.container -->
-</nav>
-<script>
-    // Drop Bootstarp low-performance Navbar
-    // Use customize navbar with high-quality material design animation
-    // in high-perf jank-free CSS3 implementation
-//    var $body   = document.body;
-    var $toggle = document.querySelector('.navbar-toggle');
-    var $navbar = document.querySelector('#huxblog_navbar');
-    var $collapse = document.querySelector('.navbar-collapse');
-
-    $toggle.addEventListener('click', handleMagic)
-    function handleMagic(e){
-        if ($navbar.className.indexOf('in') > 0) {
-        // CLOSE
-            $navbar.className = " ";
-            // wait until animation end.
-            setTimeout(function(){
-                // prevent frequently toggle
-                if($navbar.className.indexOf('in') < 0) {
-                    $collapse.style.height = "0px"
-                }
-            },400)
-        }else{
-        // OPEN
-            $collapse.style.height = "auto"
-            $navbar.className += " in";
-        }
-    }
+  };
 </script>
 
-<!-- Main Content -->
-
-<!--only post-->
 
 
-<img class="wechat-title-img"
-     src="">
+  <link rel="canonical" href="https://malingzhao.github.io/blog4/2019/10/09/dianshangtuijianxitong/">
 
 
-<style>
+
+
+
+  <title>dianshangtuijianxitong | 我的个人博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
     
-    header.intro-header {
-        background-image: url('')
-    }
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/blog4/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">我的个人博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/blog4/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/blog4/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://malingzhao.github.io/blog4/blog4/2019/10/09/dianshangtuijianxitong/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="MaLingZhao">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/blog4/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的个人博客">
+    </span>
 
     
-</style>
+      <header class="post-header">
 
-<header class="intro-header">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
-                <div class="post-heading">
-                    <h1>dianshangtuijianxitong</h1>
-                    
-                    <span class="meta">
-                         作者 MaLingZhao
-                        <span>
-                          日期 2019-10-09
-                         </span>
-                    </span>
-                    <div class="tags text-center">
-                        
-                    </div>
-                </div>
-            </div>
+        
+        
+          <h1 class="post-title" itemprop="name headline">dianshangtuijianxitong</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-09T11:52:22+08:00">
+                2019-10-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/blog4/2019/10/09/dianshangtuijianxitong/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/blog4/2019/10/09/dianshangtuijianxitong/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
         </div>
-    </div>
-    <div class="post-title-haojen">
-        <span>
-            dianshangtuijianxitong
-        </span>
-    </div>
-</header>
+      </header>
+    
 
-<!-- Post Content -->
-<article>
-    <div class="container">
-        <div class="row">
-            <!-- Post Container -->
-            <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
-                <h1 id="1-电商推荐系统的简介"><a href="#1-电商推荐系统的简介" class="headerlink" title="1 电商推荐系统的简介"></a>1 电商推荐系统的简介</h1><h2 id="1-1-项目的架构设计"><a href="#1-1-项目的架构设计" class="headerlink" title="1.1 项目的架构设计"></a>1.1 项目的架构设计</h2><h3 id="1-1-2-亚马逊"><a href="#1-1-2-亚马逊" class="headerlink" title="1.1.2 亚马逊"></a>1.1.2 亚马逊</h3><p>推荐系统的贡献 比例达到了20%到25%</p>
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="1-电商推荐系统的简介"><a href="#1-电商推荐系统的简介" class="headerlink" title="1 电商推荐系统的简介"></a>1 电商推荐系统的简介</h1><h2 id="1-1-项目的架构设计"><a href="#1-1-项目的架构设计" class="headerlink" title="1.1 项目的架构设计"></a>1.1 项目的架构设计</h2><h3 id="1-1-2-亚马逊"><a href="#1-1-2-亚马逊" class="headerlink" title="1.1.2 亚马逊"></a>1.1.2 亚马逊</h3><p>推荐系统的贡献 比例达到了20%到25%</p>
 <p>在亚马逊的页面上 推荐列表占了很大的比例</p>
 <p>真实的业务架构 构建真正的系统</p>
 <p>基于统计的模块</p>
@@ -576,168 +807,727 @@
 <figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">package</span> com.atguigu.itemcf</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.apache.spark.<span class="type">SparkConf</span></span><br><span class="line"><span class="keyword">import</span> org.apache.spark.sql.<span class="type">SparkSession</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">case</span> <span class="class"><span class="keyword">class</span> <span class="title">ProductRating</span>(<span class="params"> userId: <span class="type">Int</span>, productId: <span class="type">Int</span>, score: <span class="type">Double</span>, timestamp: <span class="type">Int</span> </span>)</span></span><br><span class="line"><span class="class"><span class="title">case</span> <span class="title">class</span> <span class="title">MongoConfig</span>(<span class="params"> uri: <span class="type">String</span>, db: <span class="type">String</span> </span>)</span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class"><span class="title">//</span> <span class="title">定义标准推荐对象</span></span></span><br><span class="line"><span class="class"><span class="title">case</span> <span class="title">class</span> <span class="title">Recommendation</span>(<span class="params"> productId: <span class="type">Int</span>, score: <span class="type">Double</span> </span>)</span></span><br><span class="line"><span class="class"><span class="title">//</span> <span class="title">定义商品相似度列表</span></span></span><br><span class="line"><span class="class"><span class="title">case</span> <span class="title">class</span> <span class="title">ProductRecs</span>(<span class="params"> productId: <span class="type">Int</span>, recs: <span class="type">Seq</span>[<span class="type">Recommendation</span>] </span>)</span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class"><span class="title">object</span> <span class="title">ItemCFRecommender</span> </span>&#123;</span><br><span class="line">  <span class="comment">// 定义常量和表名</span></span><br><span class="line">  <span class="keyword">val</span> <span class="type">MONGODB_RATING_COLLECTION</span> = <span class="string">"Rating"</span></span><br><span class="line">  <span class="keyword">val</span> <span class="type">ITEM_CF_PRODUCT_RECS</span> = <span class="string">"ItemCFProductRecs"</span></span><br><span class="line">  <span class="keyword">val</span> <span class="type">MAX_RECOMMENDATION</span> = <span class="number">10</span></span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">main</span></span>(args: <span class="type">Array</span>[<span class="type">String</span>]): <span class="type">Unit</span> = &#123;</span><br><span class="line">    <span class="keyword">val</span> config = <span class="type">Map</span>(</span><br><span class="line">      <span class="string">"spark.cores"</span> -&gt; <span class="string">"local[*]"</span>,</span><br><span class="line">      <span class="string">"mongo.uri"</span> -&gt; <span class="string">"mongodb://linux:27017/recommender"</span>,</span><br><span class="line">      <span class="string">"mongo.db"</span> -&gt; <span class="string">"recommender"</span></span><br><span class="line">    )</span><br><span class="line">    <span class="comment">// 创建一个spark config</span></span><br><span class="line">    <span class="keyword">val</span> sparkConf = <span class="keyword">new</span> <span class="type">SparkConf</span>().setMaster(config(<span class="string">"spark.cores"</span>)).setAppName(<span class="string">"ItemCFRecommender"</span>)</span><br><span class="line">    <span class="comment">// 创建spark session</span></span><br><span class="line">    <span class="keyword">val</span> spark = <span class="type">SparkSession</span>.builder().config(sparkConf).getOrCreate()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">import</span> spark.implicits._</span><br><span class="line">    <span class="keyword">implicit</span> <span class="keyword">val</span> mongoConfig = <span class="type">MongoConfig</span>( config(<span class="string">"mongo.uri"</span>), config(<span class="string">"mongo.db"</span>) )</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 加载数据，转换成DF进行处理</span></span><br><span class="line">    <span class="keyword">val</span> ratingDF = spark.read</span><br><span class="line">      .option(<span class="string">"uri"</span>, mongoConfig.uri)</span><br><span class="line">      .option(<span class="string">"collection"</span>, <span class="type">MONGODB_RATING_COLLECTION</span>)</span><br><span class="line">      .format(<span class="string">"com.mongodb.spark.sql"</span>)</span><br><span class="line">      .load()</span><br><span class="line">      .as[<span class="type">ProductRating</span>]</span><br><span class="line">      .map(</span><br><span class="line">        x =&gt; ( x.userId, x.productId, x.score )</span><br><span class="line">      )</span><br><span class="line">      .toDF(<span class="string">"userId"</span>, <span class="string">"productId"</span>, <span class="string">"score"</span>)</span><br><span class="line">      .cache()</span><br><span class="line"></span><br><span class="line">    <span class="comment">// <span class="doctag">TODO:</span> 核心算法，计算同现相似度，得到商品的相似列表</span></span><br><span class="line">    <span class="comment">// 统计每个商品的评分个数，按照productId来做group by</span></span><br><span class="line">    <span class="keyword">val</span> productRatingCountDF = ratingDF.groupBy(<span class="string">"productId"</span>).count()</span><br><span class="line">    <span class="comment">// 在原有的评分表上rating添加count</span></span><br><span class="line">    <span class="keyword">val</span> ratingWithCountDF = ratingDF.join(productRatingCountDF, <span class="string">"productId"</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 将评分按照用户id两两配对，统计两个商品被同一个用户评分过的次数</span></span><br><span class="line">    <span class="keyword">val</span> joinedDF = ratingWithCountDF.join(ratingWithCountDF, <span class="string">"userId"</span>)</span><br><span class="line">      .toDF(<span class="string">"userId"</span>,<span class="string">"product1"</span>,<span class="string">"score1"</span>,<span class="string">"count1"</span>,<span class="string">"product2"</span>,<span class="string">"score2"</span>,<span class="string">"count2"</span>)</span><br><span class="line">      .select(<span class="string">"userId"</span>,<span class="string">"product1"</span>,<span class="string">"count1"</span>,<span class="string">"product2"</span>,<span class="string">"count2"</span>)</span><br><span class="line">    <span class="comment">// 创建一张临时表，用于写sql查询</span></span><br><span class="line">    joinedDF.createOrReplaceTempView(<span class="string">"joined"</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 按照product1,product2 做group by，统计userId的数量，就是对两个商品同时评分的人数</span></span><br><span class="line">    <span class="keyword">val</span> cooccurrenceDF = spark.sql(</span><br><span class="line">      <span class="string">""</span><span class="string">"</span></span><br><span class="line"><span class="string">        |select product1</span></span><br><span class="line"><span class="string">        |, product2</span></span><br><span class="line"><span class="string">        |, count(userId) as cocount</span></span><br><span class="line"><span class="string">        |, first(count1) as count1</span></span><br><span class="line"><span class="string">        |, first(count2) as count2</span></span><br><span class="line"><span class="string">        |from joined</span></span><br><span class="line"><span class="string">        |group by product1, product2</span></span><br><span class="line"><span class="string">      "</span><span class="string">""</span>.stripMargin</span><br><span class="line">    ).cache()</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 提取需要的数据，包装成( productId1, (productId2, score) )</span></span><br><span class="line">    <span class="keyword">val</span> simDF = cooccurrenceDF.map&#123;</span><br><span class="line">      row =&gt;</span><br><span class="line">        <span class="keyword">val</span> coocSim = cooccurrenceSim( row.getAs[<span class="type">Long</span>](<span class="string">"cocount"</span>), row.getAs[<span class="type">Long</span>](<span class="string">"count1"</span>), row.getAs[<span class="type">Long</span>](<span class="string">"count2"</span>) )</span><br><span class="line">        ( row.getInt(<span class="number">0</span>), ( row.getInt(<span class="number">1</span>), coocSim ) )</span><br><span class="line">    &#125;</span><br><span class="line">      .rdd</span><br><span class="line">      .groupByKey()</span><br><span class="line">      .map&#123;</span><br><span class="line">        <span class="keyword">case</span> (productId, recs) =&gt;</span><br><span class="line">          <span class="type">ProductRecs</span>( productId, recs.toList</span><br><span class="line">            .filter(x=&gt;x._1 != productId)</span><br><span class="line">            .sortWith(_._2&gt;_._2)</span><br><span class="line">            .take(<span class="type">MAX_RECOMMENDATION</span>)</span><br><span class="line">            .map(x=&gt;<span class="type">Recommendation</span>(x._1,x._2)) )</span><br><span class="line">      &#125;</span><br><span class="line">      .toDF()</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 保存到mongodb</span></span><br><span class="line">    simDF.write</span><br><span class="line">      .option(<span class="string">"uri"</span>, mongoConfig.uri)</span><br><span class="line">      .option(<span class="string">"collection"</span>, <span class="type">ITEM_CF_PRODUCT_RECS</span>)</span><br><span class="line">      .mode(<span class="string">"overwrite"</span>)</span><br><span class="line">      .format(<span class="string">"com.mongodb.spark.sql"</span>)</span><br><span class="line">      .save()</span><br><span class="line"></span><br><span class="line">    spark.stop()</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 按照公式计算同现相似度</span></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">cooccurrenceSim</span></span>(coCount: <span class="type">Long</span>, count1: <span class="type">Long</span>, count2: <span class="type">Long</span>): <span class="type">Double</span> =&#123;</span><br><span class="line">    coCount / math.sqrt( count1 * count2 )</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
-                <hr>
-                
-
-                <ul class="pager">
-                    
-                    <li class="previous">
-                        <a href="/blog4/2019/10/09/zookeeper/" data-toggle="tooltip" data-placement="top"
-                           title="zookeeper">&larr; Previous Post</a>
-                    </li>
-                    
-                    
-                    <li class="next">
-                        <a href="/blog4/2019/10/08/java/" data-toggle="tooltip" data-placement="top"
-                           title="java">Next Post &rarr;</a>
-                    </li>
-                    
-                </ul>
-
-                
-
-                
-
-
-                <!--加入新的评论系统-->
-                
-
-                
-
-            </div>
-
-            <div class="hidden-xs col-sm-3 toc-col">
-                <div class="toc-wrap">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-电商推荐系统的简介"><span class="toc-text">1 电商推荐系统的简介</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-项目的架构设计"><span class="toc-text">1.1 项目的架构设计</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-2-亚马逊"><span class="toc-text">1.1.2 亚马逊</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-2-分析"><span class="toc-text">1.1.2 分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-3-数据的生命周期"><span class="toc-text">1.1.3 数据的生命周期</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-大数据的处理流程"><span class="toc-text">1.2 大数据的处理流程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-我们的目标"><span class="toc-text">1.3 我们的目标</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-4-项目的系统架构"><span class="toc-text">1.4 项目的系统架构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-1-离线"><span class="toc-text">1.4.1 离线</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-2-实时"><span class="toc-text">1.4.2 实时</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-5-数据源的解析"><span class="toc-text">1.5 数据源的解析</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-5-1-信息介绍"><span class="toc-text">1.5.1 信息介绍</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-6主要的数据模型"><span class="toc-text">1.6主要的数据模型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-6-统计推荐模块"><span class="toc-text">1.6 统计推荐模块</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-6-1-历史热门商品统计"><span class="toc-text">1.6.1 历史热门商品统计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-6-2近期热门商品的统计"><span class="toc-text">1.6.2近期热门商品的统计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-6-3商品的平均得分的统计"><span class="toc-text">1.6.3商品的平均得分的统计</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-7-离线推荐模块"><span class="toc-text">1.7 离线推荐模块</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-7-1-计算用户推荐矩阵"><span class="toc-text">1.7.1 计算用户推荐矩阵</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-7-2计算商品相似度矩阵"><span class="toc-text">1.7.2计算商品相似度矩阵</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-8-基于模型的实时推荐模块"><span class="toc-text">1.8 基于模型的实时推荐模块</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-8-1-需求"><span class="toc-text">1.8.1 需求</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-8-2推荐优先级的计算"><span class="toc-text">1.8.2推荐优先级的计算</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-9-其他形式的离线相似推荐"><span class="toc-text">1.9 其他形式的离线相似推荐</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-9-1-基于内容的推荐"><span class="toc-text">1.9.1 基于内容的推荐</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-9-3-基于物品的协同过滤"><span class="toc-text">1.9.3  基于物品的协同过滤</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-10-混合推荐分区推荐"><span class="toc-text">1.10 混合推荐分区推荐</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-环境的搭建"><span class="toc-text">2 环境的搭建</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-安装monhgodb"><span class="toc-text">2.1 安装monhgodb</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-1-mongodb的启动"><span class="toc-text">2.1.1 mongodb的启动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-2-mongodb的访问"><span class="toc-text">2.1.2 mongodb的访问</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-3-mongodb的停止"><span class="toc-text">2.1.3  mongodb的停止</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-安装Redis"><span class="toc-text">2.2 安装Redis</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-1-Redis的基本安装"><span class="toc-text">2.2.1 Redis的基本安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-2-Redis的基本使用"><span class="toc-text">2.2.2 Redis的基本使用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-安装Spark（单节点）"><span class="toc-text">2.3  安装Spark（单节点）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-4-安装-Zookeeper-单节点"><span class="toc-text">2.4 安装  Zookeeper 单节点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-5-安装Flume-ng-单节点"><span class="toc-text">2.5 安装Flume-ng 单节点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-6-安装kafka-单节点"><span class="toc-text">2.6 安装kafka 单节点</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-项目的搭建"><span class="toc-text">3 项目的搭建</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-新建maven项目"><span class="toc-text">3.1 新建maven项目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2reoommender-的pom-xml"><span class="toc-text">2.2reoommender 的pom.xml</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3DataLoader-的搭建"><span class="toc-text">2.3DataLoader 的搭建</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-离线推荐服务-代码"><span class="toc-text">4 离线推荐服务 代码</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-1-创建maven项目"><span class="toc-text">4.1 创建maven项目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-2-创建离线统计-服务-StatisticsRecommender"><span class="toc-text">4.2 创建离线统计 服务  StatisticsRecommender</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-3-基于隐语义模型的推荐"><span class="toc-text">4.3 基于隐语义模型的推荐</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-2-商品相似度矩阵"><span class="toc-text">4.3.2 商品相似度矩阵</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-4-创建模块"><span class="toc-text">4.3.4 创建模块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-5ALS算法代码部分"><span class="toc-text">4.3.5ALS算法代码部分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-3-模型参数评估"><span class="toc-text">4.3.3 模型参数评估</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#null"><span class="toc-text"></span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-实时推荐模块"><span class="toc-text">5 实时推荐模块</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#5-1-分析"><span class="toc-text">5.1 分析</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-2-推荐优先级计算"><span class="toc-text">5.1.2 推荐优先级计算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-3-实现"><span class="toc-text">5.1.3 实现</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-实时系统的联调"><span class="toc-text">6 实时系统的联调</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#6-2-配置启动Flume"><span class="toc-text">6.2 配置启动Flume</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-冷启动问题的解决"><span class="toc-text">6 冷启动问题的解决</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#7-其他形式的离线相似推荐"><span class="toc-text">7 其他形式的离线相似推荐</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#7-1-基于内容的相似度推荐"><span class="toc-text">7.1 基于内容的相似度推荐</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-2-基于ItemCF的推荐算法"><span class="toc-text">7.2 基于ItemCF的推荐算法</span></a></li></ol></li></ol>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <!-- Sidebar Container -->
-
-            <div class="
-                col-lg-8 col-lg-offset-2
-                col-md-10 col-md-offset-1
-                sidebar-container">
-
-                <!-- Featured Tags -->
-                
-
-                <!-- Friends Blog -->
-                
-            </div>
-        </div>
-
+      
     </div>
-</article>
+    
+    
+    
 
+    
 
+    
 
+    
 
+    <footer class="post-footer">
+      
 
+      
+      
+      
 
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/blog4/2019/10/08/java/" rel="next" title="java">
+                <i class="fa fa-chevron-left"></i> java
+              </a>
+            
+          </div>
 
-<!-- Footer -->
-<!-- Footer -->
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
-                <br>
-                <ul class="list-inline text-center">
-                
-                
-                
+          <span class="post-nav-divider"></span>
 
-                
-
-                
-
-                
-
-                
-
-                </ul>
-                <p class="copyright text-muted">
-                    Copyright &copy; 我的个人博客 2019
-                    <br>
-                    <span id="busuanzi_container_site_pv" style="font-size: 12px;">PV: <span id="busuanzi_value_site_pv"></span> Times</span>
-                    <br>
-                    Theme by <a href="https://haojen.github.io/">Haojen Ma</a>
-                </p>
-
-            </div>
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/blog4/2019/10/09/zookeeper/" rel="prev" title="zookeeper">
+                zookeeper <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
         </div>
-    </div>
-</footer>
+      
 
-<!-- jQuery -->
-<script src="/blog4/js/jquery.min.js"></script>
-
-<!-- Bootstrap Core JavaScript -->
-<script src="/blog4/js/bootstrap.min.js"></script>
-
-<!-- Custom Theme JavaScript -->
-<script src="/blog4/js/blog.js"></script>
-
-<!-- async load function -->
-<script>
-    function async(u, c) {
-      var d = document, t = 'script',
-          o = d.createElement(t),
-          s = d.getElementsByTagName(t)[0];
-      o.src = u;
-      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
-      s.parentNode.insertBefore(o, s);
-    }
-</script>
-
-<!-- jquery.tagcloud.js -->
-<script>
-    // only load tagcloud.js in tag.html
-    if($('#tag_cloud').length !== 0){
-        async("https://malingzhao.github.io/blog4/blog4/js/jquery.tagcloud.js",function(){
-            $.fn.tagcloud.defaults = {
-                //size: {start: 1, end: 1, unit: 'em'},
-                color: {start: '#bbbbee', end: '#0085a1'},
-            };
-            $('#tag_cloud a').tagcloud();
-        })
-    }
-</script>
-
-<!--fastClick.js -->
-<script>
-    async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
-        var $nav = document.querySelector("nav");
-        if($nav) FastClick.attach($nav);
-    })
-</script>
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
 
 
 
-<!-- Google Analytics -->
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_fav">收藏夹</a>
+<a class="jiathis_button_copy">复制网址</a>
+<a class="jiathis_button_email">邮件</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone">QQ空间</a>
+<a class="jiathis_button_tqq">腾讯微博</a>
+<a class="jiathis_button_douban">豆瓣</a>
+<a class="jiathis_button_share">一键分享</a>
 
-
-
-<!-- Baidu Tongji -->
-
-
-<!-- swiftype -->
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
 <script type="text/javascript">
-  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
-  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
-  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
-  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+      
+    </div>
+  </div>
 
-  _st('install','','2.0.0');
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">MaLingZhao</p>
+              <p class="site-description motion-element" itemprop="description">欢迎大家共同交流学习</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/blog4/archives/">
+              
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-电商推荐系统的简介"><span class="nav-number">1.</span> <span class="nav-text">1 电商推荐系统的简介</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-项目的架构设计"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 项目的架构设计</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-2-亚马逊"><span class="nav-number">1.1.1.</span> <span class="nav-text">1.1.2 亚马逊</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-2-分析"><span class="nav-number">1.1.2.</span> <span class="nav-text">1.1.2 分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-3-数据的生命周期"><span class="nav-number">1.1.3.</span> <span class="nav-text">1.1.3 数据的生命周期</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-大数据的处理流程"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 大数据的处理流程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-我们的目标"><span class="nav-number">1.3.</span> <span class="nav-text">1.3 我们的目标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-4-项目的系统架构"><span class="nav-number">1.4.</span> <span class="nav-text">1.4 项目的系统架构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-1-离线"><span class="nav-number">1.4.1.</span> <span class="nav-text">1.4.1 离线</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-2-实时"><span class="nav-number">1.4.2.</span> <span class="nav-text">1.4.2 实时</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-5-数据源的解析"><span class="nav-number">1.5.</span> <span class="nav-text">1.5 数据源的解析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-5-1-信息介绍"><span class="nav-number">1.5.1.</span> <span class="nav-text">1.5.1 信息介绍</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-6主要的数据模型"><span class="nav-number">1.6.</span> <span class="nav-text">1.6主要的数据模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-6-统计推荐模块"><span class="nav-number">1.7.</span> <span class="nav-text">1.6 统计推荐模块</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-6-1-历史热门商品统计"><span class="nav-number">1.7.1.</span> <span class="nav-text">1.6.1 历史热门商品统计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-6-2近期热门商品的统计"><span class="nav-number">1.7.2.</span> <span class="nav-text">1.6.2近期热门商品的统计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-6-3商品的平均得分的统计"><span class="nav-number">1.7.3.</span> <span class="nav-text">1.6.3商品的平均得分的统计</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-7-离线推荐模块"><span class="nav-number">1.8.</span> <span class="nav-text">1.7 离线推荐模块</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-7-1-计算用户推荐矩阵"><span class="nav-number">1.8.1.</span> <span class="nav-text">1.7.1 计算用户推荐矩阵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-7-2计算商品相似度矩阵"><span class="nav-number">1.8.2.</span> <span class="nav-text">1.7.2计算商品相似度矩阵</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-8-基于模型的实时推荐模块"><span class="nav-number">1.9.</span> <span class="nav-text">1.8 基于模型的实时推荐模块</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-8-1-需求"><span class="nav-number">1.9.1.</span> <span class="nav-text">1.8.1 需求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-8-2推荐优先级的计算"><span class="nav-number">1.9.2.</span> <span class="nav-text">1.8.2推荐优先级的计算</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-9-其他形式的离线相似推荐"><span class="nav-number">1.10.</span> <span class="nav-text">1.9 其他形式的离线相似推荐</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-9-1-基于内容的推荐"><span class="nav-number">1.10.1.</span> <span class="nav-text">1.9.1 基于内容的推荐</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-9-3-基于物品的协同过滤"><span class="nav-number">1.10.2.</span> <span class="nav-text">1.9.3  基于物品的协同过滤</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-10-混合推荐分区推荐"><span class="nav-number">1.11.</span> <span class="nav-text">1.10 混合推荐分区推荐</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-环境的搭建"><span class="nav-number">2.</span> <span class="nav-text">2 环境的搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-安装monhgodb"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 安装monhgodb</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-1-mongodb的启动"><span class="nav-number">2.1.1.</span> <span class="nav-text">2.1.1 mongodb的启动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-2-mongodb的访问"><span class="nav-number">2.1.2.</span> <span class="nav-text">2.1.2 mongodb的访问</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-3-mongodb的停止"><span class="nav-number">2.1.3.</span> <span class="nav-text">2.1.3  mongodb的停止</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-安装Redis"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 安装Redis</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-1-Redis的基本安装"><span class="nav-number">2.2.1.</span> <span class="nav-text">2.2.1 Redis的基本安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-2-Redis的基本使用"><span class="nav-number">2.2.2.</span> <span class="nav-text">2.2.2 Redis的基本使用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-安装Spark（单节点）"><span class="nav-number">2.3.</span> <span class="nav-text">2.3  安装Spark（单节点）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-4-安装-Zookeeper-单节点"><span class="nav-number">2.4.</span> <span class="nav-text">2.4 安装  Zookeeper 单节点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-5-安装Flume-ng-单节点"><span class="nav-number">2.5.</span> <span class="nav-text">2.5 安装Flume-ng 单节点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-6-安装kafka-单节点"><span class="nav-number">2.6.</span> <span class="nav-text">2.6 安装kafka 单节点</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-项目的搭建"><span class="nav-number">3.</span> <span class="nav-text">3 项目的搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-新建maven项目"><span class="nav-number">3.1.</span> <span class="nav-text">3.1 新建maven项目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2reoommender-的pom-xml"><span class="nav-number">3.2.</span> <span class="nav-text">2.2reoommender 的pom.xml</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3DataLoader-的搭建"><span class="nav-number">3.3.</span> <span class="nav-text">2.3DataLoader 的搭建</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-离线推荐服务-代码"><span class="nav-number">4.</span> <span class="nav-text">4 离线推荐服务 代码</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#4-1-创建maven项目"><span class="nav-number">4.1.</span> <span class="nav-text">4.1 创建maven项目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-2-创建离线统计-服务-StatisticsRecommender"><span class="nav-number">4.2.</span> <span class="nav-text">4.2 创建离线统计 服务  StatisticsRecommender</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-3-基于隐语义模型的推荐"><span class="nav-number">4.3.</span> <span class="nav-text">4.3 基于隐语义模型的推荐</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-2-商品相似度矩阵"><span class="nav-number">4.3.1.</span> <span class="nav-text">4.3.2 商品相似度矩阵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-4-创建模块"><span class="nav-number">4.3.2.</span> <span class="nav-text">4.3.4 创建模块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-5ALS算法代码部分"><span class="nav-number">4.3.3.</span> <span class="nav-text">4.3.5ALS算法代码部分</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-3-模型参数评估"><span class="nav-number">4.3.4.</span> <span class="nav-text">4.3.3 模型参数评估</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">5.</span> <span class="nav-text"></span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-实时推荐模块"><span class="nav-number">6.</span> <span class="nav-text">5 实时推荐模块</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#5-1-分析"><span class="nav-number">6.1.</span> <span class="nav-text">5.1 分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-2-推荐优先级计算"><span class="nav-number">6.1.1.</span> <span class="nav-text">5.1.2 推荐优先级计算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-3-实现"><span class="nav-number">6.1.2.</span> <span class="nav-text">5.1.3 实现</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-实时系统的联调"><span class="nav-number">7.</span> <span class="nav-text">6 实时系统的联调</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#6-2-配置启动Flume"><span class="nav-number">7.1.</span> <span class="nav-text">6.2 配置启动Flume</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-冷启动问题的解决"><span class="nav-number">8.</span> <span class="nav-text">6 冷启动问题的解决</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#7-其他形式的离线相似推荐"><span class="nav-number">9.</span> <span class="nav-text">7 其他形式的离线相似推荐</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#7-1-基于内容的相似度推荐"><span class="nav-number">9.1.</span> <span class="nav-text">7.1 基于内容的相似度推荐</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-2-基于ItemCF的推荐算法"><span class="nav-number">9.2.</span> <span class="nav-text">7.2 基于ItemCF的推荐算法</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">MaLingZhao</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
 </script>
 
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-<!--wechat title img-->
-<img class="wechat-title-img" src="">
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/blog4/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog4/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog4/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog4/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog4/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog4/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/blog4/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/blog4/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/blog4/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/blog4/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/blog4/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: '8TOqOwTzIDHvfpCddf1zIWum-gzGzoHsz',
+        appKey: 'EQrtySSrAvcKm4R7okLaXIIP',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/blog4/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
 </body>
-
 </html>
