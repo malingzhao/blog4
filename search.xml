@@ -11,11 +11,6 @@
     <content type="text"></content>
   </entry>
   <entry>
-    <title><![CDATA[categories^C]]></title>
-    <url>%2Fblog4%2F2019%2F10%2F09%2Fcategories-C%2F</url>
-    <content type="text"></content>
-  </entry>
-  <entry>
     <title><![CDATA[Kylin]]></title>
     <url>%2Fblog4%2F2019%2F10%2F09%2FKylin%2F</url>
     <content type="text"><![CDATA[1 概述1.1 Kylin定义开源 分布式 分析引擎 提供基于Hadoop/spark的sql查询和多维分析 OLAP能力（联机分析处理） 亚秒内查询巨大的Hive表 1.2 架构 1 RestServer Rsultful接口 提供查询 2 查询引擎 解析用户查询 3 路由器 在发行版是默认关闭的 体验不好 Hive的速度和Kylin的速度相差加大 4 元数据管理工具 元数据驱动应用程序 kylin的元数据存储在hbase中 5 分析引擎 处理离线任务 shell脚本 java API MapReduce任务 任务引擎需要对kylin中的任务进行协调和管理 1.3特点SQL接口 超大规模数据集 亚秒级的响应 ​ 很多复杂的计算 连接 聚合 离线的预计算过程就完成了 可伸缩性和高吞吐率 搭建集群 每秒70个查询 BI ODBC tableau JDBC RestPI Kylin 2 环境搭建官方文档即可 3 入门4 Cube构建原理5 cube构建优化6 BI集成]]></content>
