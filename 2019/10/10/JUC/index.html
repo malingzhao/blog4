@@ -86,20 +86,20 @@
 
 
 
-<meta name="description" content="1. dubbo的hello-world 消费者   服务的提供者  解决名称空间导入的问题 https://blog.csdn.net/feinifi/article/details/86677534">
+<meta name="description" content="1 JUC是什么java.util.current 在并发编程中使用的工具类 进程和线程的回顾1 进程是什么 线程是什么进程是操作系统动作执行的基本单元 在传统的操作系统中，进程既是基本的分配单元，也是基本的执行单元 独立功能的程序关于某个数据集合的一次性活动 线程一个进程可以包含若干个线程，一个进程中至少有一个线程， 不然没有存在的意义 线程可以利用进程拥有的资源 进程作为分配资源的基本单位 线">
 <meta property="og:type" content="article">
-<meta property="og:title" content="dubbo">
-<meta property="og:url" content="https://malingzhao.github.io/blog4/2019/10/08/dubbo/index.html">
+<meta property="og:title" content="JUC">
+<meta property="og:url" content="https://malingzhao.github.io/blog4/2019/10/10/JUC/index.html">
 <meta property="og:site_name" content="我的个人博客">
-<meta property="og:description" content="1. dubbo的hello-world 消费者   服务的提供者  解决名称空间导入的问题 https://blog.csdn.net/feinifi/article/details/86677534">
+<meta property="og:description" content="1 JUC是什么java.util.current 在并发编程中使用的工具类 进程和线程的回顾1 进程是什么 线程是什么进程是操作系统动作执行的基本单元 在传统的操作系统中，进程既是基本的分配单元，也是基本的执行单元 独立功能的程序关于某个数据集合的一次性活动 线程一个进程可以包含若干个线程，一个进程中至少有一个线程， 不然没有存在的意义 线程可以利用进程拥有的资源 进程作为分配资源的基本单位 线">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/08/dubbo/1570519203346.png">
-<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/08/dubbo/1570519218894.png">
-<meta property="og:updated_time" content="2019-10-08T10:50:36.953Z">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/10/JUC/1570698958118.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/10/JUC/1570699935383.png">
+<meta property="og:updated_time" content="2019-10-10T09:34:13.216Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="dubbo">
-<meta name="twitter:description" content="1. dubbo的hello-world 消费者   服务的提供者  解决名称空间导入的问题 https://blog.csdn.net/feinifi/article/details/86677534">
-<meta name="twitter:image" content="https://malingzhao.github.io/blog4/2019/10/08/dubbo/1570519203346.png">
+<meta name="twitter:title" content="JUC">
+<meta name="twitter:description" content="1 JUC是什么java.util.current 在并发编程中使用的工具类 进程和线程的回顾1 进程是什么 线程是什么进程是操作系统动作执行的基本单元 在传统的操作系统中，进程既是基本的分配单元，也是基本的执行单元 独立功能的程序关于某个数据集合的一次性活动 线程一个进程可以包含若干个线程，一个进程中至少有一个线程， 不然没有存在的意义 线程可以利用进程拥有的资源 进程作为分配资源的基本单位 线">
+<meta name="twitter:image" content="https://malingzhao.github.io/blog4/2019/10/10/JUC/1570698958118.png">
 
 
 
@@ -129,13 +129,13 @@
 
 
 
-  <link rel="canonical" href="https://malingzhao.github.io/blog4/2019/10/08/dubbo/">
+  <link rel="canonical" href="https://malingzhao.github.io/blog4/2019/10/10/JUC/">
 
 
 
 
 
-  <title>dubbo | 我的个人博客</title>
+  <title>JUC | 我的个人博客</title>
   
 
 
@@ -334,7 +334,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://malingzhao.github.io/blog4/blog4/2019/10/08/dubbo/">
+    <link itemprop="mainEntityOfPage" href="https://malingzhao.github.io/blog4/blog4/2019/10/10/JUC/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="MaLingZhao">
@@ -351,7 +351,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">dubbo</h2>
+          <h2 class="post-title" itemprop="name headline">JUC</h2>
         
 
         <div class="post-meta">
@@ -363,8 +363,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-08T15:18:48+08:00">
-                2019-10-08
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-10T15:53:40+08:00">
+                2019-10-10
               </time>
             
 
@@ -382,8 +382,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/blog4/2019/10/08/dubbo/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/blog4/2019/10/08/dubbo/" itemprop="commentCount"></span>
+                <a href="/blog4/2019/10/10/JUC/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/blog4/2019/10/10/JUC/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -405,7 +405,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  32
+                  755
                 </span>
               
 
@@ -421,7 +421,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  2
                 </span>
               
             </div>
@@ -442,11 +442,61 @@
       
 
       
-        <h1 id="1-dubbo的hello-world"><a href="#1-dubbo的hello-world" class="headerlink" title="1. dubbo的hello-world"></a>1. dubbo的hello-world</h1><p><img src="/blog4/2019/10/08/dubbo/1570519203346.png" alt="1570519203346"></p>
-<p>消费者   服务的提供者</p>
-<p><img src="/blog4/2019/10/08/dubbo/1570519218894.png" alt="1570519218894"></p>
-<p>解决名称空间导入的问题</p>
-<p><a href="https://blog.csdn.net/feinifi/article/details/86677534" target="_blank" rel="noopener">https://blog.csdn.net/feinifi/article/details/86677534</a></p>
+        <h1 id="1-JUC是什么"><a href="#1-JUC是什么" class="headerlink" title="1 JUC是什么"></a>1 JUC是什么</h1><p>java.util.current 在并发编程中使用的工具类</p>
+<h2 id="进程和线程的回顾"><a href="#进程和线程的回顾" class="headerlink" title="进程和线程的回顾"></a>进程和线程的回顾</h2><h3 id="1-进程是什么-线程是什么"><a href="#1-进程是什么-线程是什么" class="headerlink" title="1 进程是什么 线程是什么"></a>1 进程是什么 线程是什么</h3><h4 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h4><p>是操作系统动作执行的基本单元 在传统的操作系统中，进程既是基本的分配单元，也是基本的执行单元</p>
+<p>独立功能的程序关于某个数据集合的一次性活动</p>
+<h4 id="线程"><a href="#线程" class="headerlink" title="线程"></a>线程</h4><p>一个进程可以包含若干个线程，一个进程中至少有一个线程，</p>
+<p>不然没有存在的意义</p>
+<p>线程可以利用进程拥有的资源</p>
+<p>进程作为分配资源的基本单位</p>
+<p>线程作为独立运行和独立调度的基本单位，基本上不拥有系统资源，</p>
+<p>因此对它的调度所付出的开销就小得多</p>
+<h3 id="2-进程和线程的例子"><a href="#2-进程和线程的例子" class="headerlink" title="2 进程和线程的例子"></a>2 进程和线程的例子</h3><h3 id="3-线程的状态"><a href="#3-线程的状态" class="headerlink" title="3 线程的状态"></a>3 线程的状态</h3><p>new</p>
+<p>runnable</p>
+<p>blocked</p>
+<p>waiting</p>
+<p>Timed_waiting</p>
+<p>terminated</p>
+<p> 吧  </p>
+<h3 id="4-wait-sleep的区别"><a href="#4-wait-sleep的区别" class="headerlink" title="4 wait/sleep的区别"></a>4 wait/sleep的区别</h3><p>wait 线程暂停</p>
+<p>wait 放开手去睡 放开手里的锁</p>
+<p>sleep握紧手去睡 行了手里还有锁</p>
+<h3 id="5-什么是并发-什么是并行"><a href="#5-什么是并发-什么是并行" class="headerlink" title="5 什么是并发 什么是并行"></a>5 什么是并发 什么是并行</h3><p>并发</p>
+<p>同一个时刻在访问同一个 资源</p>
+<p>并行</p>
+<p>多项工作一起执行 之后再汇总</p>
+<h1 id="Lock接口"><a href="#Lock接口" class="headerlink" title="Lock接口"></a>Lock接口</h1><h2 id="复习synchronized"><a href="#复习synchronized" class="headerlink" title="复习synchronized"></a>复习synchronized</h2><p>线程操作资源类  高内聚  低耦合</p>
+<h2 id="实现步骤"><a href="#实现步骤" class="headerlink" title="实现步骤"></a>实现步骤</h2><p>1 创建资源类</p>
+<p>2 资源类创建同步方法，同步代码</p>
+<p>example  买票程序</p>
+<h2 id="Lock"><a href="#Lock" class="headerlink" title="Lock"></a>Lock</h2><p><img src="/blog4/2019/10/10/JUC/1570698958118.png" alt="1570698958118"></p>
+<h2 id="Lock接口实现-可重入锁"><a href="#Lock接口实现-可重入锁" class="headerlink" title="Lock接口实现  可重入锁"></a>Lock接口实现  可重入锁</h2><p>怎么用</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">X</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> ReetrantLock lock=<span class="keyword">new</span> ReetrantLock();</span><br><span class="line">    <span class="comment">//....</span></span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">m</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        lock.lock();</span><br><span class="line">        <span class="keyword">try</span>&#123;</span><br><span class="line">            <span class="comment">//....nethod  body</span></span><br><span class="line">        &#125;<span class="keyword">finally</span>&#123;</span><br><span class="line">            lock.unlock();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="synchronized和lock的区别"><a href="#synchronized和lock的区别" class="headerlink" title="synchronized和lock的区别"></a>synchronized和lock的区别</h4><p>1 首先synchronized是java的内置关键字，在jvm层面，lock是一个java类</p>
+<p>2 synchronized无法判断是否获取锁的状态，Lock可以判断是否被获取到锁</p>
+<p>3  首先synchronized是java的内置关键字，在jvm层面，lock是一个java类</p>
+<p>synchronized无法判断是否获取锁的状态，Lock可以判断是否被获取到锁</p>
+<p>4 用synchronized关键字的两个线程线程1 和线程2 ，如果线程1 获得锁</p>
+<p>线程2 等待 。如果线程1阻塞线程2 会一致等待下去，Lock就不一定会等待下去，如果一致获取不到锁的话，线程可以不用一直等待就结束了</p>
+<p>5 synchronized的锁可重入  不可中断，非公平 而Lock锁可重入，可判断，</p>
+<p>可公平（两者皆可）</p>
+<p>6Lock锁适合大量同步代码的同步问题 synchronized适合代码量少的同步问题</p>
+<h2 id="创建线程的方式"><a href="#创建线程的方式" class="headerlink" title="创建线程的方式"></a>创建线程的方式</h2><p>集成Thread</p>
+<p>实现Runnable方法</p>
+<p> 新建类实现Runnnable接口</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ckass MyThread umplements Runnable</span><br><span class="line"><span class="keyword">new</span> Thread()</span><br></pre></td></tr></table></figure>
+
+<p>匿名内部类</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> Thread(<span class="keyword">new</span> Runnable()&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span></span>&#123;</span><br><span class="line">&#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>lambda表达式</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">new Thread(()-&gt;&#123;</span><br><span class="line">    </span><br><span class="line">&#125;,<span class="string">"your thread name"</span>).start()</span><br></pre></td></tr></table></figure>
+
+<h2 id="Lambda表达式"><a href="#Lambda表达式" class="headerlink" title="Lambda表达式"></a>Lambda表达式</h2><p>lambda是一个匿名函数  我们可以把lambda表达式理解为可以传递的代码</p>
+<p>左侧   lambda表达式需要的参数 </p>
+<p>右侧  lambda题  lambda表达式要执行的功能</p>
+<h3 id="Runnable接口为什么可以使用lambda表达式"><a href="#Runnable接口为什么可以使用lambda表达式" class="headerlink" title="Runnable接口为什么可以使用lambda表达式"></a>Runnable接口为什么可以使用lambda表达式</h3><p><img src="/blog4/2019/10/10/JUC/1570699935383.png" alt="1570699935383"></p>
 
       
     </div>
@@ -510,7 +560,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://malingzhao.github.io/blog4/2019/10/08/dubbo/" title="dubbo">https://malingzhao.github.io/blog4/2019/10/08/dubbo/</a>
+    <a href="https://malingzhao.github.io/blog4/2019/10/10/JUC/" title="JUC">https://malingzhao.github.io/blog4/2019/10/10/JUC/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -532,15 +582,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/blog4/2019/10/10/weixin/" rel="next" title="weixin">
+                <i class="fa fa-chevron-left"></i> weixin
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/blog4/2019/10/08/springcloud/" rel="prev" title="springcloud">
-                springcloud <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -719,7 +769,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-dubbo的hello-world"><span class="nav-number">1.</span> <span class="nav-text">1. dubbo的hello-world</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-JUC是什么"><span class="nav-number">1.</span> <span class="nav-text">1 JUC是什么</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#进程和线程的回顾"><span class="nav-number">1.1.</span> <span class="nav-text">进程和线程的回顾</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-进程是什么-线程是什么"><span class="nav-number">1.1.1.</span> <span class="nav-text">1 进程是什么 线程是什么</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#进程"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">进程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#线程"><span class="nav-number">1.1.1.2.</span> <span class="nav-text">线程</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-进程和线程的例子"><span class="nav-number">1.1.2.</span> <span class="nav-text">2 进程和线程的例子</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-线程的状态"><span class="nav-number">1.1.3.</span> <span class="nav-text">3 线程的状态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-wait-sleep的区别"><span class="nav-number">1.1.4.</span> <span class="nav-text">4 wait/sleep的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-什么是并发-什么是并行"><span class="nav-number">1.1.5.</span> <span class="nav-text">5 什么是并发 什么是并行</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Lock接口"><span class="nav-number">2.</span> <span class="nav-text">Lock接口</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#复习synchronized"><span class="nav-number">2.1.</span> <span class="nav-text">复习synchronized</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现步骤"><span class="nav-number">2.2.</span> <span class="nav-text">实现步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Lock"><span class="nav-number">2.3.</span> <span class="nav-text">Lock</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Lock接口实现-可重入锁"><span class="nav-number">2.4.</span> <span class="nav-text">Lock接口实现  可重入锁</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#synchronized和lock的区别"><span class="nav-number">2.4.0.1.</span> <span class="nav-text">synchronized和lock的区别</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建线程的方式"><span class="nav-number">2.5.</span> <span class="nav-text">创建线程的方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Lambda表达式"><span class="nav-number">2.6.</span> <span class="nav-text">Lambda表达式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Runnable接口为什么可以使用lambda表达式"><span class="nav-number">2.6.1.</span> <span class="nav-text">Runnable接口为什么可以使用lambda表达式</span></a></li></ol></li></ol></div>
             
 
           </div>
