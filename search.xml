@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[git]]></title>
+    <url>%2Fblog4%2F2019%2F10%2F10%2Fgit%2F</url>
+    <content type="text"><![CDATA[一、Git的基础11 认识gi有了SVN 为什么还需要git svn增量式管理 GIT采取文件系统快照的方式 svn是集中式管理 git是分布式管理 其他的优势 大部分的操作在本地不需要互联网，只有pull和push时需要 2 git的安装1 Linux的环境./config make sudo make install gt config –global user.name “YourName” 我们注意到了global参数 用了这个参数，表示这台加的所有的git仓库都会使用这个配置 3 git的结构工作区 git add的暂存区 （临时存储） git commit 本地库（历史版本） 很多人喜欢直接commit到本地库 是因为用svn比较多的缘故 工作区 (.git)=.svn git的版本库里面包含了很多的东西，其中最重要的就是成为stage的暂存区， 还有Git为我们自动创建的第一个分支master 以及指向master的一个指针叫Head svn是没有暂存区的 文件git的版本库里添加的时候 分两步执行 实际上就是把文件修改添加到暂存区 4 Git和代码托管中心局域网 - GitLab服务器 外网- GitLab 、 码云 本地库与远程协作的方式 1 团队的内部协作 2 跨团队的协作 5 Git的命令行操作克隆远程仓库12git clone https://github.com/malingzhao/tuchaung.gitcd 本地仓库 本地库的初始化git add 设置签名作用 区分开发人员的身份 设置的额签名和远程 登录的仓库的账号和密码没有关系 命令 123git config user.name tom_progit config user.email [good_pro@126.com](mailto:good_pro@126.com) cd .git 观察配置信息 项目的优先于用户的优先级 二 命令行的常用的操作1 上传文件git clone cd 仓库地址 gti add 文件名 git commit -m “描述” git push orign master 第一次出现user.name user.email 配置输入即可// 查看路径echo $HOME 查看路径git config –global credential.helper store 创建此文件时一依据此路径]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[categories]]></title>
     <url>%2Fblog4%2F2019%2F10%2F09%2Fcategories%2F</url>
     <content type="text"></content>
