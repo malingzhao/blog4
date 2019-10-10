@@ -86,17 +86,17 @@
 
 
 
-<meta name="description" content="后台  前台  用户管理  订单的管理  购物车管理 tomcat 都在一个项目里面 容易出现单点故障问题 并发数低 代码的耦合度高 了解springBoot  @ComponentScan SpringBootApplication webstorm的下载">
+<meta name="description" content="1 微服务与SpringCloud1.1 马丁.福勒强调的是服务的大小，它关注的是某一个点，是具体解决某一个问题/提供落地对应服务的一个服务应用,狭意的看,可以看作Eclipse里面的一个个微服务工程/或者Module 1.2  微服务的技术栈2 Rest服务构建案例工程模块3 Eureka服务注册与发现4 Ribbon负载均衡5Feign负载均衡6 Hystrix熔断器7 Zuul路由网关">
 <meta property="og:type" content="article">
 <meta property="og:title" content="springcloud">
 <meta property="og:url" content="https://malingzhao.github.io/blog4/2019/10/08/springcloud/index.html">
 <meta property="og:site_name" content="我的个人博客">
-<meta property="og:description" content="后台  前台  用户管理  订单的管理  购物车管理 tomcat 都在一个项目里面 容易出现单点故障问题 并发数低 代码的耦合度高 了解springBoot  @ComponentScan SpringBootApplication webstorm的下载">
+<meta property="og:description" content="1 微服务与SpringCloud1.1 马丁.福勒强调的是服务的大小，它关注的是某一个点，是具体解决某一个问题/提供落地对应服务的一个服务应用,狭意的看,可以看作Eclipse里面的一个个微服务工程/或者Module 1.2  微服务的技术栈2 Rest服务构建案例工程模块3 Eureka服务注册与发现4 Ribbon负载均衡5Feign负载均衡6 Hystrix熔断器7 Zuul路由网关">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-10-08T12:18:33.250Z">
+<meta property="og:updated_time" content="2019-10-10T09:56:43.388Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="springcloud">
-<meta name="twitter:description" content="后台  前台  用户管理  订单的管理  购物车管理 tomcat 都在一个项目里面 容易出现单点故障问题 并发数低 代码的耦合度高 了解springBoot  @ComponentScan SpringBootApplication webstorm的下载">
+<meta name="twitter:description" content="1 微服务与SpringCloud1.1 马丁.福勒强调的是服务的大小，它关注的是某一个点，是具体解决某一个问题/提供落地对应服务的一个服务应用,狭意的看,可以看作Eclipse里面的一个个微服务工程/或者Module 1.2  微服务的技术栈2 Rest服务构建案例工程模块3 Eureka服务注册与发现4 Ribbon负载均衡5Feign负载均衡6 Hystrix熔断器7 Zuul路由网关">
 
 
 
@@ -402,7 +402,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  57
+                  124
                 </span>
               
 
@@ -439,17 +439,8 @@
       
 
       
-        <p>后台  前台  用户管理  订单的管理  购物车管理</p>
-<p>tomcat</p>
-<p>都在一个项目里面</p>
-<p>容易出现单点故障问题</p>
-<p>并发数低</p>
-<p>代码的耦合度高</p>
-<p>了解springBoot </p>
-<p>@ComponentScan</p>
-<p>SpringBootApplication</p>
-<p>webstorm的下载</p>
-
+        <h1 id="1-微服务与SpringCloud"><a href="#1-微服务与SpringCloud" class="headerlink" title="1 微服务与SpringCloud"></a>1 微服务与SpringCloud</h1><h2 id="1-1-马丁-福勒"><a href="#1-1-马丁-福勒" class="headerlink" title="1.1 马丁.福勒"></a>1.1 马丁.福勒</h2><p>强调的是服务的大小，它关注的是某一个点，是具体解决某一个问题/提供落地对应服务的一个服务应用,<br>狭意的看,可以看作Eclipse里面的一个个微服务工程/或者Module</p>
+<h2 id="1-2-微服务的技术栈"><a href="#1-2-微服务的技术栈" class="headerlink" title="1.2  微服务的技术栈"></a>1.2  微服务的技术栈</h2><h2 id="2-Rest服务构建案例工程模块"><a href="#2-Rest服务构建案例工程模块" class="headerlink" title="2 Rest服务构建案例工程模块"></a>2 Rest服务构建案例工程模块</h2><h1 id="3-Eureka服务注册与发现"><a href="#3-Eureka服务注册与发现" class="headerlink" title="3 Eureka服务注册与发现"></a>3 Eureka服务注册与发现</h1><h1 id="4-Ribbon负载均衡"><a href="#4-Ribbon负载均衡" class="headerlink" title="4 Ribbon负载均衡"></a>4 Ribbon负载均衡</h1><h1 id="5Feign负载均衡"><a href="#5Feign负载均衡" class="headerlink" title="5Feign负载均衡"></a>5Feign负载均衡</h1><h1 id="6-Hystrix熔断器"><a href="#6-Hystrix熔断器" class="headerlink" title="6 Hystrix熔断器"></a>6 Hystrix熔断器</h1><h1 id="7-Zuul路由网关"><a href="#7-Zuul路由网关" class="headerlink" title="7 Zuul路由网关"></a>7 Zuul路由网关</h1>
       
     </div>
     
@@ -627,8 +618,17 @@ var jiathis_config={
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -706,6 +706,22 @@ var jiathis_config={
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-微服务与SpringCloud"><span class="nav-number">1.</span> <span class="nav-text">1 微服务与SpringCloud</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-马丁-福勒"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 马丁.福勒</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-微服务的技术栈"><span class="nav-number">1.2.</span> <span class="nav-text">1.2  微服务的技术栈</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Rest服务构建案例工程模块"><span class="nav-number">1.3.</span> <span class="nav-text">2 Rest服务构建案例工程模块</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-Eureka服务注册与发现"><span class="nav-number">2.</span> <span class="nav-text">3 Eureka服务注册与发现</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-Ribbon负载均衡"><span class="nav-number">3.</span> <span class="nav-text">4 Ribbon负载均衡</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5Feign负载均衡"><span class="nav-number">4.</span> <span class="nav-text">5Feign负载均衡</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-Hystrix熔断器"><span class="nav-number">5.</span> <span class="nav-text">6 Hystrix熔断器</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#7-Zuul路由网关"><span class="nav-number">6.</span> <span class="nav-text">7 Zuul路由网关</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
