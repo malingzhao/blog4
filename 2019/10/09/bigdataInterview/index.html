@@ -86,20 +86,35 @@
 
 
 
-<meta name="description" content="1. dubbo的hello-world 消费者   服务的提供者  解决名称空间导入的问题 https://blog.csdn.net/feinifi/article/details/86677534">
+<meta name="description" content="Michael_PK  大数据团队面试  spark Hadoop 的公有云和私有云 剑指大数据面试概述互联网寒冬 简历投递的活跃度高 大数据岗位    够硬的技术功底 表现能力 拓展和提升大数据相应的能力 java Linux的基础知识 具有一定的项目经 1 开篇就业趋势 高效Offer 2 大数据处理架构总体架构 系统设计 3 小文件引发的血案篇hdfs 小文件问题 4 SQL on Hado">
 <meta property="og:type" content="article">
-<meta property="og:title" content="dubbo">
-<meta property="og:url" content="https://malingzhao.github.io/blog4/2019/10/08/dubbo/index.html">
+<meta property="og:title" content="bigdataInterview">
+<meta property="og:url" content="https://malingzhao.github.io/blog4/2019/10/09/bigdataInterview/index.html">
 <meta property="og:site_name" content="我的个人博客">
-<meta property="og:description" content="1. dubbo的hello-world 消费者   服务的提供者  解决名称空间导入的问题 https://blog.csdn.net/feinifi/article/details/86677534">
+<meta property="og:description" content="Michael_PK  大数据团队面试  spark Hadoop 的公有云和私有云 剑指大数据面试概述互联网寒冬 简历投递的活跃度高 大数据岗位    够硬的技术功底 表现能力 拓展和提升大数据相应的能力 java Linux的基础知识 具有一定的项目经 1 开篇就业趋势 高效Offer 2 大数据处理架构总体架构 系统设计 3 小文件引发的血案篇hdfs 小文件问题 4 SQL on Hado">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/08/dubbo/1570519203346.png">
-<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/08/dubbo/1570519218894.png">
-<meta property="og:updated_time" content="2019-10-08T10:50:36.953Z">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/09/bigdataInterview/1570754974103.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/09/bigdataInterview/1570755208182.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/09/bigdataInterview/1570755234618.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/09/bigdataInterview/1570756400102.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/09/bigdataInterview/1570756883318.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/09/bigdataInterview/1570757322881.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/09/bigdataInterview/1570757447918.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/09/bigdataInterview/1570757932798.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/09/bigdataInterview/1570758016524.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/09/bigdataInterview/1570758749614.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/09/bigdataInterview/1570766947475.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/09/bigdataInterview/1570781232285.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/09/bigdataInterview/1570781275286.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/09/bigdataInterview/1570781573318.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/09/bigdataInterview/1570785172866.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/09/bigdataInterview/java/1570846583982.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/09/bigdataInterview/1570782982177.png">
+<meta property="og:updated_time" content="2019-10-12T06:46:30.730Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="dubbo">
-<meta name="twitter:description" content="1. dubbo的hello-world 消费者   服务的提供者  解决名称空间导入的问题 https://blog.csdn.net/feinifi/article/details/86677534">
-<meta name="twitter:image" content="https://malingzhao.github.io/blog4/2019/10/08/dubbo/1570519203346.png">
+<meta name="twitter:title" content="bigdataInterview">
+<meta name="twitter:description" content="Michael_PK  大数据团队面试  spark Hadoop 的公有云和私有云 剑指大数据面试概述互联网寒冬 简历投递的活跃度高 大数据岗位    够硬的技术功底 表现能力 拓展和提升大数据相应的能力 java Linux的基础知识 具有一定的项目经 1 开篇就业趋势 高效Offer 2 大数据处理架构总体架构 系统设计 3 小文件引发的血案篇hdfs 小文件问题 4 SQL on Hado">
+<meta name="twitter:image" content="https://malingzhao.github.io/blog4/2019/10/09/bigdataInterview/1570754974103.png">
 
 
 
@@ -129,13 +144,13 @@
 
 
 
-  <link rel="canonical" href="https://malingzhao.github.io/blog4/2019/10/08/dubbo/">
+  <link rel="canonical" href="https://malingzhao.github.io/blog4/2019/10/09/bigdataInterview/">
 
 
 
 
 
-  <title>dubbo | 我的个人博客</title>
+  <title>bigdataInterview | 我的个人博客</title>
   
 
 
@@ -334,7 +349,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://malingzhao.github.io/blog4/blog4/2019/10/08/dubbo/">
+    <link itemprop="mainEntityOfPage" href="https://malingzhao.github.io/blog4/blog4/2019/10/09/bigdataInterview/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="MaLingZhao">
@@ -351,7 +366,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">dubbo</h2>
+          <h2 class="post-title" itemprop="name headline">bigdataInterview</h2>
         
 
         <div class="post-meta">
@@ -363,8 +378,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-08T15:18:48+08:00">
-                2019-10-08
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-09T21:02:21+08:00">
+                2019-10-09
               </time>
             
 
@@ -382,8 +397,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/blog4/2019/10/08/dubbo/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/blog4/2019/10/08/dubbo/" itemprop="commentCount"></span>
+                <a href="/blog4/2019/10/09/bigdataInterview/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/blog4/2019/10/09/bigdataInterview/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -405,7 +420,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  32
+                  1.9k
                 </span>
               
 
@@ -421,7 +436,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  7
                 </span>
               
             </div>
@@ -442,11 +457,235 @@
       
 
       
-        <h1 id="1-dubbo的hello-world"><a href="#1-dubbo的hello-world" class="headerlink" title="1. dubbo的hello-world"></a>1. dubbo的hello-world</h1><p><img src="/blog4/2019/10/08/dubbo/1570519203346.png" alt="1570519203346"></p>
-<p>消费者   服务的提供者</p>
-<p><img src="/blog4/2019/10/08/dubbo/1570519218894.png" alt="1570519218894"></p>
-<p>解决名称空间导入的问题</p>
-<p><a href="https://blog.csdn.net/feinifi/article/details/86677534" target="_blank" rel="noopener">https://blog.csdn.net/feinifi/article/details/86677534</a></p>
+        <p>Michael_PK </p>
+<p>大数据团队面试 </p>
+<p>spark Hadoop 的公有云和私有云</p>
+<h1 id="剑指大数据面试概述"><a href="#剑指大数据面试概述" class="headerlink" title="剑指大数据面试概述"></a>剑指大数据面试概述</h1><p>互联网寒冬</p>
+<p>简历投递的活跃度高</p>
+<p>大数据岗位   </p>
+<p>够硬的技术功底</p>
+<p>表现能力</p>
+<p>拓展和提升大数据相应的能力</p>
+<p>java Linux的基础知识</p>
+<p>具有一定的项目经</p>
+<h2 id="1-开篇"><a href="#1-开篇" class="headerlink" title="1 开篇"></a>1 开篇</h2><p>就业趋势</p>
+<p>高效Offer</p>
+<h2 id="2-大数据处理架构"><a href="#2-大数据处理架构" class="headerlink" title="2 大数据处理架构"></a>2 大数据处理架构</h2><p>总体架构</p>
+<p>系统设计</p>
+<h2 id="3-小文件引发的血案篇"><a href="#3-小文件引发的血案篇" class="headerlink" title="3 小文件引发的血案篇"></a>3 小文件引发的血案篇</h2><p>hdfs</p>
+<p>小文件问题</p>
+<h2 id="4-SQL-on-Hadoop"><a href="#4-SQL-on-Hadoop" class="headerlink" title="4 SQL on Hadoop"></a>4 SQL on Hadoop</h2><p>架构层面的调优</p>
+<p>语法层面调优</p>
+<p>执行框架底层调优</p>
+<p>sql的实战案例</p>
+<h2 id="5-数据倾斜篇"><a href="#5-数据倾斜篇" class="headerlink" title="5 数据倾斜篇"></a>5 数据倾斜篇</h2><p>什么是数据倾斜及产生的原因</p>
+<p>大数据中的shuffle </p>
+<p>产生数据倾斜的场景</p>
+<p>数据倾斜的解决方案</p>
+<h2 id="6-spark的调优篇"><a href="#6-spark的调优篇" class="headerlink" title="6 spark的调优篇"></a>6 spark的调优篇</h2><p>算子的合理选择给计算性能带来的深远影响</p>
+<p>合理的序列化整合saprk使用为性能提速</p>
+<p>如何保证流处理过程的零数据丢失</p>
+<p>流处理数据Sink到目的地的N中错误的操作剖析</p>
+<p>案例实战：</p>
+<p>如何基于Spark定制外部数据源</p>
+<h2 id="7-java篇"><a href="#7-java篇" class="headerlink" title="7 java篇"></a>7 java篇</h2><p>javaSE</p>
+<p>多线程</p>
+<p>  生产者和消费者</p>
+<p>jvm</p>
+<h2 id="8-jvm篇"><a href="#8-jvm篇" class="headerlink" title="8 jvm篇"></a>8 jvm篇</h2><p>ClassLoader机制</p>
+<p>内存模型</p>
+<p>垃圾回收</p>
+<p>  垃圾回收算法</p>
+<p>  垃圾回收器</p>
+<h2 id="9-其他篇"><a href="#9-其他篇" class="headerlink" title="9 其他篇"></a>9 其他篇</h2><p>  zookeeper </p>
+<p>  Linux</p>
+<h2 id="10-技巧篇"><a href="#10-技巧篇" class="headerlink" title="10 技巧篇"></a>10 技巧篇</h2><h1 id="2小文件引发的血案篇"><a href="#2小文件引发的血案篇" class="headerlink" title="2小文件引发的血案篇"></a>2小文件引发的血案篇</h1><h2 id="1-HDFS架构"><a href="#1-HDFS架构" class="headerlink" title="1 HDFS架构"></a>1 HDFS架构</h2><ul>
+<li>学习一个新框架</li>
+</ul>
+<p>​         百度 文档 不推荐</p>
+<p>​        开源框架存在问题</p>
+<ul>
+<li>推荐  官网+源码</li>
+</ul>
+<p>​       跪在坚持</p>
+<p>​       hadoop</p>
+<p>​       spark</p>
+<p>​       flink</p>
+<p>​       org.apache.xxxxx</p>
+<p>hadoop :HDFS/YARN/MapReduce3</p>
+<p>HDFS</p>
+<p>​    NameNode </p>
+<p>​     DataNode</p>
+<p>​     SecondaryNameNode</p>
+<p><img src="/blog4/2019/10/09/bigdataInterview/1570754974103.png" alt="1570754974103"></p>
+<p>​      </p>
+<p><img src="/blog4/2019/10/09/bigdataInterview/1570755208182.png" alt="1570755208182"></p>
+<p><img src="/blog4/2019/10/09/bigdataInterview/1570755234618.png" alt="1570755234618"></p>
+<p>概念<br>   Client<br>   NN: 一个，Single Problem Of  Failure  ====&gt; HA<br>      metadata： 谁  权限  文件对应block的信息<br>      文件名  副本信息（生产环境一般3个）<br>      副本机制 ======》》》 增加容错</p>
+<p>   DN： 多个<br>       存储数据<br>       和NN之间是有心跳的<br>   Block : File存入HDFS  按照block进行拆分  128M</p>
+<h2 id><a href="#" class="headerlink" title></a></h2><h2 id="2-HDFS的读写流程"><a href="#2-HDFS的读写流程" class="headerlink" title="2  HDFS的读写流程"></a>2  HDFS的读写流程</h2><p>HDFS的写流程</p>
+<p><img src="/blog4/2019/10/09/bigdataInterview/1570756400102.png" alt="1570756400102"></p>
+<p>HDFS的读流程</p>
+<p>请求最近的NameNode</p>
+<p><img src="/blog4/2019/10/09/bigdataInterview/1570756883318.png" alt="1570756883318"></p>
+<p>最终</p>
+<p><img src="/blog4/2019/10/09/bigdataInterview/1570757322881.png" alt="1570757322881"></p>
+<h2 id="-1"><a href="#-1" class="headerlink" title></a></h2><h2 id="-2"><a href="#-2" class="headerlink" title></a></h2><h2 id="3HDFS-HA"><a href="#3HDFS-HA" class="headerlink" title="3HDFS HA"></a>3HDFS HA</h2><p><img src="/blog4/2019/10/09/bigdataInterview/1570757447918.png" alt="1570757447918"></p>
+<p>NameNode挂掉 SecondaryNameNode</p>
+<p>Active Standby 同步NameNode的状态  共享  快速的切换</p>
+<p>两个独立的机器上</p>
+<p>一个活动状态一个备份状态</p>
+<p>Zookeeper 实现高可用<br>调度系统<br>调度机</p>
+<p>zookeeper进行管理<br>持久性的  临时性的</p>
+<p>HA</p>
+<p>主 和 备的 切换</p>
+<p>各自的进程监控<br>zookeeper状态的切换<br>Active Standby 数据的同步 共享</p>
+<p><img src="/blog4/2019/10/09/bigdataInterview/1570757932798.png" alt="1570757932798"></p>
+<p>。。。。很多</p>
+<p>Yarn的架构</p>
+<p>ResourceManager HA</p>
+<p><img src="/blog4/2019/10/09/bigdataInterview/1570758016524.png" alt="1570758016524"></p>
+<p>NN HA<br>    也有这个问题？ 什么导致<br>    小文件问题RM  HA<br>    遇到的问题： 起不来<br>NN HA<br>    也有这个问题？ 什么导致<br>    小文件问题</p>
+<p>RM  HA<br>    遇到的问题： 起不来<br>    SLA 如何保证？？ 99.99%  99.95%</p>
+<h2 id="4-小文件是什么"><a href="#4-小文件是什么" class="headerlink" title="4 小文件是什么"></a>4 小文件是什么</h2><h2 id="小文件的定义"><a href="#小文件的定义" class="headerlink" title="小文件的定义"></a>小文件的定义</h2><p>  小文件<br>   明显小于block size的文件  80%<br>   129M 128M + 1M</p>
+<h2 id="为什么产生小文件"><a href="#为什么产生小文件" class="headerlink" title="为什么产生小文件"></a>为什么产生小文件</h2><p>1 批处理  离线计算  小文件  特别是spark<br>  2 数据拷贝到HDFS 没有关注  数据搬迁（手工 Flume采集）没有做很好的设置<br>  3 MapReduce 作业 Reduce 没有做设置  Reduce 决定了输出文件的多少 shuffle合理的设置</p>
+<p>hadoop的目录 文件  blk是以元数据的方式存储下来的<br> 200字节</p>
+<h2 id="5-小文件给hadoop集群带来的瓶颈问题"><a href="#5-小文件给hadoop集群带来的瓶颈问题" class="headerlink" title="5 小文件给hadoop集群带来的瓶颈问题"></a>5 小文件给hadoop集群带来的瓶颈问题</h2><p><img src="/blog4/2019/10/09/bigdataInterview/1570758749614.png" alt="1570758749614"></p>
+<p>  100个小文件 IO<br>  n多个小文件的IO<br>1 IO开销大<br>2 Map task Reduce Task 的开启和销毁  （task）jvm的启动销毁<br>3 资源有限 </p>
+<h1 id="3-SQL-on-Hadoop"><a href="#3-SQL-on-Hadoop" class="headerlink" title="3 SQL on Hadoop"></a>3 SQL on Hadoop</h1><h2 id="1-SQL-on-Hadoop的常用框架"><a href="#1-SQL-on-Hadoop的常用框架" class="headerlink" title="1 SQL on Hadoop的常用框架"></a>1 SQL on Hadoop的常用框架</h2><p>常用的SQL on hadoop框架<br>   Hive  sql =====》》 对应的sql转换成对应的执行引擎的作业： MapReduce/Spark/Tez<br>   Impala：  内存<br>   Presto: 京东<br>   Drill: 跨数据源的查询<br>   Phoenix： HBase（RowKey） 性能高 API + 命令行 sql查询hbase的东西<br>   Spark SQL： 查询结构化数据</p>
+<p>   MetaStore  存储表的元数据信息<br>   框架之间是共享元数据信息的</p>
+<p>Hive on Spark: Hive社区  MR  Spark Tez<br>Spark SQL： Spark社区</p>
+<p>Spark  on Hive : X 错误的说法</p>
+<h2 id="2-行式存储-vs-列式存储"><a href="#2-行式存储-vs-列式存储" class="headerlink" title="2 行式存储 vs 列式存储"></a>2 行式存储 vs 列式存储</h2><p><img src="/blog4/2019/10/09/bigdataInterview/1570766947475.png" alt="1570766947475"></p>
+<p>列式存储 带来很大的性能提升</p>
+<h3 id="分表"><a href="#分表" class="headerlink" title="分表"></a>分表</h3><p>SQL  on Hadoop的调优策略</p>
+<p>架构层面调优</p>
+<p>架构调优之分表</p>
+<p>spark  ETL操作</p>
+<p>Flume ===&gt;&gt; HDFS===&gt;&gt; spark EL ===&gt;&gt; SQL==&gt;&gt;Spark SQL ==&gt; NoSQL</p>
+<p>前提</p>
+<p>1 行式</p>
+<p>2 每分钟2亿条数据</p>
+<p>3 500个作业访问这个大表</p>
+<h3 id="分区表"><a href="#分区表" class="headerlink" title="分区表"></a>分区表</h3><p>系统用户日志： who done</p>
+<h2 id="语法调优"><a href="#语法调优" class="headerlink" title="语法调优"></a>语法调优</h2><p>jvm重用</p>
+<p>MapTask/ReduceTask都是以进程存在的 ，有多少个task就有多少个jvm</p>
+<h3 id="推测执行"><a href="#推测执行" class="headerlink" title="推测执行"></a>推测执行</h3><p>1 集群中的机器负载是不同的</p>
+<p>2 集群中机器的配置不同</p>
+<p>3 数据倾斜</p>
+<p>一个job100个reduce 99个很快运行完，</p>
+<p>只有最后一个话费很撑的执行时间，那么这个job它的运行速度是取决于最慢的一个task</p>
+<p>长尾作业</p>
+<p><img src="/blog4/2019/10/09/bigdataInterview/1570781232285.png" alt="1570781232285"></p>
+<h3 id="并行执行"><a href="#并行执行" class="headerlink" title="并行执行"></a>并行执行</h3><p><img src="/blog4/2019/10/09/bigdataInterview/1570781275286.png" alt="1570781275286"></p>
+<p>默认没有开启</p>
+<p>并行的前提多个task之间是没有依赖的</p>
+<h3 id="jvm重用"><a href="#jvm重用" class="headerlink" title="jvm重用"></a>jvm重用</h3><p>MapTask 和ReduceTask 都是以进程的形式存在的，有多少个task就有多少个jvm</p>
+<p>当task运行完成结束之后，jvm就会被销毁，jvm的启动和销毁需要开销，每个jvm可以执行多个task</p>
+<p><img src="/blog4/2019/10/09/bigdataInterview/1570781573318.png" alt="1570781573318"></p>
+<h2 id="本章总结"><a href="#本章总结" class="headerlink" title="本章总结"></a>本章总结</h2><p>框架</p>
+<p>MetaStore</p>
+<p>行式存储  列式存储</p>
+<p>调优策略</p>
+<h1 id="4-Spark调优篇"><a href="#4-Spark调优篇" class="headerlink" title="4 Spark调优篇"></a>4 Spark调优篇</h1><h1 id="其他篇"><a href="#其他篇" class="headerlink" title="其他篇"></a>其他篇</h1><h2 id="分布式锁"><a href="#分布式锁" class="headerlink" title="分布式锁"></a>分布式锁</h2><p>什么是分布式锁：</p>
+<p>   公共资源： 同步、加锁</p>
+<p>下订单</p>
+<p> zookeeper 实现分布式锁</p>
+<p><img src="/blog4/2019/10/09/bigdataInterview/1570785172866.png" alt="1570785172866"></p>
+<p>创建一个springboot工程</p>
+<p>订单： id  itemid</p>
+<p>条目： id name  counts</p>
+<p>1 Spark 10</p>
+<p>2  Hadoop 6</p>
+<p>3  Flink  3 </p>
+<p>Spring Data 操作数据库</p>
+<p>springdatajpa + mysql</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">jpa:</span><br><span class="line">  hibernate:</span><br><span class="line">    ddl-auto: update</span><br><span class="line">  database: mysql</span><br></pre></td></tr></table></figure>
+
+<p>同一个业务的执行</p>
+<p>两个请求一块发起 两个订单同时创建成功</p>
+<p>案例演示</p>
+<p><img src="/blog4/2019/10/09/bigdataInterview/java/1570846583982.png" alt="1570846583982"></p>
+<p>自动创建表的配置</p>
+<p> 套路</p>
+<p>dao</p>
+<p>service</p>
+<p>controller</p>
+<p>domain</p>
+<p>业务层</p>
+<h2 id="代码详情"><a href="#代码详情" class="headerlink" title="代码详情"></a>代码详情</h2><p><a href="https://github.com/malingzhao/bigdata" target="_blank" rel="noopener">https://github.com/malingzhao/bigdata</a></p>
+<h2 id="Linu的内容"><a href="#Linu的内容" class="headerlink" title="Linu的内容"></a>Linu的内容</h2><h3 id="1-检索：-内容"><a href="#1-检索：-内容" class="headerlink" title="1 检索： 内容"></a>1 检索： 内容</h3><p>​    grep</p>
+<p>pk1.txt   pk2.txt</p>
+<p>grep “oop” pk*|grep “Spark”</p>
+<p>管道操作符  |</p>
+<p>多个命令  多个指令 连接起来</p>
+<p>前一个指令的结果作为下一个指令的输入</p>
+<p>ps -ef</p>
+<p>ps -ef| grep zookeeper </p>
+<p>ps -ef|grep zookeeper |grep -v “grep”</p>
+<p>-v过滤东西</p>
+<h3 id="2-对内容的统计"><a href="#2-对内容的统计" class="headerlink" title="2 对内容的统计"></a>2 对内容的统计</h3><p>awk </p>
+<p>获得第一列和第二列</p>
+<p>tab键分割的处理</p>
+<p>awk ‘{print $1,$2}’ file.txt</p>
+<p>拿到头</p>
+<p>awk “$1=8888 || NR=1” emp.txt</p>
+<p>逗号</p>
+<p>awk -F  “,”   ‘{print $1}’ sales.csv</p>
+<p>拿出来</p>
+<p>-F 指定分割符</p>
+<p>awk -F “,” ‘{print $0}’一行所有的数据</p>
+<h3 id="3-对内容的替换"><a href="#3-对内容的替换" class="headerlink" title="3 对内容的替换"></a>3 对内容的替换</h3><p>sed</p>
+<p><img src="/blog4/2019/10/09/bigdataInterview/1570782982177.png" alt="1570782982177"></p>
+<p>java的格式转换成scala的</p>
+<p>sed ‘s/String/val/‘  test.txt</p>
+<p>第一个原来的  替换成 val</p>
+<p>sed -i ‘s/String/val’ test.txt</p>
+<p>完成第二步的操作</p>
+<p>sed -i ‘s/;/ /‘  test.txt</p>
+<p>默认替换第一个</p>
+<p>sed -i  ‘s/Hadoop/hadoop/‘ test.txt</p>
+<p>想要全局替换</p>
+<p>sed -i  ‘s/Hadoop/hadoop/g’ test.txt</p>
+<h1 id="技巧篇"><a href="#技巧篇" class="headerlink" title="技巧篇"></a>技巧篇</h1><p>技术<br>一票决定的权利<br>公司的价值观</p>
+<h2 id="你的职业规划"><a href="#你的职业规划" class="headerlink" title="你的职业规划"></a>你的职业规划</h2><h2 id="为什么要离职"><a href="#为什么要离职" class="headerlink" title="为什么要离职"></a>为什么要离职</h2><p>薪资问题</p>
+<p>加班（抗压能力）</p>
+<p>周边的同事 领导</p>
+<p>项目</p>
+<p>==》》》》》》》》</p>
+<p>个人的发展：</p>
+<p>加分</p>
+<p>个人的成长空间</p>
+<p>离职原因不是个人原因</p>
+<p>不是频繁的离职</p>
+<p>找到更适合自己的平台</p>
+<p>家庭的原因：</p>
+<p>对象</p>
+<h2 id="你对加班的看法"><a href="#你对加班的看法" class="headerlink" title="你对加班的看法"></a>你对加班的看法</h2><p>常态</p>
+<p>公司基本上加班是早上11点</p>
+<p>住的地方就在公司附近</p>
+<p>有家</p>
+<p>单身</p>
+<h2 id="为什么选择我们公司"><a href="#为什么选择我们公司" class="headerlink" title="为什么选择我们公司"></a>为什么选择我们公司</h2><p>公司  海投</p>
+<p>打电话 为什么选择你们公司</p>
+<p>建议</p>
+<p>对于个人特别想去的</p>
+<p>建立一定要差异化</p>
+<p>投不同的公司 投不一样的简历</p>
+<p>编简历</p>
+<p>简历的包装</p>
+<p>行业</p>
+<p>公司</p>
+<p>岗位的描述</p>
+<p>喜欢 胜任</p>
+<h2 id="你的优缺点"><a href="#你的优缺点" class="headerlink" title="你的优缺点"></a>你的优缺点</h2><p>目的 你这个人对自己有没有对自己的清晰的认识</p>
+<p>自我认知</p>
+<p>实事求是</p>
+<p>优点：</p>
+<p>  全力以赴</p>
+<p>  适应能力</p>
+<p>缺点：</p>
+<p>   推辞能力 在意别人的看法 问问题 自己加班加点===》》（乐于助人，人缘，关系融洽）</p>
 
       
     </div>
@@ -510,7 +749,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://malingzhao.github.io/blog4/2019/10/08/dubbo/" title="dubbo">https://malingzhao.github.io/blog4/2019/10/08/dubbo/</a>
+    <a href="https://malingzhao.github.io/blog4/2019/10/09/bigdataInterview/" title="bigdataInterview">https://malingzhao.github.io/blog4/2019/10/09/bigdataInterview/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -532,14 +771,18 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/blog4/2019/10/09/Kylin/" rel="next" title="Kylin">
+                <i class="fa fa-chevron-left"></i> Kylin
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/blog4/2019/10/08/springcloud/" rel="prev" title="springcloud">
-                springcloud <i class="fa fa-chevron-right"></i>
+              <a href="/blog4/2019/10/09/categories/" rel="prev" title="categories">
+                categories <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -719,7 +962,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-dubbo的hello-world"><span class="nav-number">1.</span> <span class="nav-text">1. dubbo的hello-world</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#剑指大数据面试概述"><span class="nav-number">1.</span> <span class="nav-text">剑指大数据面试概述</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-开篇"><span class="nav-number">1.1.</span> <span class="nav-text">1 开篇</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-大数据处理架构"><span class="nav-number">1.2.</span> <span class="nav-text">2 大数据处理架构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-小文件引发的血案篇"><span class="nav-number">1.3.</span> <span class="nav-text">3 小文件引发的血案篇</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-SQL-on-Hadoop"><span class="nav-number">1.4.</span> <span class="nav-text">4 SQL on Hadoop</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-数据倾斜篇"><span class="nav-number">1.5.</span> <span class="nav-text">5 数据倾斜篇</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-spark的调优篇"><span class="nav-number">1.6.</span> <span class="nav-text">6 spark的调优篇</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-java篇"><span class="nav-number">1.7.</span> <span class="nav-text">7 java篇</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-jvm篇"><span class="nav-number">1.8.</span> <span class="nav-text">8 jvm篇</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-其他篇"><span class="nav-number">1.9.</span> <span class="nav-text">9 其他篇</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-技巧篇"><span class="nav-number">1.10.</span> <span class="nav-text">10 技巧篇</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2小文件引发的血案篇"><span class="nav-number">2.</span> <span class="nav-text">2小文件引发的血案篇</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-HDFS架构"><span class="nav-number">2.1.</span> <span class="nav-text">1 HDFS架构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">2.2.</span> <span class="nav-text"></span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-HDFS的读写流程"><span class="nav-number">2.3.</span> <span class="nav-text">2  HDFS的读写流程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#-1"><span class="nav-number">2.4.</span> <span class="nav-text"></span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#-2"><span class="nav-number">2.5.</span> <span class="nav-text"></span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3HDFS-HA"><span class="nav-number">2.6.</span> <span class="nav-text">3HDFS HA</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-小文件是什么"><span class="nav-number">2.7.</span> <span class="nav-text">4 小文件是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#小文件的定义"><span class="nav-number">2.8.</span> <span class="nav-text">小文件的定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么产生小文件"><span class="nav-number">2.9.</span> <span class="nav-text">为什么产生小文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-小文件给hadoop集群带来的瓶颈问题"><span class="nav-number">2.10.</span> <span class="nav-text">5 小文件给hadoop集群带来的瓶颈问题</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-SQL-on-Hadoop"><span class="nav-number">3.</span> <span class="nav-text">3 SQL on Hadoop</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-SQL-on-Hadoop的常用框架"><span class="nav-number">3.1.</span> <span class="nav-text">1 SQL on Hadoop的常用框架</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-行式存储-vs-列式存储"><span class="nav-number">3.2.</span> <span class="nav-text">2 行式存储 vs 列式存储</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分表"><span class="nav-number">3.2.1.</span> <span class="nav-text">分表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分区表"><span class="nav-number">3.2.2.</span> <span class="nav-text">分区表</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#语法调优"><span class="nav-number">3.3.</span> <span class="nav-text">语法调优</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#推测执行"><span class="nav-number">3.3.1.</span> <span class="nav-text">推测执行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#并行执行"><span class="nav-number">3.3.2.</span> <span class="nav-text">并行执行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jvm重用"><span class="nav-number">3.3.3.</span> <span class="nav-text">jvm重用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#本章总结"><span class="nav-number">3.4.</span> <span class="nav-text">本章总结</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-Spark调优篇"><span class="nav-number">4.</span> <span class="nav-text">4 Spark调优篇</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#其他篇"><span class="nav-number">5.</span> <span class="nav-text">其他篇</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#分布式锁"><span class="nav-number">5.1.</span> <span class="nav-text">分布式锁</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码详情"><span class="nav-number">5.2.</span> <span class="nav-text">代码详情</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Linu的内容"><span class="nav-number">5.3.</span> <span class="nav-text">Linu的内容</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-检索：-内容"><span class="nav-number">5.3.1.</span> <span class="nav-text">1 检索： 内容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-对内容的统计"><span class="nav-number">5.3.2.</span> <span class="nav-text">2 对内容的统计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-对内容的替换"><span class="nav-number">5.3.3.</span> <span class="nav-text">3 对内容的替换</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#技巧篇"><span class="nav-number">6.</span> <span class="nav-text">技巧篇</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#你的职业规划"><span class="nav-number">6.1.</span> <span class="nav-text">你的职业规划</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么要离职"><span class="nav-number">6.2.</span> <span class="nav-text">为什么要离职</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#你对加班的看法"><span class="nav-number">6.3.</span> <span class="nav-text">你对加班的看法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么选择我们公司"><span class="nav-number">6.4.</span> <span class="nav-text">为什么选择我们公司</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#你的优缺点"><span class="nav-number">6.5.</span> <span class="nav-text">你的优缺点</span></a></li></ol></li></ol></div>
             
 
           </div>
