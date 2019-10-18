@@ -1,0 +1,1397 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/blog4/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/blog4/lib/pace/pace-theme-center-atom.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/blog4/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/blog4/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/blog4/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog4/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog4/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog4/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/blog4/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="编辑器,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="1 sublime的安装sublime的安装非常简单 只需要官网下载直接安装即可 sublime Txet可谓是一个现在非常流行的编辑器 闲来无事 配置配置 首先要聊的是sublime的主题 主题的安装方式有很多种 最方便的是在先安装之间 crtl +shift+p 快捷键  我们在命令行输入Install package 会出现  各种各样的插件  主题之类的东西 我们可以选择自己喜欢的主题 经">
+<meta name="keywords" content="编辑器">
+<meta property="og:type" content="article">
+<meta property="og:title" content="sublime之旅">
+<meta property="og:url" content="https://malingzhao.github.io/blog4/2019/10/17/sublime/index.html">
+<meta property="og:site_name" content="我的个人博客">
+<meta property="og:description" content="1 sublime的安装sublime的安装非常简单 只需要官网下载直接安装即可 sublime Txet可谓是一个现在非常流行的编辑器 闲来无事 配置配置 首先要聊的是sublime的主题 主题的安装方式有很多种 最方便的是在先安装之间 crtl +shift+p 快捷键  我们在命令行输入Install package 会出现  各种各样的插件  主题之类的东西 我们可以选择自己喜欢的主题 经">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/17/sublime/1571387363469.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/17/sublime/1571387438280.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/17/sublime/1571387565045.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/17/sublime/1571387952930.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/17/sublime/1571388362123.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/17/sublime/1571388936841.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/17/sublime/1571388996036.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/17/sublime/1571389047056.png">
+<meta property="og:updated_time" content="2019-10-18T09:16:08.914Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="sublime之旅">
+<meta name="twitter:description" content="1 sublime的安装sublime的安装非常简单 只需要官网下载直接安装即可 sublime Txet可谓是一个现在非常流行的编辑器 闲来无事 配置配置 首先要聊的是sublime的主题 主题的安装方式有很多种 最方便的是在先安装之间 crtl +shift+p 快捷键  我们在命令行输入Install package 会出现  各种各样的插件  主题之类的东西 我们可以选择自己喜欢的主题 经">
+<meta name="twitter:image" content="https://malingzhao.github.io/blog4/2019/10/17/sublime/1571387363469.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/blog4/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://malingzhao.github.io/blog4/2019/10/17/sublime/">
+
+
+
+
+
+  <title>sublime之旅 | 我的个人博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+<a href="https://github.com/malingzhao" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#70B7FD; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/blog4/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">我的个人博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description"></h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/blog4/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/blog4/about/Introduce.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/blog4/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/blog4/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/blog4/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-schedule">
+          <a href="/blog4/schedule.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br>
+            
+            日程表
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-sitemap">
+          <a href="/blog4/sitemap.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>
+            
+            站点地图
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/blog4/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br>
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://malingzhao.github.io/blog4/blog4/2019/10/17/sublime/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="MaLingZhao">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/blog4/images/dongman.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的个人博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">sublime之旅</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-17T18:12:38+08:00">
+                2019-10-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog4/categories/工具/" itemprop="url" rel="index">
+                    <span itemprop="name">工具</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/blog4/2019/10/17/sublime/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/blog4/2019/10/17/sublime/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  3.2k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  18
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="1-sublime的安装"><a href="#1-sublime的安装" class="headerlink" title="1 sublime的安装"></a>1 sublime的安装</h1><p>sublime的安装非常简单</p>
+<p>只需要官网下载直接安装即可</p>
+<p>sublime Txet可谓是一个现在非常流行的编辑器</p>
+<p>闲来无事 配置配置</p>
+<p>首先要聊的是sublime的主题 主题的安装方式有很多种</p>
+<p>最方便的是在先安装之间 crtl +shift+p 快捷键</p>
+<p><img src="/blog4/2019/10/17/sublime/1571387363469.png" alt="1571387363469"></p>
+<p>我们在命令行输入Install package</p>
+<p>会出现  各种各样的插件</p>
+<p><img src="/blog4/2019/10/17/sublime/1571387438280.png" alt="1571387438280"></p>
+<p>主题之类的东西</p>
+<p>我们可以选择自己喜欢的主题</p>
+<p>经过一些简单的配置完全可以充当ide来使用</p>
+<p>但是一般我们下载了sublime之后并不能够使用 </p>
+<p>我们需要进入sublime插件的官方的地址</p>
+<p> <a href="https://packagecontrol.io/" target="_blank" rel="noopener">https://packagecontrol.io/</a> </p>
+<p><img src="/blog4/2019/10/17/sublime/1571387565045.png" alt="1571387565045"></p>
+<p><a href="https://packagecontrol.io/installation#st3" target="_blank" rel="noopener">https://packagecontrol.io/installation#st3</a> 需要注意的是</p>
+<p>我们可能不太好用此时我们可以找到view<img src="/blog4/2019/10/17/sublime/1571387952930.png" alt="1571387952930"></p>
+<p>执行这一步的操作</p>
+<p>然后将在哪个网站的链接copy过来 前提一定要有python的安装环境</p>
+<p>这个网上不了没关系 我们可以离线安装  </p>
+<h1 id="2-sublime插件"><a href="#2-sublime插件" class="headerlink" title="2 sublime插件"></a>2 sublime插件</h1><p>接下来介绍一下sublime的插件</p>
+<p>介绍一下SublimeCodeIntel自动补齐插件</p>
+<p>这款插件能够实现python代码的自动提示功能但是需要配置相应插件的settings文件实现路径的配置</p>
+<p>而我更喜欢的是使用anacona插件来进行python代码的编写，功能不比Pycharm差，但是需要自己相应的设置settiings文件</p>
+<p><img src="/blog4/2019/10/17/sublime/1571388362123.png" alt="1571388362123"></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br><span class="line">289</span><br><span class="line">290</span><br><span class="line">291</span><br><span class="line">292</span><br><span class="line">293</span><br><span class="line">294</span><br><span class="line">295</span><br><span class="line">296</span><br><span class="line">297</span><br><span class="line">298</span><br><span class="line">299</span><br><span class="line">300</span><br><span class="line">301</span><br><span class="line">302</span><br><span class="line">303</span><br><span class="line">304</span><br><span class="line">305</span><br><span class="line">306</span><br><span class="line">307</span><br><span class="line">308</span><br><span class="line">309</span><br><span class="line">310</span><br><span class="line">311</span><br><span class="line">312</span><br><span class="line">313</span><br><span class="line">314</span><br><span class="line">315</span><br><span class="line">316</span><br><span class="line">317</span><br><span class="line">318</span><br><span class="line">319</span><br><span class="line">320</span><br><span class="line">321</span><br><span class="line">322</span><br><span class="line">323</span><br><span class="line">324</span><br><span class="line">325</span><br><span class="line">326</span><br><span class="line">327</span><br><span class="line">328</span><br><span class="line">329</span><br><span class="line">330</span><br><span class="line">331</span><br><span class="line">332</span><br><span class="line">333</span><br><span class="line">334</span><br><span class="line">335</span><br><span class="line">336</span><br><span class="line">337</span><br><span class="line">338</span><br><span class="line">339</span><br><span class="line">340</span><br><span class="line">341</span><br><span class="line">342</span><br><span class="line">343</span><br><span class="line">344</span><br><span class="line">345</span><br><span class="line">346</span><br><span class="line">347</span><br><span class="line">348</span><br><span class="line">349</span><br><span class="line">350</span><br><span class="line">351</span><br><span class="line">352</span><br><span class="line">353</span><br><span class="line">354</span><br><span class="line">355</span><br><span class="line">356</span><br><span class="line">357</span><br><span class="line">358</span><br><span class="line">359</span><br><span class="line">360</span><br><span class="line">361</span><br><span class="line">362</span><br><span class="line">363</span><br><span class="line">364</span><br><span class="line">365</span><br><span class="line">366</span><br><span class="line">367</span><br><span class="line">368</span><br><span class="line">369</span><br><span class="line">370</span><br><span class="line">371</span><br><span class="line">372</span><br><span class="line">373</span><br><span class="line">374</span><br><span class="line">375</span><br><span class="line">376</span><br><span class="line">377</span><br><span class="line">378</span><br><span class="line">379</span><br><span class="line">380</span><br><span class="line">381</span><br><span class="line">382</span><br><span class="line">383</span><br><span class="line">384</span><br><span class="line">385</span><br><span class="line">386</span><br><span class="line">387</span><br><span class="line">388</span><br><span class="line">389</span><br><span class="line">390</span><br><span class="line">391</span><br><span class="line">392</span><br><span class="line">393</span><br><span class="line">394</span><br><span class="line">395</span><br><span class="line">396</span><br><span class="line">397</span><br><span class="line">398</span><br><span class="line">399</span><br><span class="line">400</span><br><span class="line">401</span><br><span class="line">402</span><br><span class="line">403</span><br><span class="line">404</span><br><span class="line">405</span><br><span class="line">406</span><br><span class="line">407</span><br><span class="line">408</span><br><span class="line">409</span><br><span class="line">410</span><br><span class="line">411</span><br><span class="line">412</span><br><span class="line">413</span><br><span class="line">414</span><br><span class="line">415</span><br><span class="line">416</span><br><span class="line">417</span><br><span class="line">418</span><br><span class="line">419</span><br><span class="line">420</span><br><span class="line">421</span><br><span class="line">422</span><br><span class="line">423</span><br><span class="line">424</span><br><span class="line">425</span><br><span class="line">426</span><br><span class="line">427</span><br><span class="line">428</span><br><span class="line">429</span><br><span class="line">430</span><br><span class="line">431</span><br><span class="line">432</span><br><span class="line">433</span><br><span class="line">434</span><br><span class="line">435</span><br><span class="line">436</span><br><span class="line">437</span><br><span class="line">438</span><br><span class="line">439</span><br><span class="line">440</span><br><span class="line">441</span><br><span class="line">442</span><br><span class="line">443</span><br><span class="line">444</span><br><span class="line">445</span><br><span class="line">446</span><br><span class="line">447</span><br><span class="line">448</span><br><span class="line">449</span><br><span class="line">450</span><br><span class="line">451</span><br><span class="line">452</span><br><span class="line">453</span><br><span class="line">454</span><br><span class="line">455</span><br><span class="line">456</span><br><span class="line">457</span><br><span class="line">458</span><br><span class="line">459</span><br><span class="line">460</span><br><span class="line">461</span><br><span class="line">462</span><br><span class="line">463</span><br><span class="line">464</span><br><span class="line">465</span><br><span class="line">466</span><br><span class="line">467</span><br><span class="line">468</span><br><span class="line">469</span><br><span class="line">470</span><br><span class="line">471</span><br><span class="line">472</span><br><span class="line">473</span><br><span class="line">474</span><br><span class="line">475</span><br><span class="line">476</span><br><span class="line">477</span><br><span class="line">478</span><br><span class="line">479</span><br><span class="line">480</span><br><span class="line">481</span><br><span class="line">482</span><br><span class="line">483</span><br><span class="line">484</span><br><span class="line">485</span><br><span class="line">486</span><br><span class="line">487</span><br><span class="line">488</span><br><span class="line">489</span><br><span class="line">490</span><br><span class="line">491</span><br><span class="line">492</span><br><span class="line">493</span><br><span class="line">494</span><br><span class="line">495</span><br><span class="line">496</span><br><span class="line">497</span><br><span class="line">498</span><br><span class="line">499</span><br><span class="line">500</span><br><span class="line">501</span><br><span class="line">502</span><br><span class="line">503</span><br><span class="line">504</span><br><span class="line">505</span><br><span class="line">506</span><br><span class="line">507</span><br><span class="line">508</span><br><span class="line">509</span><br><span class="line">510</span><br><span class="line">511</span><br><span class="line">512</span><br><span class="line">513</span><br><span class="line">514</span><br><span class="line">515</span><br><span class="line">516</span><br><span class="line">517</span><br><span class="line">518</span><br><span class="line">519</span><br><span class="line">520</span><br><span class="line">521</span><br><span class="line">522</span><br><span class="line">523</span><br><span class="line">524</span><br><span class="line">525</span><br><span class="line">526</span><br><span class="line">527</span><br><span class="line">528</span><br><span class="line">529</span><br><span class="line">530</span><br><span class="line">531</span><br><span class="line">532</span><br><span class="line">533</span><br><span class="line">534</span><br><span class="line">535</span><br><span class="line">536</span><br><span class="line">537</span><br><span class="line">538</span><br><span class="line">539</span><br><span class="line">540</span><br><span class="line">541</span><br><span class="line">542</span><br><span class="line">543</span><br><span class="line">544</span><br><span class="line">545</span><br><span class="line">546</span><br><span class="line">547</span><br><span class="line">548</span><br><span class="line">549</span><br><span class="line">550</span><br><span class="line">551</span><br><span class="line">552</span><br><span class="line">553</span><br><span class="line">554</span><br><span class="line">555</span><br><span class="line">556</span><br><span class="line">557</span><br><span class="line">558</span><br><span class="line">559</span><br><span class="line">560</span><br><span class="line">561</span><br><span class="line">562</span><br><span class="line">563</span><br><span class="line">564</span><br><span class="line">565</span><br><span class="line">566</span><br><span class="line">567</span><br><span class="line">568</span><br><span class="line">569</span><br><span class="line">570</span><br><span class="line">571</span><br><span class="line">572</span><br><span class="line">573</span><br><span class="line">574</span><br><span class="line">575</span><br><span class="line">576</span><br><span class="line">577</span><br><span class="line">578</span><br><span class="line">579</span><br><span class="line">580</span><br><span class="line">581</span><br><span class="line">582</span><br><span class="line">583</span><br><span class="line">584</span><br><span class="line">585</span><br><span class="line">586</span><br><span class="line">587</span><br><span class="line">588</span><br><span class="line">589</span><br><span class="line">590</span><br><span class="line">591</span><br><span class="line">592</span><br><span class="line">593</span><br><span class="line">594</span><br><span class="line">595</span><br><span class="line">596</span><br><span class="line">597</span><br><span class="line">598</span><br><span class="line">599</span><br><span class="line">600</span><br><span class="line">601</span><br><span class="line">602</span><br><span class="line">603</span><br><span class="line">604</span><br><span class="line">605</span><br><span class="line">606</span><br><span class="line">607</span><br><span class="line">608</span><br><span class="line">609</span><br><span class="line">610</span><br><span class="line">611</span><br><span class="line">612</span><br><span class="line">613</span><br><span class="line">614</span><br><span class="line">615</span><br><span class="line">616</span><br><span class="line">617</span><br><span class="line">618</span><br><span class="line">619</span><br><span class="line">620</span><br><span class="line">621</span><br><span class="line">622</span><br><span class="line">623</span><br><span class="line">624</span><br><span class="line">625</span><br><span class="line">626</span><br><span class="line">627</span><br><span class="line">628</span><br><span class="line">629</span><br><span class="line">630</span><br><span class="line">631</span><br><span class="line">632</span><br><span class="line">633</span><br><span class="line">634</span><br><span class="line">635</span><br><span class="line">636</span><br><span class="line">637</span><br><span class="line">638</span><br><span class="line">639</span><br><span class="line">640</span><br><span class="line">641</span><br><span class="line">642</span><br><span class="line">643</span><br><span class="line">644</span><br><span class="line">645</span><br><span class="line">646</span><br><span class="line">647</span><br><span class="line">648</span><br><span class="line">649</span><br><span class="line">650</span><br><span class="line">651</span><br><span class="line">652</span><br><span class="line">653</span><br><span class="line">654</span><br><span class="line">655</span><br><span class="line">656</span><br><span class="line">657</span><br><span class="line">658</span><br><span class="line">659</span><br><span class="line">660</span><br><span class="line">661</span><br><span class="line">662</span><br><span class="line">663</span><br><span class="line">664</span><br><span class="line">665</span><br><span class="line">666</span><br><span class="line">667</span><br><span class="line">668</span><br><span class="line">669</span><br><span class="line">670</span><br><span class="line">671</span><br><span class="line">672</span><br><span class="line">673</span><br><span class="line">674</span><br><span class="line">675</span><br><span class="line">676</span><br><span class="line">677</span><br><span class="line">678</span><br><span class="line">679</span><br><span class="line">680</span><br><span class="line">681</span><br><span class="line">682</span><br><span class="line">683</span><br><span class="line">684</span><br><span class="line">685</span><br><span class="line">686</span><br><span class="line">687</span><br><span class="line">688</span><br><span class="line">689</span><br><span class="line">690</span><br><span class="line">691</span><br><span class="line">692</span><br><span class="line">693</span><br><span class="line">694</span><br><span class="line">695</span><br></pre></td><td class="code"><pre><span class="line">/*</span><br><span class="line">    Anaconda default settings</span><br><span class="line">*/</span><br><span class="line">&#123;</span><br><span class="line">    /*</span><br><span class="line">        Anaconda Tooltip Options</span><br><span class="line"></span><br><span class="line">        Sublime Text 3 supports tooltips since build 3070; if anaconda</span><br><span class="line">        runs in a ST3 installation equal to or newer than build 3070, it</span><br><span class="line">        can be configured to show tooltips for documentation and signatures.</span><br><span class="line"></span><br><span class="line">        The options below set how the tooltip looks.</span><br><span class="line">    */</span><br><span class="line">    "anaconda_tooltip_theme": "popup",</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">        If you set the following option as true, anaconda will display the</span><br><span class="line">        signatures of the methods in a floating popup.</span><br><span class="line"></span><br><span class="line">        *note*: this only has an effect if "display_signatures" is true.</span><br><span class="line">    */</span><br><span class="line">    "enable_signatures_tooltip": true,</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">        If you set the following option as true, anaconda will display the</span><br><span class="line">        documentation of modules, classes or methods in a floating popup.</span><br><span class="line">    */</span><br><span class="line">    "enable_docstrings_tooltip": true,</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">        If the option below is set as true, anaconda will merge the</span><br><span class="line">        outputs of display_signatures and show documentation.</span><br><span class="line"></span><br><span class="line">        *note*: This only has an effect if tooltips are enabled.</span><br><span class="line">    */</span><br><span class="line">    "merge_signatures_and_doc": true,</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">        If you set the following option as true, anaconda will display the</span><br><span class="line">        signatures of the methods you are using while typing</span><br><span class="line">    */</span><br><span class="line">    "display_signatures": true,</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">        Auto project switching</span><br><span class="line"></span><br><span class="line">        If you set this to true, anaconda will detect project switches and</span><br><span class="line">        will reconnect a new JsonServer with the switched project</span><br><span class="line">        configuration.</span><br><span class="line">    */</span><br><span class="line">    "auto_project_switch": true,</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">        Python Builder Options</span><br><span class="line"></span><br><span class="line">        If enabled, anaconda will add your configured interpreter (if any)</span><br><span class="line">        into your per-project `build_systems` list if any, or create a</span><br><span class="line">        new one in case you don't define one yourself.</span><br><span class="line"></span><br><span class="line">        This is enabled by default; disable it if you experience slowdowns</span><br><span class="line">        when you switch between projects, and file an issue in GitHub.</span><br><span class="line">    */</span><br><span class="line">    "auto_python_builder_enabled": true,</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">        Debug Mode:</span><br><span class="line"></span><br><span class="line">        If you need to debug the jsonserver.py service for any reason, you</span><br><span class="line">        can configure the following options to make the plugin to connect</span><br><span class="line">        always to the same port in your local machine.</span><br><span class="line"></span><br><span class="line">        Procedure:</span><br><span class="line"></span><br><span class="line">            1. Set the debug_mode as true</span><br><span class="line">            2. Set the debug_port to your desired port</span><br><span class="line">            3. Close Sublime Text 3</span><br><span class="line">            4. cd to your Packages/Anaconda directory</span><br><span class="line">            5. Start the jsonserver manually:</span><br><span class="line">                python -B anaconda_server/jsonserver.py -p test 9999 DEBUG</span><br><span class="line">            6. Start your Sublime Text 3 and</span><br><span class="line"></span><br><span class="line">        Then your anaconda plugin will use the configured server, and you will</span><br><span class="line">        get debug messages in the terminal where you ran it.</span><br><span class="line">    */</span><br><span class="line">    "jsonserver_debug": false,</span><br><span class="line">    "jsonserver_debug_port": 9999,</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">        Default python interpreter</span><br><span class="line"></span><br><span class="line">        This can (and should) be overridden by project settings.</span><br><span class="line"></span><br><span class="line">        NOTE: if you want anaconda to lint and complete using a remote</span><br><span class="line">        python interpreter that runs the anaconda's minserver.py script</span><br><span class="line">        in a remote machine just use it's address:port as interpreter</span><br><span class="line">        for example:</span><br><span class="line"></span><br><span class="line">        	"python_interpreter": "tcp://my_remote.machine.com:19360"</span><br><span class="line">    */</span><br><span class="line">    "python_interpreter": "D:\\java\\anaconda\\python.exe",</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">        Disable anaconda completion</span><br><span class="line"></span><br><span class="line">        WARNING: setting this as true will totally disable anaconda completion.</span><br><span class="line">    */</span><br><span class="line">    "disable_anaconda_completion": false,</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">        Set those as true if you don't want Sublime Text regular completions</span><br><span class="line">    */</span><br><span class="line">    "suppress_word_completions":true,</span><br><span class="line">    "suppress_explicit_completions": true,</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">        If complete_parameters is true, anaconda will add function and class</span><br><span class="line">        parameters to its completions.</span><br><span class="line"></span><br><span class="line">        If complete_all_parameters is true, it will add all the possible</span><br><span class="line">        parameters, if it's false, it will add only required parameters</span><br><span class="line">    */</span><br><span class="line">    "complete_parameters": true,</span><br><span class="line">    "complete_all_parameters": false,</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">        If you set the following option as true, anaconda will complete</span><br><span class="line">        function parameters on keypress, when cursor is between function</span><br><span class="line">        brackets, independently from any other setting. It also works with</span><br><span class="line">        disabled tooltips.</span><br><span class="line"></span><br><span class="line">        Moreover you'll be able to choose at the moment of insertion, whether</span><br><span class="line">        inserting all parameters or just the required parameters.</span><br><span class="line"></span><br><span class="line">        Default keybindings (they only work between empty function brackets):</span><br><span class="line">        Tab      : insert required parameters</span><br><span class="line">        Ctrl+Tab : insert all parameters</span><br><span class="line">    */</span><br><span class="line">    "parameters_completion_on_keypress": true,</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">        The following set of options controls the autopep autoformatting</span><br><span class="line">        behaviour.</span><br><span class="line"></span><br><span class="line">        The full list of errors that can be fixed are:</span><br><span class="line"></span><br><span class="line">            E101 - Reindent all lines.</span><br><span class="line">            E111 - Reindent all lines.</span><br><span class="line">            E121 - Fix indentation to be a multiple of four.</span><br><span class="line">            E122 - Add absent indentation for hanging indentation.</span><br><span class="line">            E123 - Align closing bracket to match opening bracket.</span><br><span class="line">            E124 - Align closing bracket to match visual indentation.</span><br><span class="line">            E125 - Indent to distinguish line from next logical line.</span><br><span class="line">            E126 - Fix over-indented hanging indentation.</span><br><span class="line">            E127 - Fix visual indentation.</span><br><span class="line">            E128 - Fix visual indentation.</span><br><span class="line">            E129 - Indent to distinguish line from next logical line.</span><br><span class="line">            E201 - Remove extraneous whitespace.</span><br><span class="line">            E202 - Remove extraneous whitespace.</span><br><span class="line">            E203 - Remove extraneous whitespace.</span><br><span class="line">            E211 - Remove extraneous whitespace.</span><br><span class="line">            E221 - Fix extraneous whitespace around keywords.</span><br><span class="line">            E222 - Fix extraneous whitespace around keywords.</span><br><span class="line">            E223 - Fix extraneous whitespace around keywords.</span><br><span class="line">            E224 - Remove extraneous whitespace around operator.</span><br><span class="line">            E225 - Fix missing whitespace around operator.</span><br><span class="line">            E226 - Fix missing whitespace around operator.</span><br><span class="line">            E227 - Fix missing whitespace around operator.</span><br><span class="line">            E228 - Fix missing whitespace around operator.</span><br><span class="line">            E231 - Add missing whitespace.</span><br><span class="line">            E241 - Fix extraneous whitespace around keywords.</span><br><span class="line">            E242 - Remove extraneous whitespace around operator.</span><br><span class="line">            E251 - Remove whitespace around parameter '=' sign.</span><br><span class="line">            E261 - Fix spacing before comment hash.</span><br><span class="line">            E262 - Fix spacing after comment hash.</span><br><span class="line">            E271 - Fix extraneous whitespace around keywords.</span><br><span class="line">            E272 - Fix extraneous whitespace around keywords.</span><br><span class="line">            E273 - Fix extraneous whitespace around keywords.</span><br><span class="line">            E274 - Fix extraneous whitespace around keywords.</span><br><span class="line">            E301 - Add missing blank line.</span><br><span class="line">            E302 - Add missing 2 blank lines.</span><br><span class="line">            E303 - Remove extra blank lines.</span><br><span class="line">            E304 - Remove blank line following function decorator.</span><br><span class="line">            E401 - Put imports on separate lines.</span><br><span class="line">            E501 - Try to make lines fit within --max-line-length characters.</span><br><span class="line">            E502 - Remove extraneous escape of newline.</span><br><span class="line">            E701 - Put colon-separated compound statement on separate lines.</span><br><span class="line">            E702 - Put semicolon-separated compound statement on separate lines.</span><br><span class="line">            E703 - Put semicolon-separated compound statement on separate lines.</span><br><span class="line">            E711 - Fix comparison with None.</span><br><span class="line">            E712 - Fix comparison with boolean.</span><br><span class="line">            W191 - Reindent all lines.</span><br><span class="line">            W291 - Remove trailing whitespace.</span><br><span class="line">            W293 - Remove trailing whitespace on blank line.</span><br><span class="line">            W391 - Remove trailing blank lines.</span><br><span class="line">            E26  - Format block comments.</span><br><span class="line">            W6   - Fix various deprecated code (via lib2to3).</span><br><span class="line">            W602 - Fix deprecated form of raising exception.</span><br><span class="line">    */</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">        Autoformat files on save</span><br><span class="line"></span><br><span class="line">        This option is disabled by default, AutoPEP8 is really slow and it get</span><br><span class="line">        the file buffer read only while its working in the background.</span><br><span class="line"></span><br><span class="line">        Use this at your own risk.</span><br><span class="line">    */</span><br><span class="line">    "auto_formatting": true,</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">        Timeout for the autoformatting tool before fail</span><br><span class="line"></span><br><span class="line">        Note: Take into account that depending on the size of the file you</span><br><span class="line">        want to autoformat, this can take a while.</span><br><span class="line">    */</span><br><span class="line">    "auto_formatting_timeout": 1,  // seconds</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">        Enable unsafe changes:</span><br><span class="line">            https://github.com/hhatto/autopep8#more-advanced-usage</span><br><span class="line"></span><br><span class="line">        Set it as 0 if you are unsure here.</span><br><span class="line">    */</span><br><span class="line">    "aggressive": 0,</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">        Do not fix the errors listed here:</span><br><span class="line">        Note: By default we ignore E309 as this is not pep8 but it does</span><br><span class="line">        conflict with pep257 D211.</span><br><span class="line">    */</span><br><span class="line">    "autoformat_ignore":</span><br><span class="line">    [</span><br><span class="line">        <span class="string">"E309"</span></span><br><span class="line">    ],</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">        Fix only the errors listed here:</span><br><span class="line">    */</span><br><span class="line">    "autoformat_select":</span><br><span class="line">    [</span><br><span class="line">    ],</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">        Set the threshold limit for McCabe complexity checker.</span><br><span class="line">    */</span><br><span class="line">    "mccabe_threshold": 7,</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">        Set to false to disable Anaconda linting entirely.</span><br><span class="line">    */</span><br><span class="line">    "anaconda_linting": true,</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">        Sets the linting behaviour for anaconda:</span><br><span class="line"></span><br><span class="line">        "always" - Linting works always even while you are writing (in the background)</span><br><span class="line">        "load-save" - Linting works in file load and save only</span><br><span class="line">        "save-only" - Linting works in file save only</span><br><span class="line">    */</span><br><span class="line">    "anaconda_linting_behaviour": "save only",</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">        The minimum delay in seconds (fractional seconds are okay) before</span><br><span class="line">        a linter is run when the "anaconda_linting" setting is true. This allows</span><br><span class="line">        you to have background linting active, but defer the actual linting</span><br><span class="line">        until you are idle. When this value is greater than the built in linting delay,</span><br><span class="line">        errors are erased when the file is modified, since the assumption is</span><br><span class="line">        you don't want to see errors while you type (unless the option</span><br><span class="line">        anaconda_linter_persistent is true).</span><br><span class="line">    */</span><br><span class="line">    "anaconda_linter_delay": 0.5,</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">        If true, anaconda does not remove lint marks while you type.</span><br><span class="line">    */</span><br><span class="line">    "anaconda_linter_persistent": false,</span><br><span class="line"></span><br><span class="line">    // If true, anaconda draws gutter marks on line with errors.</span><br><span class="line">    "anaconda_gutter_marks": true,</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line"></span><br><span class="line">        If anaconda_gutter_marks is true, this determines what theme is used.</span><br><span class="line">        Theme 'basic' only adds dots and circles to gutter.</span><br><span class="line"></span><br><span class="line">        Other available themes are 'alpha', 'bright', 'dark', 'hard', "retina"</span><br><span class="line">        (for retina displays) and 'simple'. To see icons that will be used for</span><br><span class="line">        each theme check gutter_icon_themes folder in Anaconda package.</span><br><span class="line">    */</span><br><span class="line">    "anaconda_gutter_theme": "basic",</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">        If 'outline' (default), anaconda will outline error lines.</span><br><span class="line">        If 'fill', anaconda will fill the lines.</span><br><span class="line">        If 'solid_underline', anaconda will draw a solid underline below regions.</span><br><span class="line">        If 'stippled_underline', anaconda will draw a stippled underline below regions.</span><br><span class="line">        If 'squiggly_underline', anaconda will draw a squiggly underline below regions.</span><br><span class="line">        If 'none', anaconda will not draw anything on error lines.</span><br><span class="line">    */</span><br><span class="line">    "anaconda_linter_mark_style": "outline",</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">        If this is set to false, anaconda will not underline errors.</span><br><span class="line">    */</span><br><span class="line">    "anaconda_linter_underlines": true,</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">        If this is set to true, anaconda will show errors inline.</span><br><span class="line">    */</span><br><span class="line">    "anaconda_linter_phantoms": true,</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">        This determines what theme is phantoms used.</span><br><span class="line">    */</span><br><span class="line">    "anaconda_linter_phantoms_theme": "phantom",</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">        This determines what template is phantoms used.</span><br><span class="line">    */</span><br><span class="line">    "anaconda_linter_phantoms_template": "default",</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">        If anaconda_linter_show_errors_on_save is set to true, anaconda</span><br><span class="line">        will show a list of errors when you save the file.</span><br><span class="line"></span><br><span class="line">        This is disabled by default.</span><br><span class="line">    */</span><br><span class="line">    "anaconda_linter_show_errors_on_save": false,</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">        Use PyLint instead of PyFlakes and PEP-8</span><br><span class="line"></span><br><span class="line">        **** WARNING ****</span><br><span class="line"></span><br><span class="line">        - If you set this value as true, PyFlakes and pep8 will not be used.</span><br><span class="line">        - PyLint does *NOT* support linting buffers that are not already saved in</span><br><span class="line">          the file system.</span><br><span class="line"></span><br><span class="line">        **** WARNING ****</span><br><span class="line">    */</span><br><span class="line">    "use_pylint": false,</span><br><span class="line"></span><br><span class="line">    // Set this to false to turn pep8 checking off completely.</span><br><span class="line">    "pep8": true,</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">        If set, the given file will be used as configuration for pep8.</span><br><span class="line"></span><br><span class="line">        **** WARNING ****</span><br><span class="line"></span><br><span class="line">        - If this option is set to something other than false,</span><br><span class="line">          pep8_ignore and pep8_max_line_length will be silently ignored.</span><br><span class="line"></span><br><span class="line">        **** WARNING ****</span><br><span class="line">    */</span><br><span class="line">    "pep8_rcfile": false,</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">        A list of pep8 error numbers to ignore.</span><br><span class="line">        The list of error codes is in this file:</span><br><span class="line">            https://pycodestyle.readthedocs.io/en/latest/intro.html#error-codes.</span><br><span class="line">        Search for "Ennn:", where nnn is a 3-digit number.</span><br><span class="line">        E309 is ignored by default as it conflicts with pep257 E211</span><br><span class="line">    */</span><br><span class="line">    "pep8_ignore":</span><br><span class="line">    [</span><br><span class="line">        <span class="string">"E309"</span></span><br><span class="line">    ],</span><br><span class="line"></span><br><span class="line">    // Maximum line length for pep8</span><br><span class="line">    "pep8_max_line_length": 79,</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">        You can override the level of PEP8 errors altering this mapping.</span><br><span class="line">        WARNING: Be careful with this option, the only valid error level values</span><br><span class="line">        are:</span><br><span class="line"></span><br><span class="line">            * E for errors (reduced to Warning by default)</span><br><span class="line">            * W for warnings (reduced to Violation by default)</span><br><span class="line">            * V for convention violations</span><br><span class="line"></span><br><span class="line">        If you set a value that is not listed here, anaconda will ignore your</span><br><span class="line">        setting</span><br><span class="line">    */</span><br><span class="line">    "pep8_error_levels": &#123;"E": "W", "W": "V", "V": "V"&#125;,</span><br><span class="line"></span><br><span class="line">    // Set this to true to turn pep257 checking on.</span><br><span class="line">    "pep257": false,</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">        A list of pep257 error numbers to ignore.</span><br><span class="line"></span><br><span class="line">        The list can be found here: http://www.pydocstyle.org/en/2.1.1/error_codes.html</span><br><span class="line"></span><br><span class="line">        D209: Multi-line docstring should end with 1 blank line is ignored by</span><br><span class="line">        default as this rule has been deprecated.</span><br><span class="line"></span><br><span class="line">        D203: 1 blank line before class docstring is ignored by default, as</span><br><span class="line">        this rule has been deprecated.</span><br><span class="line">    */</span><br><span class="line">    "pep257_ignore":</span><br><span class="line">    [</span><br><span class="line">        <span class="string">"D203"</span>,</span><br><span class="line">        <span class="string">"D209"</span></span><br><span class="line">    ],</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">        You can ignore some of the "undefined name xxx" errors (comes</span><br><span class="line">        in handy if you work with post-processors, globals/builtins</span><br><span class="line">        available only at runtime, etc.). You can control what names</span><br><span class="line">        will be ignored with the user setting "pyflakes_ignore".</span><br><span class="line"></span><br><span class="line">        Example:</span><br><span class="line"></span><br><span class="line">        "pyflakes_ignore":</span><br><span class="line">            [</span><br><span class="line">                <span class="string">"some_custom_builtin_o_mine"</span>,</span><br><span class="line">                <span class="string">"A_GLOBAL_CONSTANT"</span></span><br><span class="line">            ],</span><br><span class="line">    */</span><br><span class="line">    "pyflakes_ignore":</span><br><span class="line">    [</span><br><span class="line">    ],</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">        Specific error types to ignore for pyflakes.</span><br><span class="line">        (Uncomment to ignore the below error types.)</span><br><span class="line">    */</span><br><span class="line">    "pyflakes_explicit_ignore":</span><br><span class="line">    [</span><br><span class="line">        // <span class="string">"Redefined"</span>,</span><br><span class="line">            <span class="string">"UnusedImport"</span>,</span><br><span class="line">        // <span class="string">"UndefinedName"</span>,</span><br><span class="line">        // <span class="string">"UndefinedLocal"</span>,</span><br><span class="line">        // <span class="string">"UnusedVariable,"</span>,</span><br><span class="line">        // <span class="string">"UndefinedExport"</span>,</span><br><span class="line">        // <span class="string">"DuplicateArgument"</span>,</span><br><span class="line">        // <span class="string">"RedefinedWhileUnused"</span></span><br><span class="line">    ],</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">        If set, the given file will be used as configuration for PyLint.</span><br><span class="line"></span><br><span class="line">        **** WARNING ****</span><br><span class="line"></span><br><span class="line">            - If this option is set to something different than false,</span><br><span class="line">              pylint_ignore will be silently ignored</span><br><span class="line"></span><br><span class="line">        **** WARNING ****</span><br><span class="line">    */</span><br><span class="line">    "pylint_rcfile": false,</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">        You can ignore specific PyLint error codes using this configuration.</span><br><span class="line"></span><br><span class="line">        We strongly suggest that you better configure your pylintrc file to</span><br><span class="line">        determine which type of error is important to you.</span><br><span class="line">    */</span><br><span class="line">    "pylint_ignore":</span><br><span class="line">    [</span><br><span class="line">        // <span class="string">"0201"</span></span><br><span class="line">    ],</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">        Ordinarily pyflakes will issue a warning when 'from foo import *'</span><br><span class="line">        is used; this is ignored by default.</span><br><span class="line"></span><br><span class="line">        If you want to see this warning, set this option to false.</span><br><span class="line">    */</span><br><span class="line">    "pyflakes_ignore_import_*": true,</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">        Set the following option to true if you want anaconda to check</span><br><span class="line">        the validity of your imports when the linting process is fired.</span><br><span class="line"></span><br><span class="line">        WARNING: take into account that anaconda compiles and import the</span><br><span class="line">        modules in the JsonServer memory segment in order to check this</span><br><span class="line">    */</span><br><span class="line">    "validate_imports": false,</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">    	MyPy</span><br><span class="line"></span><br><span class="line">    	Set the following option to true to enable MyPy checker.</span><br><span class="line">    */</span><br><span class="line">    "mypy": false,</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">        Set the following variable to set MyPy MYPYPATH.</span><br><span class="line">     */</span><br><span class="line">    "mypy_mypypath": "",</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">    	MyPy Silent Imports</span><br><span class="line"></span><br><span class="line">    	If true, mypy will not follow imports to .py files.</span><br><span class="line">    */</span><br><span class="line">    "mypy_silent_imports": false,</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">    	MyPy Almost Silent</span><br><span class="line"></span><br><span class="line">		Same as Silent Imports, but report the imports as errors.</span><br><span class="line">    */</span><br><span class="line">    "mypy_almost_silent": false,</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">        MyPy suppress stub warnings</span><br><span class="line"></span><br><span class="line">        Suppress stub warnings when silent_imports is not used.</span><br><span class="line">     */</span><br><span class="line">    "mypy_suppress_stub_warnings": true,</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">    	MyPy py2</span><br><span class="line"></span><br><span class="line">    	Use Python 2 mode.</span><br><span class="line">    */</span><br><span class="line">    "mypy_py2": false,</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">    	MyPy Disallow Untyped Calls</span><br><span class="line"></span><br><span class="line">    	Disallow calling functions without type annotations from</span><br><span class="line">    	functions with type annotations.</span><br><span class="line">    */</span><br><span class="line">    "mypy_disallow_untyped_calls": false,</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">    	MyPy Disallow Untyped Defs</span><br><span class="line"></span><br><span class="line">    	Disallow defining functions without type annotations or</span><br><span class="line">    	with incomplete type annotations.</span><br><span class="line">    */</span><br><span class="line">    "mypy_disallow_untyped_defs": false,</span><br><span class="line"></span><br><span class="line">	/*</span><br><span class="line">		MyPy Check Untyped Defs</span><br><span class="line"></span><br><span class="line">		Type check the interior of functions without type annotations.</span><br><span class="line">	*/</span><br><span class="line">	"mypy_check_untyped_defs": false,</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">        MyPy Fast Parser</span><br><span class="line"></span><br><span class="line">        Enable the experimental fast parser module of MyPy. In practice</span><br><span class="line">        this seems to be slower, however is required for support of some</span><br><span class="line">        recent syntax changes in Python.</span><br><span class="line">    */</span><br><span class="line">    "mypy_fast_parser": false,</span><br><span class="line"></span><br><span class="line">	/*</span><br><span class="line">		MyPy Custom Typing</span><br><span class="line"></span><br><span class="line">		Use a custom typing module. Uncomment to enable.</span><br><span class="line">	*/</span><br><span class="line">	// "mypy_custom_typing": "",</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">        Debug and development options</span><br><span class="line"></span><br><span class="line">        Use those options only for debugging and development purposes, they can</span><br><span class="line">        and will slowdown your Sublime Text</span><br><span class="line"></span><br><span class="line">        anconda_debug can be set as: false or profiler</span><br><span class="line"></span><br><span class="line">        If this is set as profiler, Anaconda will run a profiler on autocomplete</span><br><span class="line">        and print its results in the Sublime Text console.</span><br><span class="line"></span><br><span class="line">        NOTE: cProfile can't be imported in all the platforms, at least not in</span><br><span class="line">        Linux, this is an already reported bug:</span><br><span class="line"></span><br><span class="line">            http://www.sublimetext.com/forum/viewtopic.php?f=3&amp;t=13698</span><br><span class="line">            https://github.com/SublimeText/Issues/issues/127</span><br><span class="line"></span><br><span class="line">    */</span><br><span class="line">    "anaconda_debug": false,</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">        Anaconda test runner related configuration.</span><br><span class="line"></span><br><span class="line">        The anaconda's test runner is originally a contribution by NorthIsUp</span><br><span class="line">            https://github.com/NorthIsUp</span><br><span class="line"></span><br><span class="line">        Run Twisted's trial based test suite under a virtualenv project:</span><br><span class="line"></span><br><span class="line">            // this is your &lt;ProjectName&gt;.sublime-project file</span><br><span class="line">            "settings": &#123;</span><br><span class="line">                "python_interpreter": "~/.virtualenvs/project_name",</span><br><span class="line">                "test_command": "trial",</span><br><span class="line">                "test_virtualenv": "~/.virtualenvs/project_name",</span><br><span class="line">                "test_project_path": "project_src"</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        Run Django project tests using nose2 with a virtualenv:</span><br><span class="line"></span><br><span class="line">            // this is your &lt;ProjectName&gt;.sublime-project file</span><br><span class="line">            "settings": &#123;</span><br><span class="line">                "python_interpreter": "~/.virtualenvs/django_project_name",</span><br><span class="line">                "test_command": "./manage.py test --settings=tests.settings --noinput"</span><br><span class="line">            &#125;</span><br><span class="line">    */</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">        Theme to use in the output panel.</span><br><span class="line"></span><br><span class="line">        Uncomment the line below to override the default tests runner</span><br><span class="line">        output, by default the theme is PythonConsoleDark.hidden-tmTheme</span><br><span class="line">        NOTE: The file specified here **MUST** exists in `Packages/Anaconda`</span><br><span class="line">    */</span><br><span class="line">    //"test_runner_theme": "PythonConsoleDark.hidden-tmTheme",</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">        Uncomment the line below to execute any command before try to execute</span><br><span class="line">        your test suite. (if you need to run more than one command, just use a</span><br><span class="line">        list of commands ["cmd1", "cmd2", ...])</span><br><span class="line"></span><br><span class="line">    */</span><br><span class="line">    // "test_before_command": "",</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">        Command to execute tests with. nosetests by default</span><br><span class="line">    */</span><br><span class="line">    "test_command": "nosetests",</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">        Uncomment the line below to execute any command after execute</span><br><span class="line">        your test suite.</span><br><span class="line">    */</span><br><span class="line">    //"test_after_command": "",</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">        This is the delimiter between the module and the class.</span><br><span class="line">    */</span><br><span class="line">    "test_delimeter": ":",</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">        This is the delimiter between the class and the method.</span><br><span class="line">    */</span><br><span class="line">    "test_method_delimeter": ".",</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">        Whether to include full path of the test file/method.</span><br><span class="line">    */</span><br><span class="line">    "test_include_full_path": true,</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">        Uncomment the line below to enable filepath-based test runner</span><br><span class="line">        patterns like those required for py.test.</span><br><span class="line">    */</span><br><span class="line">    // "test_filepath_patterns": true,</span><br><span class="line"></span><br><span class="line">    /* Uncomment the line below to use a virtualenv for your tests */</span><br><span class="line">    //"test_virtualenv": ""</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">        Uncomment the line below to add a top level path when you ask</span><br><span class="line">        anaconda to run all your project tests.</span><br><span class="line"></span><br><span class="line">        Note: this is need for example to can run tests with `twisted's trial`</span><br><span class="line">    */</span><br><span class="line">    // "test_project_path": "./"</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">    	Set this option to true if you get warnings about anaconda not</span><br><span class="line">    	being able to connect to your localhost on ST3 startup but it</span><br><span class="line">    	works normally after closing the error message.</span><br><span class="line"></span><br><span class="line">    	NOTE: Ignoring errors may be dangerous.</span><br><span class="line">     */</span><br><span class="line"></span><br><span class="line">     /* Parameters to include after test_command specific to testing scope */</span><br><span class="line">     "test_params": &#123;</span><br><span class="line">        "current_file_tests": "",</span><br><span class="line">        "current_test": "",</span><br><span class="line">        "project_tests": ""</span><br><span class="line">    &#125;,</span><br><span class="line">	"swallow_startup_errors": false,</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">        If this is set to true, anaconda will unload plugins that</span><br><span class="line">        make it malfunction interfering with it</span><br><span class="line">    */</span><br><span class="line">    "auto_unload_conflictive_plugins": true,</span><br><span class="line">    /*</span><br><span class="line">        If this is set to true, anaconda will search for environment hook</span><br><span class="line">        files in any directory level down to the one the current file is in</span><br><span class="line">        as opposed to the default where it will only search down to the</span><br><span class="line">        root of your working directory.</span><br><span class="line">    */</span><br><span class="line">    "anaconda_allow_project_environment_hooks": false</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// vim: set ft=javascript:</span><br></pre></td></tr></table></figure>
+
+<p>这是相应的插件的设置，我们可以尝试</p>
+<p>但是建议将这个设置关闭 否则会影响anaconda的自动提示 （sublime的自动提示和anaconda的提示出现冲突） </p>
+<p>两个都设置成true</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"suppress_word_completions"</span>:<span class="literal">true</span>,</span><br><span class="line">   <span class="string">"suppress_explicit_completions"</span>: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<p>python.exe 的路径</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"python_interpreter"</span>: <span class="string">"D:\\java\\anaconda\\python.exe"</span></span><br></pre></td></tr></table></figure>
+
+<p>代码检查的配置也有我们大家可以进行搜索进行相应的设置</p>
+<p>当然了sublime几乎支持当下所有热门的编程语言</p>
+<p>插件的安装还有一种安装方式 直接下载github上的主题或者插件进行文件的安装</p>
+<p><img src="/blog4/2019/10/17/sublime/1571388936841.png" alt="1571388936841"></p>
+<p>打开文件位置</p>
+<p>将我们需要安装的东西放到里面去就行了 ，</p>
+<p>主题的话点击theme</p>
+<p><img src="/blog4/2019/10/17/sublime/1571388996036.png" alt="1571388996036"></p>
+<p>安装完成之后就会进行自动的切换</p>
+<p><img src="/blog4/2019/10/17/sublime/1571389047056.png" alt="1571389047056"></p>
+<p>Theme- Afterglow这个插件就是我在github下载然后拖进去的</p>
+<p>当然了，插件很多选择自己喜欢的就好了，自己也就业余的研究一下，但是我想用这款编译器写go，python，C++，htmlo应该挺爽的 其配置插件之后，简单易用。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+      <div>
+        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/blog4/images/pp.png" alt="MaLingZhao wechat" style="width: 200px; max-width: 100%;">
+    <div>扫一扫上面的二维码 加qq群共同学习</div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/blog4/images/zf.png
+" alt="MaLingZhao 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/blog4/images/zfb.png" alt="MaLingZhao 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+      <div id="bitcoin" style="display: inline-block">
+        <img id="bitcoin_qr" src="/images/bitcoin.png" alt="MaLingZhao 比特币">
+        <p>比特币</p>
+      </div>
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    MaLingZhao
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://malingzhao.github.io/blog4/2019/10/17/sublime/" title="sublime之旅">https://malingzhao.github.io/blog4/2019/10/17/sublime/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/blog4/tags/编辑器/" rel="tag"># 编辑器</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/blog4/2019/10/17/mageMall2/" rel="next" title="马哥商城续">
+                <i class="fa fa-chevron-left"></i> 马哥商城续
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/blog4/2019/10/18/BlockChain/" rel="prev" title="BlockChain">
+                BlockChain <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_fav">收藏夹</a>
+<a class="jiathis_button_copy">复制网址</a>
+<a class="jiathis_button_email">邮件</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone">QQ空间</a>
+<a class="jiathis_button_tqq">腾讯微博</a>
+<a class="jiathis_button_douban">豆瓣</a>
+<a class="jiathis_button_share">一键分享</a>
+
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript">
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/blog4/images/dongman.png" alt="MaLingZhao">
+            
+              <p class="site-author-name" itemprop="name">MaLingZhao</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/blog4/archives/">
+              
+                  <span class="site-state-item-count">28</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/blog4/categories/index.html">
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/blog4/tags/index.html">
+                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/malingzhao" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://weibo.com/u/7279469056/home" target="_blank" title="weibo">
+                      
+                        <i class="fa fa-fw fa-weibo"></i>weibo</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://malingzhao.github.io/blog4" title="Title" target="_blank">Title</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://malingzhao.github.io/blog4" title="我的博客" target="_blank">我的博客</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-sublime的安装"><span class="nav-number">1.</span> <span class="nav-text">1 sublime的安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-sublime插件"><span class="nav-number">2.</span> <span class="nav-text">2 sublime插件</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">MaLingZhao</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">84.3k</span>
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/blog4/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog4/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog4/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog4/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog4/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog4/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog4/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog4/lib/three/three-waves.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/blog4/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/blog4/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/blog4/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/blog4/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/blog4/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/blog4/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/blog4/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: '8TOqOwTzIDHvfpCddf1zIWum-gzGzoHsz',
+        appKey: 'EQrtySSrAvcKm4R7okLaXIIP',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/blog4/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
