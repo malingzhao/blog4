@@ -86,18 +86,22 @@
 
 
 
-<meta name="description" content="1 机器学习的简单介绍1.1  机器学习的数据文件csv mysql     性能瓶颈 读取速度 格式不太符合机器学习要求的数据的格式  pandas： 读取数据的工具 python cpython  jpython dataFrame的缺失值  数据转换 重复值  需要去重    特征抽取  等等数据处理 1.2机器学习算法的分类：监督学习（预测）**** 分类 k-紧邻算法  贝叶斯分类  决">
+<meta name="description" content="1 机器学习工具理论和技术小前提在学习机器学习之前首先应该具备一定的数学基础 还有就是掌握python基本库的使用 主要就是numpy,pandas,和matplotlib 安装好python的环境 anaconda的安装推荐安装anaconda的环境 anaconda可以切换不同的虚拟环境 它是一个方便的pythob包的管理和环境管理软件，可以用它配置不同的项目环境 在安装的时候如果需要在cmd">
 <meta name="keywords" content="机器学习">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MachineLearning">
 <meta property="og:url" content="https://malingzhao.github.io/blog4/2019/05/16/MachineLearning/index.html">
 <meta property="og:site_name" content="我的个人博客">
-<meta property="og:description" content="1 机器学习的简单介绍1.1  机器学习的数据文件csv mysql     性能瓶颈 读取速度 格式不太符合机器学习要求的数据的格式  pandas： 读取数据的工具 python cpython  jpython dataFrame的缺失值  数据转换 重复值  需要去重    特征抽取  等等数据处理 1.2机器学习算法的分类：监督学习（预测）**** 分类 k-紧邻算法  贝叶斯分类  决">
+<meta property="og:description" content="1 机器学习工具理论和技术小前提在学习机器学习之前首先应该具备一定的数学基础 还有就是掌握python基本库的使用 主要就是numpy,pandas,和matplotlib 安装好python的环境 anaconda的安装推荐安装anaconda的环境 anaconda可以切换不同的虚拟环境 它是一个方便的pythob包的管理和环境管理软件，可以用它配置不同的项目环境 在安装的时候如果需要在cmd">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-10-16T11:59:02.365Z">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/16/MachineLearning/1571989432412.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/16/MachineLearning/1571989582040.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/16/MachineLearning/1572081183898.png">
+<meta property="og:updated_time" content="2019-10-26T09:45:53.720Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MachineLearning">
-<meta name="twitter:description" content="1 机器学习的简单介绍1.1  机器学习的数据文件csv mysql     性能瓶颈 读取速度 格式不太符合机器学习要求的数据的格式  pandas： 读取数据的工具 python cpython  jpython dataFrame的缺失值  数据转换 重复值  需要去重    特征抽取  等等数据处理 1.2机器学习算法的分类：监督学习（预测）**** 分类 k-紧邻算法  贝叶斯分类  决">
+<meta name="twitter:description" content="1 机器学习工具理论和技术小前提在学习机器学习之前首先应该具备一定的数学基础 还有就是掌握python基本库的使用 主要就是numpy,pandas,和matplotlib 安装好python的环境 anaconda的安装推荐安装anaconda的环境 anaconda可以切换不同的虚拟环境 它是一个方便的pythob包的管理和环境管理软件，可以用它配置不同的项目环境 在安装的时候如果需要在cmd">
+<meta name="twitter:image" content="https://malingzhao.github.io/blog4/2019/05/16/MachineLearning/1571989432412.png">
 
 
 
@@ -425,7 +429,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  139
+                  2.9k
                 </span>
               
 
@@ -441,7 +445,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  10
                 </span>
               
             </div>
@@ -462,21 +466,139 @@
       
 
       
-        <h1 id="1-机器学习的简单介绍"><a href="#1-机器学习的简单介绍" class="headerlink" title="1 机器学习的简单介绍"></a>1 机器学习的简单介绍</h1><h2 id="1-1-机器学习的数据"><a href="#1-1-机器学习的数据" class="headerlink" title="1.1  机器学习的数据"></a>1.1  机器学习的数据</h2><p>文件csv</p>
-<p>mysql   </p>
-<ol>
-<li>性能瓶颈 读取速度</li>
-<li>格式不太符合机器学习要求的数据的格式</li>
-</ol>
-<p>pandas： 读取数据的工具</p>
-<p>python cpython  jpython</p>
-<p>dataFrame的缺失值  数据转换</p>
-<p>重复值  需要去重    特征抽取  等等数据处理</p>
-<h2 id="1-2机器学习算法的分类："><a href="#1-2机器学习算法的分类：" class="headerlink" title="1.2机器学习算法的分类："></a>1.2机器学习算法的分类：</h2><p><strong>监督学习</strong>（<strong>预测</strong>）****</p>
-<p>分类 k-紧邻算法  贝叶斯分类  决策树与随机森林</p>
-<p>逻辑回归 神经网络  </p>
-<p><strong>无监督学习</strong></p>
-<p>聚类  kmeans</p>
+        <h1 id="1-机器学习工具"><a href="#1-机器学习工具" class="headerlink" title="1 机器学习工具"></a>1 机器学习工具</h1><h2 id="理论和技术小前提"><a href="#理论和技术小前提" class="headerlink" title="理论和技术小前提"></a>理论和技术小前提</h2><p>在学习机器学习之前首先应该具备一定的数学基础</p>
+<p>还有就是掌握python基本库的使用</p>
+<p>主要就是numpy,pandas,和matplotlib</p>
+<p>安装好python的环境</p>
+<h2 id="anaconda的安装"><a href="#anaconda的安装" class="headerlink" title="anaconda的安装"></a>anaconda的安装</h2><p>推荐安装anaconda的环境</p>
+<p>anaconda可以切换不同的虚拟环境</p>
+<p>它是一个方便的pythob包的管理和环境管理软件，可以用它配置不同的项目环境</p>
+<p>在安装的时候如果需要在cmd中使用我们的环境</p>
+<p>我们需要配置环境变量</p>
+<p>在linux的操作系统中也是一样的</p>
+<p>conda env –list 查看我们安装的anaconda的虚拟环境</p>
+<p>我们会使用python的不同版本</p>
+<p>如果使用2.7版本我们只需要敲入命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda create -n your_env_name python=2.7</span><br></pre></td></tr></table></figure>
+
+<p>如果我们使用的是python的3.x版本</p>
+<p>比如3.5 的版本同时呢我们还需要pandas numpy的虚拟环境</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda create -n your_env_name python=<span class="number">3.5</span> numpy pandas</span><br></pre></td></tr></table></figure>
+
+<p>当我们指定的时候</p>
+<p>如果我们不指定版本的话 它默认显示的是最新的版本</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda update --all</span><br></pre></td></tr></table></figure>
+
+<p> 例如我现在要创建一个名叫 learningpy的基于py3的环境 </p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">conda update --all</span><br><span class="line">conda create -n learningpy python=3.7</span><br></pre></td></tr></table></figure>
+
+<p>之后会出现让我们安装一些包</p>
+<p><img src="/blog4/2019/05/16/MachineLearning/1571989432412.png" alt="1571989432412"></p>
+<p>比如你要安装TensorFlow，而TensorFlow会用到很多像前置包像pandas、matiplot等，如果你在单纯的python下没有安装pandas等包就直接安装TensorFlow，那么和有可能无法使用，而使用conda安装TensorFlow将会询问你并自动帮你把缺少的前置包安装好<br> 创建完新的环境我们查看环境列表</p>
+<p> 只要你的硬盘够大，你就可以创造很多个不同的环境<br>那么现在我们有多个环境了，如何切换环境呢？<br>windows </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">activate 环境名`  </span><br><span class="line"> 退出时记得退出命令哦</span><br><span class="line"> `deactivate`  </span><br><span class="line"> linux和mac用户的命令不一样</span><br><span class="line"> `source source activate 环境名`  </span><br><span class="line"> `source deactivate 环境名</span><br></pre></td></tr></table></figure>
+
+<h2 id="anaconda包管理"><a href="#anaconda包管理" class="headerlink" title="anaconda包管理"></a>anaconda包管理</h2><p>上文我们提到了创建环境时的包管理，那么我们创建好环境后如何进行包的安装、更新和卸载呢？<br> 当然我们任然可以通过pip安装更新删除<br> 这里我们介绍conda</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">conda <span class="built_in">list</span> 列举当前环境下的所有包</span><br><span class="line">conda <span class="built_in">list</span> -n packagename 列举某个特定名称包</span><br><span class="line">conda install packagename 为当前环境安装某包</span><br><span class="line">conda install -n envname packagename 为某环境安装某包</span><br><span class="line">conda search packagename 搜索某包</span><br><span class="line">conda updata packagename 更新当前环境某包</span><br><span class="line">conda update -n envname packagename 更新某特定环境某包</span><br><span class="line">conda remove packagename 删除当前环境某包</span><br><span class="line">conda remove -n envname packagename 删除某环境环境某包</span><br><span class="line">conda本身和anaconda、python本身也算包</span><br><span class="line">conda update conda</span><br><span class="line">conda update anaconda</span><br><span class="line">conda update python</span><br></pre></td></tr></table></figure>
+
+<p>conda默认源可能速度比较慢<br> 可以添加其他源，常用的有<a href="https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/" target="_blank" rel="noopener">清华TUNA</a></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">conda config --<span class="keyword">add</span> channels https:<span class="comment">//mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/</span></span><br><span class="line">conda config --<span class="keyword">add</span> channels https:<span class="comment">//mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/</span></span><br><span class="line">conda config --<span class="keyword">set</span> show_channel_urls yes 在包后面显示来源</span><br></pre></td></tr></table></figure>
+
+<p>第三条执行安装包时会显示来自哪个源，一目了然</p>
+<p><img src="/blog4/2019/05/16/MachineLearning/1571989582040.png" alt="1571989582040"></p>
+<p>source.png</p>
+<p>教育网用户可以添加ipv6源，速度很快</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">conda config --<span class="keyword">add</span> channels https:<span class="comment">//mirrors6.tuna.tsinghua.edu.cn/anaconda/pkgs/free/</span></span><br><span class="line">conda config --<span class="keyword">add</span> channels https:<span class="comment">//mirrors6.tuna.tsinghua.edu.cn/anaconda/pkgs/main/</span></span><br><span class="line">conda config --<span class="keyword">set</span> show_channel_urls yes 在包后面显示来源</span><br></pre></td></tr></table></figure>
+
+<h2 id="anaconda实现原理解析"><a href="#anaconda实现原理解析" class="headerlink" title="anaconda实现原理解析"></a>anaconda实现原理解析</h2><p>anaconda在目录下的envs文件夹保存了环境配置，也就是把所有的安装在这个环境下的包放在同一个文件夹中<br> 当创建一个新环境时，anaconda将在envs中创建一个新的文件夹，这个文件夹包括了你安装在这个环境中的所有包<br> anaconda通过巧妙的包管理解决的一个大难题，确实方便了很多。<br> 下一期会讲如何在第三方软件中使用anaconda的不同环境配置。</p>
+<h1 id="2-机器学习简介"><a href="#2-机器学习简介" class="headerlink" title="2 机器学习简介"></a>2 机器学习简介</h1><h2 id="2-1-什么是机器学习"><a href="#2-1-什么是机器学习" class="headerlink" title="2.1  什么是机器学习"></a>2.1  什么是机器学习</h2><p> 学习是人工智能的一个分支。人工智能的研究是从以“推理”为重点到以“知识”为重点，再到以“学习”为重点，一条自然、清晰的脉络。机器学习是实现人工智能的一个途径，即以机器学习为手段解决人工智能中的问题。<strong>机器学习算法是一类从数据中自动分析获得规律（模型），并利用规律对未知数据进行预测的算法</strong>  </p>
+<p><img src="/blog4/2019/05/16/MachineLearning/1572081183898.png" alt="1572081183898"></p>
+<h2 id="2-2-为什么需要机器学习"><a href="#2-2-为什么需要机器学习" class="headerlink" title="2.2 为什么需要机器学习"></a>2.2 为什么需要机器学习</h2><p> 21世纪机器学习又一次被人们关注，而这些关注的背后是因为整个环境的改变，我们的数据量越来越多，硬件越来越强悍。急需要解放人的生产力，自动去寻找数据的规律。解决更多专业领域的问题。机器学习已广泛应用于数据挖掘、计算机视觉、自然语言处理、生物特征识别、搜索引擎、医学诊断、检测信用卡欺诈、证券市场分析、DNA序列测序、语音和手写识别、战略游戏和机器人等领域. </p>
+<h2 id="2-3-开发机器学习的步骤是什么"><a href="#2-3-开发机器学习的步骤是什么" class="headerlink" title="2.3 开发机器学习的步骤是什么"></a>2.3 开发机器学习的步骤是什么</h2><blockquote>
+<p>1 收集数据</p>
+</blockquote>
+<p>​     网络爬虫     </p>
+<p>​    从RSS反馈或者API中得到信息、设备发送过来的实测数据。 </p>
+<blockquote>
+<p>2 准备输入数据</p>
+</blockquote>
+<p>​    数据的格式必须必符合要求</p>
+<blockquote>
+<p>3 分析输入数据</p>
+</blockquote>
+<p>​    判断数据中有没有垃圾数据</p>
+<blockquote>
+<p>4 训练算法</p>
+</blockquote>
+<p>​     机器学习算法从这一步才真正开始学习。如果使用无监督学习算法，由于不存在   目标变量值，故而也不需要训练算法，所有与算法相关的内容在第5步 </p>
+<p>​    </p>
+<blockquote>
+<p>5 测试算法</p>
+</blockquote>
+<p>使用上一步机器学习学到的知识信息  ，评估算法的准确率，根据需要重新训练你的算法</p>
+<h2 id="2-4-需要具备的技能"><a href="#2-4-需要具备的技能" class="headerlink" title="2.4 需要具备的技能"></a>2.4 需要具备的技能</h2><p>1 学会分析问题</p>
+<p>2 掌握算法的基本能思想，学会对问题用相应的算法解决</p>
+<p>3 学会试用库和框架解决问题</p>
+<h1 id="3-sklearn与特征工程"><a href="#3-sklearn与特征工程" class="headerlink" title="3 sklearn与特征工程"></a>3 sklearn与特征工程</h1><h2 id="3-1-数据来源-类型"><a href="#3-1-数据来源-类型" class="headerlink" title="3.1 数据来源 类型"></a>3.1 数据来源 类型</h2><p> 大部分的数据都来自已有的数据库，如果没有的话也可以交给很多爬虫工程师去采集，来提供。也可以来自平时的记录，反正数据无处不在，大都是可用的。 </p>
+<h3 id="数据的类型"><a href="#数据的类型" class="headerlink" title="数据的类型"></a>数据的类型</h3><p>按照机器学习的数据分类我们可以将数据分成：</p>
+<ul>
+<li>标称型：标称型目标变量的结果只在有限目标集中取值，如真与假(标称型目标变量主要用于分类)</li>
+<li>数值型：数值型目标变量则可以从无限的数值集合中取值，如0.100，42.001等 (数值型目标变量主要用于回归分析)</li>
+</ul>
+<p>按照数据的本身分布特性</p>
+<ul>
+<li>离散型</li>
+<li>连续型</li>
+</ul>
+<p>那么什么是离散型和连续型数据呢？首先连续型数据是有规律的,离散型数据是没有规律的</p>
+<ul>
+<li>离散变量是指其数值只能用自然数或整数单位计算的则为离散变量.例如，班级人数、进球个数、是否是某个类别等等</li>
+<li>连续型数据是指在指定区间内可以是任意一个数值,例如，票房数据、花瓣大小分布数据</li>
+</ul>
+<h2 id="3-2-数据的特征抽取"><a href="#3-2-数据的特征抽取" class="headerlink" title="3.2 数据的特征抽取"></a>3.2 数据的特征抽取</h2><p> 现实世界中多数特征都不是连续变量，比如分类、文字、图像等，为了对非连续变量做特征表述，需要对这些特征做数学化表述，因此就用到了特征提取. sklearn.feature_extraction提供了特征提取的很多方法 </p>
+<h3 id="分类特征变量的提取"><a href="#分类特征变量的提取" class="headerlink" title="分类特征变量的提取"></a>分类特征变量的提取</h3><p>我们将城市和环境作为字典数据，来进行特征的提取。</p>
+<p><strong>sklearn.feature_extraction.DictVectorizer(sparse = True)</strong></p>
+<p>将映射列表转换为Numpy数组或scipy.sparse矩阵</p>
+<p><strong>fit_transform(X,y)</strong></p>
+<p>应用并转化映射列表X，y为目标类型</p>
+<p><strong>inverse_transform(X[, dict_type])</strong></p>
+<p>将Numpy数组或scipy.sparse矩阵转换为映射列表sparse 是否转换为scipy.sparse矩阵表示，默认开启</p>
+<h3 id="文本特征提取（只限于英文）"><a href="#文本特征提取（只限于英文）" class="headerlink" title="文本特征提取（只限于英文）"></a>文本特征提取（只限于英文）</h3><p> 文本的特征提取应用于很多方面，比如说文档分类、垃圾邮件分类和新闻分类。那么文本分类是通过词是否存在、以及词的概率（重要性）来表示。 </p>
+<p>(1)文档的中词的出现</p>
+<p>数值为1表示词表中的这个词出现，为0表示未出现</p>
+<p><strong>sklearn.feature_extraction.text.CountVectorizer()</strong></p>
+<p>将文本文档的集合转换为计数矩阵（scipy.sparse matrices）</p>
+<p> <strong>fit_transform(raw_documents,y)</strong> </p>
+<p>文本的特征提取应用于很多方面，比如说文档分类、垃圾邮件分类和新闻分类。那么文本分类是通过词是否存在、以及词的概率（重要性）来表示。</p>
+<p>(1)文档的中词的出现</p>
+<p>数值为1表示词表中的这个词出现，为0表示未出现</p>
+<p><strong>sklearn.feature_extraction.text.CountVectorizer()</strong></p>
+<p>将文本文档的集合转换为计数矩阵（scipy.sparse matrices）</p>
+<h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><p><strong>fit_transform(raw_documents,y)</strong></p>
+<p>学习词汇词典并返回词汇文档矩阵</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.feature_extraction.text <span class="keyword">import</span> CountVectorizer</span><br><span class="line">content = [<span class="string">"life is short,i like python"</span>,<span class="string">"life is too long,i dislike python"</span>]</span><br><span class="line">vectorizer = CountVectorizer()</span><br><span class="line">print(vectorizer.fit_transform(content).toarray())</span><br></pre></td></tr></table></figure>
+
+<p>需要toarray()方法转变为numpy的数组形式</p>
+<blockquote>
+<p>温馨提示：每个文档中的词，只是整个语料库中所有词，的很小的一部分，这样造成特征向量的稀疏性（很多值为0）为了解决存储和运算速度的问题，使用Python的scipy.sparse矩阵结构</p>
+</blockquote>
+<p>(2)TF-IDF表示词的重要性</p>
+<p>TfidfVectorizer会根据指定的公式将文档中的词转换为概率表示。（朴素贝叶斯介绍详细的用法）</p>
+<p><strong>class sklearn.feature_extraction.text.TfidfVectorizer()</strong></p>
+<h3 id="方法-1"><a href="#方法-1" class="headerlink" title="方法"></a>方法</h3><p><strong>fit_transform(raw_documents,y)</strong></p>
+<p>学习词汇和idf，返回术语文档矩阵。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.feature_extraction.text <span class="keyword">import</span> TfidfVectorizer</span><br><span class="line">content = [<span class="string">"life is short,i like python"</span>,<span class="string">"life is too long,i dislike python"</span>]</span><br><span class="line">vectorizer = TfidfVectorizer(stop_words=<span class="string">'english'</span>)</span><br><span class="line">print(vectorizer.fit_transform(content).toarray())</span><br><span class="line">print(vectorizer.vocabulary_)</span><br></pre></td></tr></table></figure>
+
+<h3 id="图像特征提取"><a href="#图像特征提取" class="headerlink" title="图像特征提取"></a>图像特征提取</h3><h2 id="3-3-数据的特征预处理"><a href="#3-3-数据的特征预处理" class="headerlink" title="3.3 数据的特征预处理"></a>3.3 数据的特征预处理</h2><h1 id="数据的特征预处理"><a href="#数据的特征预处理" class="headerlink" title="数据的特征预处理"></a>数据的特征预处理</h1><h2 id="单个特征"><a href="#单个特征" class="headerlink" title="单个特征"></a>单个特征</h2><p><strong>（1）归一化</strong></p>
+<p>归一化首先在特征（维度）非常多的时候，可以防止某一维或某几维对数据影响过大，也是为了把不同来源的数据统一到一个参考区间下，这样比较起来才有意义，其次可以程序可以运行更快。 例如：一个人的身高和体重两个特征，假如体重50kg，身高175cm,由于两个单位不一样，数值大小不一样。如果比较两个人的体型差距时，那么身高的影响结果会比较大，k-临近算法会有这个距离公式。</p>
+<p><strong>min-max方法</strong></p>
+<p>常用的方法是通过对原始数据进行线性变换把数据映射到[0,1]之间，变换的函数为：</p>
+<p>X′=x−minmax−minX^{‘}{=}\frac{x-min}{max-min}X′=max−minx−min</p>
+<p>其中min是样本中最小值，max是样本中最大值，注意在数据流场景下最大值最小值是变化的，另外，最大值与最小值非常容易受异常点影响，所以这种方法鲁棒性较差，只适合传统精确小数据场景。</p>
+<ul>
+<li>min-max自定义处理</li>
+</ul>
+<p>这里我们使用相亲约会对象数据在MatchData.txt，这个样本时男士的数据，三个特征，玩游戏所消耗时间的百分比、每年获得的飞行常客里程数、每周消费的冰淇淋公升数。然后有一个 所属类别，被女士评价的三个类别，不喜欢、魅力一般、极具魅力。 首先导入数据进行矩阵转换处理</p>
 
       
     </div>
@@ -688,7 +810,7 @@ var jiathis_config={
               
                 <a href="/blog4/archives/">
               
-                  <span class="site-state-item-count">35</span>
+                  <span class="site-state-item-count">39</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -699,7 +821,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-categories">
                 <a href="/blog4/categories/index.html">
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -710,7 +832,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-tags">
                 <a href="/blog4/tags/index.html">
-                  <span class="site-state-item-count">28</span>
+                  <span class="site-state-item-count">31</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -777,7 +899,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-机器学习的简单介绍"><span class="nav-number">1.</span> <span class="nav-text">1 机器学习的简单介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-机器学习的数据"><span class="nav-number">1.1.</span> <span class="nav-text">1.1  机器学习的数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2机器学习算法的分类："><span class="nav-number">1.2.</span> <span class="nav-text">1.2机器学习算法的分类：</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-机器学习工具"><span class="nav-number">1.</span> <span class="nav-text">1 机器学习工具</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#理论和技术小前提"><span class="nav-number">1.1.</span> <span class="nav-text">理论和技术小前提</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#anaconda的安装"><span class="nav-number">1.2.</span> <span class="nav-text">anaconda的安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#anaconda包管理"><span class="nav-number">1.3.</span> <span class="nav-text">anaconda包管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#anaconda实现原理解析"><span class="nav-number">1.4.</span> <span class="nav-text">anaconda实现原理解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-机器学习简介"><span class="nav-number">2.</span> <span class="nav-text">2 机器学习简介</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-什么是机器学习"><span class="nav-number">2.1.</span> <span class="nav-text">2.1  什么是机器学习</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-为什么需要机器学习"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 为什么需要机器学习</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-开发机器学习的步骤是什么"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 开发机器学习的步骤是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-4-需要具备的技能"><span class="nav-number">2.4.</span> <span class="nav-text">2.4 需要具备的技能</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-sklearn与特征工程"><span class="nav-number">3.</span> <span class="nav-text">3 sklearn与特征工程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-数据来源-类型"><span class="nav-number">3.1.</span> <span class="nav-text">3.1 数据来源 类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数据的类型"><span class="nav-number">3.1.1.</span> <span class="nav-text">数据的类型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-数据的特征抽取"><span class="nav-number">3.2.</span> <span class="nav-text">3.2 数据的特征抽取</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分类特征变量的提取"><span class="nav-number">3.2.1.</span> <span class="nav-text">分类特征变量的提取</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文本特征提取（只限于英文）"><span class="nav-number">3.2.2.</span> <span class="nav-text">文本特征提取（只限于英文）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法"><span class="nav-number">3.2.3.</span> <span class="nav-text">方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法-1"><span class="nav-number">3.2.4.</span> <span class="nav-text">方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#图像特征提取"><span class="nav-number">3.2.5.</span> <span class="nav-text">图像特征提取</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-3-数据的特征预处理"><span class="nav-number">3.3.</span> <span class="nav-text">3.3 数据的特征预处理</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数据的特征预处理"><span class="nav-number">4.</span> <span class="nav-text">数据的特征预处理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#单个特征"><span class="nav-number">4.1.</span> <span class="nav-text">单个特征</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -811,7 +933,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">167.4k</span>
+    <span title="Site words total count">171k</span>
   
 </div>
 
