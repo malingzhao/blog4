@@ -97,7 +97,7 @@
 <meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/16/MachineLearning/1571989432412.png">
 <meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/16/MachineLearning/1571989582040.png">
 <meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/16/MachineLearning/1572081183898.png">
-<meta property="og:updated_time" content="2019-10-26T09:45:53.720Z">
+<meta property="og:updated_time" content="2019-11-02T02:10:46.814Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MachineLearning">
 <meta name="twitter:description" content="1 机器学习工具理论和技术小前提在学习机器学习之前首先应该具备一定的数学基础 还有就是掌握python基本库的使用 主要就是numpy,pandas,和matplotlib 安装好python的环境 anaconda的安装推荐安装anaconda的环境 anaconda可以切换不同的虚拟环境 它是一个方便的pythob包的管理和环境管理软件，可以用它配置不同的项目环境 在安装的时候如果需要在cmd">
@@ -429,7 +429,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2.9k
+                  3.6k
                 </span>
               
 
@@ -445,7 +445,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  10
+                  14
                 </span>
               
             </div>
@@ -599,6 +599,105 @@
 <li>min-max自定义处理</li>
 </ul>
 <p>这里我们使用相亲约会对象数据在MatchData.txt，这个样本时男士的数据，三个特征，玩游戏所消耗时间的百分比、每年获得的飞行常客里程数、每周消费的冰淇淋公升数。然后有一个 所属类别，被女士评价的三个类别，不喜欢、魅力一般、极具魅力。 首先导入数据进行矩阵转换处理</p>
+<h1 id="4-机器学习模型"><a href="#4-机器学习模型" class="headerlink" title="4 机器学习模型"></a>4 机器学习模型</h1><h2 id="监督学习"><a href="#监督学习" class="headerlink" title="监督学习"></a>监督学习</h2><h4 id="回归模型"><a href="#回归模型" class="headerlink" title="回归模型"></a>回归模型</h4><p>-<strong>线性模型</strong></p>
+<p> 一元线性回归</p>
+<p>多元线性回归</p>
+<p><strong>非线性回归模型</strong></p>
+<p>最小二乘法</p>
+<h4 id="分类模型"><a href="#分类模型" class="headerlink" title="分类模型"></a>分类模型</h4><p>– k近邻（KNN）</p>
+<h2 id="无监督学习"><a href="#无监督学习" class="headerlink" title="无监督学习"></a>无监督学习</h2><p>聚类</p>
+<ul>
+<li>k均值（k-means）</li>
+<li>降维</li>
+</ul>
+<h1 id="TFIDF算法"><a href="#TFIDF算法" class="headerlink" title="TFIDF算法"></a>TFIDF算法</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line">import pandas as pd</span><br></pre></td></tr></table></figure>
+
+<h2 id="1-定义数据和预处理"><a href="#1-定义数据和预处理" class="headerlink" title="1. 定义数据和预处理"></a>1. 定义数据和预处理</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">docA=&quot;The cat sat on my bed&quot;</span><br><span class="line">docB=&quot;The dog sat on my knees&quot;</span><br><span class="line">bowA=docA.split(&quot; &quot;)</span><br><span class="line">bowB=docB.split(&quot; &quot;)</span><br><span class="line">bowA</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#构建词库  A和B所有的词合在一起  list 转成set  用set 集合本身有一个方法去重</span><br><span class="line"># union相当于求一个并集</span><br><span class="line">wordSet= set(bowA).union(set(bowB))</span><br><span class="line"></span><br><span class="line">wordSet</span><br><span class="line">&#123;&apos;The&apos;, &apos;bed&apos;, &apos;cat&apos;, &apos;dog&apos;, &apos;knees&apos;, &apos;my&apos;, &apos;on&apos;, &apos;sat&apos;&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-进行词数统计"><a href="#2-进行词数统计" class="headerlink" title="2 进行词数统计"></a>2 进行词数统计</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">#用一个统计字典来保存词出现的次数    从集合创建一个字典 把他们当做key</span><br><span class="line">wordDictA= dict.fromkeys(wordSet, 0)</span><br><span class="line">wordDictB= dict.fromkeys(wordSet, 0)</span><br><span class="line">wordDictA</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 遍历文档 统计词数</span><br><span class="line"># 对于每一个bowA出现的次数</span><br><span class="line">for word in bowA:</span><br><span class="line">    wordDictA[word]+=1</span><br><span class="line">for word in bowB:</span><br><span class="line">    wordDictB[word]+=1</span><br><span class="line"></span><br><span class="line">pd.DataFrame([wordDictA,wordDictB])</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th>bed</th>
+<th>knees</th>
+<th>my</th>
+<th>dog</th>
+<th>sat</th>
+<th>The</th>
+<th>cat</th>
+<th>on</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+</tbody></table>
+<h2 id="3-计算词频"><a href="#3-计算词频" class="headerlink" title="3 计算词频"></a>3 计算词频</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">def computeTF(wordDict,bow):</span><br><span class="line">    #用一个字典对象记录tf,把所有的词对应在bow文档中的tf都算出来</span><br><span class="line">    tfDict=&#123;&#125;</span><br><span class="line">    nbowCount=len(bow)</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    for word,count in wordDict.items():</span><br><span class="line">        tfDict[word]=count / nbowCount</span><br><span class="line">    return tfDict</span><br><span class="line">tfA=computeTF(wordDictA,bowA)</span><br><span class="line">tfB=computeTF(wordDictB,bowB)</span><br><span class="line">tfA</span><br><span class="line">&#123;&apos;bed&apos;: 0.16666666666666666,</span><br><span class="line"> &apos;knees&apos;: 0.0,</span><br><span class="line"> &apos;my&apos;: 0.16666666666666666,</span><br><span class="line"> &apos;dog&apos;: 0.0,</span><br><span class="line"> &apos;sat&apos;: 0.16666666666666666,</span><br><span class="line"> &apos;The&apos;: 0.16666666666666666,</span><br><span class="line"> &apos;cat&apos;: 0.16666666666666666,</span><br><span class="line"> &apos;on&apos;: 0.16666666666666666&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-计算逆文档频率-idf"><a href="#4-计算逆文档频率-idf" class="headerlink" title="4 计算逆文档频率 idf"></a>4 计算逆文档频率 idf</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"># wordcountList的信息 里面包含了各个文档的信息</span><br><span class="line">def computeIDF(wordDictList):</span><br><span class="line">    #用一个字典对象保存idf的结果，每个词作为key,初始值为 0</span><br><span class="line">    idfDict=dict.fromkeys(wordDictList[0],0)</span><br><span class="line">    N=len(wordDictList)</span><br><span class="line">    import math</span><br><span class="line">    </span><br><span class="line">    for wordDict in wordDictList:</span><br><span class="line">        #遍历字典中的每个词汇,统计Ni</span><br><span class="line">        for word,count in wordDict.items():</span><br><span class="line">            if(count&gt;0):</span><br><span class="line">                #先把Ni增加1 存入到idfDict里面</span><br><span class="line">                idfDict[word]+=1</span><br><span class="line">    #已经得到所有词汇对应的Ni 根据公式把它替换成为最后的idf值</span><br><span class="line">    for word,ni in idfDict.items():</span><br><span class="line">        idfDict[word]=math.log10((N+1)/(ni+1))</span><br><span class="line">    return idfDict</span><br><span class="line"></span><br><span class="line">idfs=computeIDF([wordDictA,wordDictB])</span><br><span class="line">idfs</span><br><span class="line">            </span><br><span class="line">&#123;&apos;bed&apos;: 0.17609125905568124,</span><br><span class="line"> &apos;knees&apos;: 0.17609125905568124,</span><br><span class="line"> &apos;my&apos;: 0.0,</span><br><span class="line"> &apos;dog&apos;: 0.17609125905568124,</span><br><span class="line"> &apos;sat&apos;: 0.0,</span><br><span class="line"> &apos;The&apos;: 0.0,</span><br><span class="line"> &apos;cat&apos;: 0.17609125905568124,</span><br><span class="line"> &apos;on&apos;: 0.0&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id><a href="#" class="headerlink" title></a></h2><h2 id="5-计算TF-IDF"><a href="#5-计算TF-IDF" class="headerlink" title="5 计算TF-IDF"></a>5 计算TF-IDF</h2><p>我们通过计算得到文档中的词汇的关键的程度</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">def computeTFIDF(tf,idfs):</span><br><span class="line">    tfidf=&#123;&#125;</span><br><span class="line">    for word,tfval in tf.items():</span><br><span class="line">        tfidf[word]=tfval * idfs[word]</span><br><span class="line">    return tfidf</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">tfidfA=computeTFIDF(tfA,idfs)</span><br><span class="line"></span><br><span class="line">tfidfB=computeTFIDF(tfB,idfs)</span><br><span class="line">pd.DataFrame([tfidfA,tfidfB])</span><br></pre></td></tr></table></figure>
+
+<p>Out[9]:</p>
+<table>
+<thead>
+<tr>
+<th align="right"></th>
+<th align="right">sat</th>
+<th align="right">knees</th>
+<th align="right">cat</th>
+<th align="right">The</th>
+<th align="right">dog</th>
+<th align="right">bed</th>
+<th align="right">my</th>
+<th align="right">on</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="right">0</td>
+<td align="right">0.0</td>
+<td align="right">0.000000</td>
+<td align="right">0.029349</td>
+<td align="right">0.0</td>
+<td align="right">0.000000</td>
+<td align="right">0.029349</td>
+<td align="right">0.0</td>
+<td align="right">0.0</td>
+</tr>
+<tr>
+<td align="right">1</td>
+<td align="right">0.0</td>
+<td align="right">0.029349</td>
+<td align="right">0.000000</td>
+<td align="right">0.0</td>
+<td align="right">0.029349</td>
+<td align="right">0.000000</td>
+<td align="right">0.0</td>
+<td align="right">0.0</td>
+</tr>
+</tbody></table>
 
       
     </div>
@@ -810,7 +909,7 @@ var jiathis_config={
               
                 <a href="/blog4/archives/">
               
-                  <span class="site-state-item-count">39</span>
+                  <span class="site-state-item-count">47</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -821,7 +920,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-categories">
                 <a href="/blog4/categories/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -832,7 +931,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-tags">
                 <a href="/blog4/tags/index.html">
-                  <span class="site-state-item-count">31</span>
+                  <span class="site-state-item-count">34</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -899,7 +998,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-机器学习工具"><span class="nav-number">1.</span> <span class="nav-text">1 机器学习工具</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#理论和技术小前提"><span class="nav-number">1.1.</span> <span class="nav-text">理论和技术小前提</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#anaconda的安装"><span class="nav-number">1.2.</span> <span class="nav-text">anaconda的安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#anaconda包管理"><span class="nav-number">1.3.</span> <span class="nav-text">anaconda包管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#anaconda实现原理解析"><span class="nav-number">1.4.</span> <span class="nav-text">anaconda实现原理解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-机器学习简介"><span class="nav-number">2.</span> <span class="nav-text">2 机器学习简介</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-什么是机器学习"><span class="nav-number">2.1.</span> <span class="nav-text">2.1  什么是机器学习</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-为什么需要机器学习"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 为什么需要机器学习</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-开发机器学习的步骤是什么"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 开发机器学习的步骤是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-4-需要具备的技能"><span class="nav-number">2.4.</span> <span class="nav-text">2.4 需要具备的技能</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-sklearn与特征工程"><span class="nav-number">3.</span> <span class="nav-text">3 sklearn与特征工程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-数据来源-类型"><span class="nav-number">3.1.</span> <span class="nav-text">3.1 数据来源 类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数据的类型"><span class="nav-number">3.1.1.</span> <span class="nav-text">数据的类型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-数据的特征抽取"><span class="nav-number">3.2.</span> <span class="nav-text">3.2 数据的特征抽取</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分类特征变量的提取"><span class="nav-number">3.2.1.</span> <span class="nav-text">分类特征变量的提取</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文本特征提取（只限于英文）"><span class="nav-number">3.2.2.</span> <span class="nav-text">文本特征提取（只限于英文）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法"><span class="nav-number">3.2.3.</span> <span class="nav-text">方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法-1"><span class="nav-number">3.2.4.</span> <span class="nav-text">方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#图像特征提取"><span class="nav-number">3.2.5.</span> <span class="nav-text">图像特征提取</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-3-数据的特征预处理"><span class="nav-number">3.3.</span> <span class="nav-text">3.3 数据的特征预处理</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数据的特征预处理"><span class="nav-number">4.</span> <span class="nav-text">数据的特征预处理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#单个特征"><span class="nav-number">4.1.</span> <span class="nav-text">单个特征</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-机器学习工具"><span class="nav-number">1.</span> <span class="nav-text">1 机器学习工具</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#理论和技术小前提"><span class="nav-number">1.1.</span> <span class="nav-text">理论和技术小前提</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#anaconda的安装"><span class="nav-number">1.2.</span> <span class="nav-text">anaconda的安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#anaconda包管理"><span class="nav-number">1.3.</span> <span class="nav-text">anaconda包管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#anaconda实现原理解析"><span class="nav-number">1.4.</span> <span class="nav-text">anaconda实现原理解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-机器学习简介"><span class="nav-number">2.</span> <span class="nav-text">2 机器学习简介</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-什么是机器学习"><span class="nav-number">2.1.</span> <span class="nav-text">2.1  什么是机器学习</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-为什么需要机器学习"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 为什么需要机器学习</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-开发机器学习的步骤是什么"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 开发机器学习的步骤是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-4-需要具备的技能"><span class="nav-number">2.4.</span> <span class="nav-text">2.4 需要具备的技能</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-sklearn与特征工程"><span class="nav-number">3.</span> <span class="nav-text">3 sklearn与特征工程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-数据来源-类型"><span class="nav-number">3.1.</span> <span class="nav-text">3.1 数据来源 类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数据的类型"><span class="nav-number">3.1.1.</span> <span class="nav-text">数据的类型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-数据的特征抽取"><span class="nav-number">3.2.</span> <span class="nav-text">3.2 数据的特征抽取</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分类特征变量的提取"><span class="nav-number">3.2.1.</span> <span class="nav-text">分类特征变量的提取</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文本特征提取（只限于英文）"><span class="nav-number">3.2.2.</span> <span class="nav-text">文本特征提取（只限于英文）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法"><span class="nav-number">3.2.3.</span> <span class="nav-text">方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法-1"><span class="nav-number">3.2.4.</span> <span class="nav-text">方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#图像特征提取"><span class="nav-number">3.2.5.</span> <span class="nav-text">图像特征提取</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-3-数据的特征预处理"><span class="nav-number">3.3.</span> <span class="nav-text">3.3 数据的特征预处理</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数据的特征预处理"><span class="nav-number">4.</span> <span class="nav-text">数据的特征预处理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#单个特征"><span class="nav-number">4.1.</span> <span class="nav-text">单个特征</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-机器学习模型"><span class="nav-number">5.</span> <span class="nav-text">4 机器学习模型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#监督学习"><span class="nav-number">5.1.</span> <span class="nav-text">监督学习</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#回归模型"><span class="nav-number">5.1.0.1.</span> <span class="nav-text">回归模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分类模型"><span class="nav-number">5.1.0.2.</span> <span class="nav-text">分类模型</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#无监督学习"><span class="nav-number">5.2.</span> <span class="nav-text">无监督学习</span></a></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#TFIDF算法"><span class="nav-number">6.</span> <span class="nav-text">TFIDF算法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-定义数据和预处理"><span class="nav-number">6.1.</span> <span class="nav-text">1. 定义数据和预处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-进行词数统计"><span class="nav-number">6.2.</span> <span class="nav-text">2 进行词数统计</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-计算词频"><span class="nav-number">6.3.</span> <span class="nav-text">3 计算词频</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-计算逆文档频率-idf"><span class="nav-number">6.4.</span> <span class="nav-text">4 计算逆文档频率 idf</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">6.5.</span> <span class="nav-text"></span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-计算TF-IDF"><span class="nav-number">6.6.</span> <span class="nav-text">5 计算TF-IDF</span></a></li></ol></li></div>
             
 
           </div>
@@ -933,7 +1032,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">173.4k</span>
+    <span title="Site words total count">186.2k</span>
   
 </div>
 
