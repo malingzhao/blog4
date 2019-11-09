@@ -99,7 +99,7 @@
 <meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/12/nowcoder/1570933142284.png">
 <meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/12/nowcoder/1570933301371.png">
 <meta property="og:image" content="https://malingzhao.github.io/blog4/2019/10/12/nowcoder/1570967547664.png">
-<meta property="og:updated_time" content="2019-11-02T01:10:28.866Z">
+<meta property="og:updated_time" content="2019-11-06T12:31:57.357Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="牛客网刷题">
 <meta name="twitter:description" content="1 Linux运维第一次练习Linux的进程有哪些 交互进程   批处理进程  守护进程 Linux的文件权限10位长度    - rw- r– r– 也就是说文件类型 普通文件  文件所有者进行读写 文件所属组只能读  非同组用户只能读  文件类型 + 属主权限 + 属组权限+ 其他用户权限   文件类型     d  目录   普通文件   l 链接文件   b 普通块设备文件  c字符设备文">
@@ -431,7 +431,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  5.8k
+                  6k
                 </span>
               
 
@@ -447,7 +447,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  21
+                  22
                 </span>
               
             </div>
@@ -930,7 +930,20 @@
 </tbody></table>
 <h4 id="5-24-死锁怎么解决"><a href="#5-24-死锁怎么解决" class="headerlink" title="5.24 死锁怎么解决"></a>5.24 死锁怎么解决</h4><p>找到进程号kill掉</p>
 <h4 id="5-25-最左匹配原则"><a href="#5-25-最左匹配原则" class="headerlink" title="5.25 最左匹配原则"></a>5.25 最左匹配原则</h4><p>最左匹配原则是针对索引的<br>举例来说：两个字段（name,age）建立联合索引，如果where age=12这样的话，是没有利用到索引的，<br>这里我们可以简单的理解为先是对name字段的值排序，然后对age的数据排序，如果直接查age的话，这时就没有利用到索引了，<br>查询条件where name=‘xxx’ and age=xx 这时的话，就利用到索引了，再来思考下where age=xx and name=’xxx‘ 这个sql会利用索引吗，<br>按照正常的原则来讲是不会利用到的，但是优化器会进行优化，把位置交换下。这个sql也能利用到索引了</p>
-<h1 id="大数据练习第三次"><a href="#大数据练习第三次" class="headerlink" title="大数据练习第三次"></a>大数据练习第三次</h1>
+<h1 id="大数据练习第三次"><a href="#大数据练习第三次" class="headerlink" title="大数据练习第三次"></a>大数据练习第三次</h1><p>当进程执行状态变为阻塞状态时，CPU现场信息被保存在进程控制块PCB的下面哪个区域内？</p>
+<p>cpu状态保护区</p>
+<p>线程自己拥有很少的资源但它可以使用所属进程的资源</p>
+<p>进程创建和线程创建的开销是不同的</p>
+<p>同一个进程的锁哥咸亨具有相同的地址空间，所以他们的同步和通信也比较容易实现</p>
+<p>运行—》》 等待 就绪</p>
+<p>就绪 —》》 运行</p>
+<p>等待—》》就绪</p>
+<p>more  cat  less</p>
+<p>awk ‘{sum+=$1}END {print sum}</p>
+<p>TCP支持一对一 一对多和多对一  多堆垛</p>
+<p>TCP面向字节流</p>
+<p>UDP是无连接的 发送数据之前不需要建立连接</p>
+
       
     </div>
     
@@ -1141,7 +1154,7 @@ var jiathis_config={
               
                 <a href="/blog4/archives/">
               
-                  <span class="site-state-item-count">47</span>
+                  <span class="site-state-item-count">49</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1163,7 +1176,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-tags">
                 <a href="/blog4/tags/index.html">
-                  <span class="site-state-item-count">34</span>
+                  <span class="site-state-item-count">35</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -1264,7 +1277,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">197.2k</span>
+    <span title="Site words total count">189.2k</span>
   
 </div>
 
