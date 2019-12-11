@@ -1,0 +1,2073 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/blog4/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/blog4/lib/pace/pace-theme-center-atom.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/blog4/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/blog4/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/blog4/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog4/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog4/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog4/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/blog4/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="计算机,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="操作系统第一章 概述1课程概述 1.1  课程介绍基本概念及原理 中断及系统调用 进程和线程 内存管理 进程及线程 调度 同步 1.2 操作系统实验 准备 启动  物理内存的管理 虚拟内存 进程及线程 内核线程管理 用户进程管理 cpu调度 同步和互斥 文件系统  #################### 如何设计文件系统 操作系统和真实环境的比较  真正的比较计算机 1.3 预备知识计算机结构原">
+<meta name="keywords" content="计算机">
+<meta property="og:type" content="article">
+<meta property="og:title" content="操作系统">
+<meta property="og:url" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/index.html">
+<meta property="og:site_name" content="我的个人博客">
+<meta property="og:description" content="操作系统第一章 概述1课程概述 1.1  课程介绍基本概念及原理 中断及系统调用 进程和线程 内存管理 进程及线程 调度 同步 1.2 操作系统实验 准备 启动  物理内存的管理 虚拟内存 进程及线程 内核线程管理 用户进程管理 cpu调度 同步和互斥 文件系统  #################### 如何设计文件系统 操作系统和真实环境的比较  真正的比较计算机 1.3 预备知识计算机结构原">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569334487639.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569334641440.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569334883761.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569334996503.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569335089713.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569335191945.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569335243829.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569335397474.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569335440538.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569336005938.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569379482573.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569481222919.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569481276490.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569481332776.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569481369678.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569481388642.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569481439710.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569481614345.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569481640362.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569481925192.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569482132742.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569482226458.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569482279245.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569482569785.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569482738706.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569482812055.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569482914552.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569482976493.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569483090053.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569483109276.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569483309476.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569483319719.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569483355551.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569483414590.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569483459108.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569483619788.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569483708050.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569483744060.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569483816347.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569483912909.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569484072947.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569484191899.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569484244745.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569484301928.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569484543949.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569484734835.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569484867068.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569485001512.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569485080963.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569485101036.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569485194740.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569485269911.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569486884226.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569486900168.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569486963487.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569487195809.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569487234285.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569487489649.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569487581364.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569487621914.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569487913965.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569487935436.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569487993791.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569488041565.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569488121413.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569488227256.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569488370979.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569488447288.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569488501994.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569488560128.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569488624431.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569488666438.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569488701990.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569488737775.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569488831363.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569488837600.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569490171200.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569490260377.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569490334932.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569490384026.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569490474315.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569490529507.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569490690564.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569490881891.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569491094308.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569491142243.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569491254175.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569491300988.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569491451755.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569491510359.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569491599860.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569491818657.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569491889109.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569845933399.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569845960216.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569846201695.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569846245436.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569846414158.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569846472464.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569846564843.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569846632246.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569846827471.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569846871213.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569847389853.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569847535749.png">
+<meta property="og:updated_time" content="2019-10-12T09:34:22.043Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="操作系统">
+<meta name="twitter:description" content="操作系统第一章 概述1课程概述 1.1  课程介绍基本概念及原理 中断及系统调用 进程和线程 内存管理 进程及线程 调度 同步 1.2 操作系统实验 准备 启动  物理内存的管理 虚拟内存 进程及线程 内核线程管理 用户进程管理 cpu调度 同步和互斥 文件系统  #################### 如何设计文件系统 操作系统和真实环境的比较  真正的比较计算机 1.3 预备知识计算机结构原">
+<meta name="twitter:image" content="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/1569334487639.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/blog4/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/">
+
+
+
+
+
+  <title>操作系统 | 我的个人博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+<a href="https://github.com/malingzhao" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#70B7FD; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/blog4/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">我的个人博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description"></h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/blog4/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/blog4/about/Introduce.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/blog4/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/blog4/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/blog4/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-schedule">
+          <a href="/blog4/schedule.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br>
+            
+            日程表
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-sitemap">
+          <a href="/blog4/sitemap.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>
+            
+            站点地图
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/blog4/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br>
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://malingzhao.github.io/blog4/blog4/2019/05/12/OperatingSystem/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="MaLingZhao">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/blog4/images/dongman.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我的个人博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">操作系统</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-12T16:09:53+08:00">
+                2019-05-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog4/categories/计算机必备知识/" itemprop="url" rel="index">
+                    <span itemprop="name">计算机必备知识</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/blog4/2019/05/12/OperatingSystem/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/blog4/2019/05/12/OperatingSystem/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  4.1k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  14
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a>操作系统</h1><h1 id="第一章-概述"><a href="#第一章-概述" class="headerlink" title="第一章 概述"></a>第一章 概述</h1><h1 id="1课程概述"><a href="#1课程概述" class="headerlink" title="1课程概述"></a>1课程概述</h1><p><img src="/blog4/2019/05/12/OperatingSystem/1569334487639.png" alt="1569334487639"></p>
+<h2 id="1-1-课程介绍"><a href="#1-1-课程介绍" class="headerlink" title="1.1  课程介绍"></a>1.1  课程介绍</h2><p>基本概念及原理</p>
+<p>中断及系统调用</p>
+<p>进程和线程</p>
+<p>内存管理</p>
+<p>进程及线程</p>
+<p>调度</p>
+<p>同步</p>
+<h2 id="1-2-操作系统实验"><a href="#1-2-操作系统实验" class="headerlink" title="1.2 操作系统实验"></a><strong>1.2 操作系统实验</strong></h2><p><img src="/blog4/2019/05/12/OperatingSystem/1569334641440.png" alt="1569334641440"></p>
+<p>准备</p>
+<p>启动 </p>
+<p>物理内存的管理</p>
+<p>虚拟内存</p>
+<p>进程及线程</p>
+<p>内核线程管理</p>
+<p>用户进程管理</p>
+<p>cpu调度</p>
+<p>同步和互斥</p>
+<p>文件系统 </p>
+<p>####################</p>
+<p>如何设计文件系统</p>
+<p>操作系统和真实环境的比较  真正的比较计算机</p>
+<h2 id="1-3-预备知识"><a href="#1-3-预备知识" class="headerlink" title="1.3 预备知识"></a><strong>1.3 预备知识</strong></h2><p>计算机结构原理</p>
+<p>数据结构</p>
+<p>C和汇编语言</p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569334883761.png" alt="1569334883761"></p>
+<h1 id="2-什么是操作系统"><a href="#2-什么是操作系统" class="headerlink" title="2 什么是操作系统"></a>2 什么是操作系统</h1><p>没有一个精确的定义</p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569334996503.png" alt="1569334996503"></p>
+<h2 id="2-1-功能"><a href="#2-1-功能" class="headerlink" title="2.1 功能"></a><strong>2.1 功能</strong></h2><p>上     用户角度   控制软件</p>
+<p>​       管理应用程序</p>
+<p>​       服务</p>
+<p>​      杀死应用程序</p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569335089713.png" alt="1569335089713"></p>
+<p>对下</p>
+<p>资源管理</p>
+<p>分配资源 管理外设</p>
+<h2 id="2-2-功能的抽象"><a href="#2-2-功能的抽象" class="headerlink" title="2.2 功能的抽象"></a><strong>2.2 功能的抽象</strong></h2><p><img src="/blog4/2019/05/12/OperatingSystem/1569335191945.png" alt="1569335191945"></p>
+<h2 id="2-3-操作系统的层次架构"><a href="#2-3-操作系统的层次架构" class="headerlink" title="2.3 操作系统的层次架构"></a><strong>2.3 操作系统的层次架构</strong></h2><p><img src="/blog4/2019/05/12/OperatingSystem/1569335243829.png" alt="1569335243829"></p>
+<p>软件 应用软件  系统软件</p>
+<p>系统  功能  操作系统</p>
+<p>编译器  共享的程序库</p>
+<p>操作系统  硬件管理和控制</p>
+<p>面向应用程序 shell   windows GUI  操作系统暴露的接口 </p>
+<p>kernel在shell之下</p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569335397474.png" alt="1569335397474"></p>
+<p>操作系统内核的角度看问题</p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569335440538.png" alt="1569335440538"></p>
+<p>cpu 内存  磁盘</p>
+<p>内存  物理内存 虚拟内存</p>
+<p>技术手段 在有限的物理内存之下</p>
+<p>disk 磁盘块  底层</p>
+<p>抽象出文件系统</p>
+<p>中断处理 和设备驱动</p>
+<h2 id="2-4-操作系统的特征"><a href="#2-4-操作系统的特征" class="headerlink" title="2.4 操作系统的特征"></a>2.4 操作系统的特征</h2><p>1 <strong>并发</strong></p>
+<p>一个cpu</p>
+<p><strong>并行</strong></p>
+<p>同时执行</p>
+<p>多个cpu</p>
+<p>存在多个应用程序</p>
+<p>OS管理和调度</p>
+<p>2 <strong>共享</strong></p>
+<p>同时访问资源 </p>
+<p>互斥共享</p>
+<p>A B  两个块</p>
+<p>如何共享</p>
+<p>3 <strong>虚拟</strong></p>
+<p>多道程序技术  一个计算机 虚拟出多台机器</p>
+<p>4 <strong>异步</strong></p>
+<p>什么时候结束</p>
+<p>输出的结果是相同的</p>
+<p>程序走走停停的</p>
+<p>但是OS要保证运行的结果相同</p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569336005938.png" alt="1569336005938"></p>
+<h1 id="3-为什么学习操作系统"><a href="#3-为什么学习操作系统" class="headerlink" title="3 为什么学习操作系统"></a>3 为什么学习操作系统</h1><h2 id="3-1综合课程"><a href="#3-1综合课程" class="headerlink" title="3.1综合课程"></a>3.1综合课程</h2><p>编程语言</p>
+<p>数据结构</p>
+<p>算法</p>
+<p>计算机的体系结构</p>
+<p>材料</p>
+<p>操作系统概念和原理 源代码</p>
+<p>技能</p>
+<p>操作系统的设计和实现</p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569379482573.png" alt="1569379482573"></p>
+<h2 id="3-2-已经有何很多操作系统-要不要学"><a href="#3-2-已经有何很多操作系统-要不要学" class="headerlink" title="3.2 已经有何很多操作系统  要不要学"></a>3.2 已经有何很多操作系统  要不要学</h2><p>操作系统  底层的操作</p>
+<p>操作系统进行设计  改进和扩展</p>
+<p>分析了解和掌握</p>
+<p>很多知识 能力</p>
+<p>Windows Linux 硬件发展不断的变化 </p>
+<p>一直向前发展 学习 </p>
+<p>atguigu sudo  atguigu用户  ip地址和防火墙</p>
+<p>我听发哦的我会忘记</p>
+<h2 id="3-3-操作系统-计算机研究的基石之一"><a href="#3-3-操作系统-计算机研究的基石之一" class="headerlink" title="3.3 操作系统 计算机研究的基石之一"></a>3.3 操作系统 计算机研究的基石之一</h2><p><img src="/blog4/2019/05/12/OperatingSystem/1569481222919.png" alt="1569481222919"></p>
+<p>顶级的计算机操作系统</p>
+<p>庞大的操作系统 支持底层的架构</p>
+<p>ACM</p>
+<p>学术界</p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569481276490.png" alt="1569481276490"></p>
+<p>工业界</p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569481332776.png" alt="1569481332776"></p>
+<p>顶级会议</p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569481369678.png" alt="1569481369678"></p>
+<p>实际的操作系统</p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569481388642.png" alt="1569481388642"></p>
+<p>很大 很复杂</p>
+<p>并发导致的编码困难</p>
+<p>硬件的错误</p>
+<p>管理计算机系统的核心软件</p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569481439710.png" alt="1569481439710"></p>
+<p>对算法的设计提出了要求</p>
+<p>操作系统出错  意味着计算机出错</p>
+<p>操作系统  是安全的基础</p>
+<p>原理和概念</p>
+<p>不代表操作系统主要关注的点</p>
+<p>算法 关键部分的一个小部分</p>
+<p>IO的磁盘调度</p>
+<p>进程调度 关注小了</p>
+<p>滞后当前研究和产业现状</p>
+<p>权衡  时间和空间</p>
+<p>空间和时间</p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569481614345.png" alt="1569481614345"></p>
+<p>操作系统需要权衡</p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569481640362.png" alt="1569481640362"></p>
+<p>中断  异常  IO</p>
+<p>如何工作  如何对硬件的特征处理</p>
+<p>上层的概念和理解</p>
+<p>理解C代码和汇编代码</p>
+<p>系统级的平衡</p>
+<p>具体的角度</p>
+<h1 id="4-如何学习操作系统"><a href="#4-如何学习操作系统" class="headerlink" title="4 如何学习操作系统"></a>4 如何学习操作系统</h1><p>我看到的我能记住</p>
+<p>我能做的</p>
+<p>更深入的了解</p>
+<p>动手操作</p>
+<p>实现</p>
+<p>尝试完成实验提出的要求</p>
+<h1 id="5-操作系统实例"><a href="#5-操作系统实例" class="headerlink" title="5 操作系统实例"></a>5 操作系统实例</h1><p> 面向桌面的操作系统</p>
+<p>面向服务器的操作系统</p>
+<p>手机 移动中断  工控领域</p>
+<p>Unix BSD操作系统 </p>
+<p>Unix  基于C语言的Linux系统  </p>
+<p>改变世界</p>
+<p>BSD 在unix的基础上发展</p>
+<p>Linux BSD  发行软件   在网站的协议</p>
+<p>广大的发展</p>
+<p>基于Unix BSD Solaris  IOS     惠普</p>
+<p>Linux操作系统  一个学生学习计算机知识</p>
+<p>用一个操作系统 </p>
+<p>经历了漫长的发展</p>
+<p>很多的操作系统基于Linux </p>
+<p>Ubuntu     </p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569481925192.png" alt="1569481925192"></p>
+<p>Linux内核</p>
+<p>都是基于Linux内核开发的</p>
+<p>Windows操作系统</p>
+<p>最早是dos</p>
+<p>IBM  个人计算机</p>
+<p>GUI 图形化界面</p>
+<p>桌面  服务器  手机</p>
+<p>服务器和终端</p>
+<p>微软  —-》》 大众完成特定的事情  计算机的推广</p>
+<p>实施操作系统</p>
+<h1 id="6-操作系统的历史和发展"><a href="#6-操作系统的历史和发展" class="headerlink" title="6 操作系统的历史和发展"></a>6 操作系统的历史和发展</h1><p>计算机硬件  1921 2012 年 计算机发生了很大的变化</p>
+<p>科学家  —-》》  日常</p>
+<h2 id="6-1-早期的计算机"><a href="#6-1-早期的计算机" class="headerlink" title="6.1  早期的计算机"></a>6.1  早期的计算机</h2><p>计算机</p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569482132742.png" alt="1569482132742"></p>
+<p>早期的计算机</p>
+<p>输入  计算机   输出 </p>
+<p>单用户的处理过程</p>
+<p>CPU的计算能力强</p>
+<p>计算过程流水线化</p>
+<p>批处理阶段</p>
+<h2 id="6-2-顺序执行和批处理"><a href="#6-2-顺序执行和批处理" class="headerlink" title="6.2 顺序执行和批处理"></a>6.2 顺序执行和批处理</h2><p><img src="/blog4/2019/05/12/OperatingSystem/1569482226458.png" alt="1569482226458"></p>
+<h2 id="6-3-内存容量增大-CPU执行多个程序"><a href="#6-3-内存容量增大-CPU执行多个程序" class="headerlink" title="6.3 内存容量增大  CPU执行多个程序"></a>6.3 内存容量增大  CPU执行多个程序</h2><p><img src="/blog4/2019/05/12/OperatingSystem/1569482279245.png" alt="1569482279245"></p>
+<p>cpu很贵 </p>
+<p>程序执行 操作  IO  IO的操作效率  远远比不了CPU的速度</p>
+<p>多个IO操作  </p>
+<p>Read   让Write 使用CPU的资源</p>
+<p>中断</p>
+<p>通知操作系统 </p>
+<p>程序2 停止 </p>
+<p>程序1 执行</p>
+<p>调度  切换</p>
+<p>交互性不够好 </p>
+<p>与计算机进行交互</p>
+<p>分时</p>
+<p>千分之一秒产生一次分时</p>
+<p>第一个程序占  交给第二个 程序</p>
+<p>人的反应速度慢</p>
+<p>将时间分成很小的时间段</p>
+<p>有了分时调度</p>
+<p>人们可以更方便的执行计算机程序</p>
+<p>中断</p>
+<h2 id="6-4-个人电脑操作系统"><a href="#6-4-个人电脑操作系统" class="headerlink" title="6.4 个人电脑操作系统"></a>6.4 个人电脑操作系统</h2><p>80 年代</p>
+<p>一个一般用户用一台电脑</p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569482569785.png" alt="1569482569785"></p>
+<p>价钱提高  功能提升</p>
+<p>文字处理  数据存储</p>
+<p>提高IO的交互性</p>
+<p>两个趋势   </p>
+<p>集成电路的发展 </p>
+<p>一个cpu集成多个cpu核</p>
+<p>网络得到了飞速的发展</p>
+<p>分布式操作系统</p>
+<p>用户前端    数据中心    Internet </p>
+<p>Internet </p>
+<p>松紧 耦合 系统</p>
+<p>操作系统的演变</p>
+<h2 id="6-5-计算机的未来的发展趋势"><a href="#6-5-计算机的未来的发展趋势" class="headerlink" title="6.5 计算机的未来的发展趋势"></a>6.5 计算机的未来的发展趋势</h2><p>大数据 云计算  </p>
+<p>大量的嵌入式设备</p>
+<p>很多的工作交给计算机来处理</p>
+<p>给人的学习方便</p>
+<p>6</p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569482738706.png" alt="1569482738706"></p>
+<h1 id="7-操作系统结构"><a href="#7-操作系统结构" class="headerlink" title="7 操作系统结构"></a>7 操作系统结构</h1><p>简单的操作系统  比较弱</p>
+<p>操作系统 </p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569482812055.png" alt="1569482812055"></p>
+<p>x80 8086机器 硬件的限制  计算机很难有突破</p>
+<p>早期面向个人的计算机</p>
+<p>服务器 计算机</p>
+<p>更高层次的设计</p>
+<p>Unix操作系统</p>
+<p>C语言 实现</p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569482914552.png" alt="1569482914552"></p>
+<p>C语言方便移植</p>
+<p>获得图灵奖和美国总统访问</p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569482976493.png" alt="1569482976493"></p>
+<p>向下</p>
+<p>向上</p>
+<p>分析uCore操作系统 实际的OS在硬件上是如何发展的</p>
+<p>把内核尽量变的尽量小巧</p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569483090053.png" alt="1569483090053"></p>
+<p>微内核的设计</p>
+<p>是一种服务的形式实现  松耦合的架构</p>
+<p>地址隔离</p>
+<p>无法 影响彼此</p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569483109276.png" alt="1569483109276"></p>
+<p>数据导内核  内核</p>
+<p>产业界 很少采用微内核</p>
+<p>性能</p>
+<p>操作系统的设计分成两块</p>
+<p>Office 面向office 的Linux Kernel  IOS Kernel 完成对硬件管理</p>
+<p>速度</p>
+<p>OS </p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569483309476.png" alt="1569483309476"></p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569483319719.png" alt="1569483319719"></p>
+<p>虚拟出操作出多台操作系统</p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569483355551.png" alt="1569483355551"></p>
+<p>计算机的发展</p>
+<p>CPU的计算能力快速发展</p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569483414590.png" alt="1569483414590"></p>
+<p>充分分发挥计算机的效率</p>
+<h1 id="8-小结"><a href="#8-小结" class="headerlink" title="8 小结"></a>8 小结</h1><p>什么是操作系统</p>
+<p>为什么学习</p>
+<p>如何学习操作系统</p>
+<p>操作系统实例</p>
+<p>操作系统结构</p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569483459108.png" alt="1569483459108"></p>
+<h1 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h1><h2 id="2-1-启动-中断-异常-和-系统调用"><a href="#2-1-启动-中断-异常-和-系统调用" class="headerlink" title="2.1  启动 中断  异常  和  系统调用"></a>2.1  启动 中断  异常  和  系统调用</h2><p><img src="/blog4/2019/05/12/OperatingSystem/1569483619788.png" alt="1569483619788"></p>
+<p>启动 </p>
+<p>接口  控制外设</p>
+<p>中断 异常  系统调用</p>
+<p>实现 中断  异常 和  系统调用</p>
+<p>CPU    Memory   IO</p>
+<p>Disk  存放OS</p>
+<p>BIOS 基本IO处理系统 检查外射</p>
+<p>加载软件</p>
+<p>OS 放在OS</p>
+<p>Bootloader 加载OS的</p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569483708050.png" alt="1569483708050"></p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569483744060.png" alt="1569483744060"></p>
+<p>BIOS 干什么</p>
+<p>特定的地址开始执行</p>
+<p>地址是固定的</p>
+<p>CS 和  IP</p>
+<p>CS 段寄存器  IP 指令指针寄存器</p>
+<p>POST（加电自检）</p>
+<p>寻找显卡</p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569483816347.png" alt="1569483816347"></p>
+<p>外射  把bootloader 硬盘放到内存中去</p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569483912909.png" alt="1569483912909"></p>
+<p>bootloader 代码块 加载到内存</p>
+<p>控制权交给os</p>
+<p>os的最起始的地址</p>
+<p>操作系统与设备程序交互</p>
+<p>interface</p>
+<p>中断IO 系统调用 异常  外射</p>
+<p>中断  外设  </p>
+<p>异常和系统调用 应用程序  </p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569484072947.png" alt="1569484072947"></p>
+<p>操作系统 特殊的软件  可以信任的软件</p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569484191899.png" alt="1569484191899"></p>
+<p>屏蔽底层的复杂性</p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569484244745.png" alt="1569484244745"></p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569484301928.png" alt="1569484301928"></p>
+<p>中断来源于外设  键盘 鼠标   网卡   声卡 </p>
+<p>异常  应用程序意向不到的行为</p>
+<p>系统调用 应用程序强求操作提供服务</p>
+<p>读写文件  网络包   系统调用</p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569484543949.png" alt="1569484543949"></p>
+<p>中断 异步  </p>
+<p>异常 同步</p>
+<p>系统调用 异步或者同步</p>
+<p>发出请求 返回的时间是异步的</p>
+<p>发数据  </p>
+<p>马上做其他的事情</p>
+<p>完成异步发送完成的请求</p>
+<p>你做一件事  等一会返回结果 </p>
+<p>做其他的事情</p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569484734835.png" alt="1569484734835"></p>
+<p>系统调用不会重复的使用</p>
+<h2 id="2-2-中断-异常和系统调用"><a href="#2-2-中断-异常和系统调用" class="headerlink" title="2.2 中断  异常和系统调用"></a>2.2 中断  异常和系统调用</h2><p><img src="/blog4/2019/05/12/OperatingSystem/1569484867068.png" alt="1569484867068"></p>
+<p>表  key  中断号</p>
+<p>特定的编号 对应的地址</p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569485001512.png" alt="1569485001512"></p>
+<p>软件 </p>
+<p>保存当前的处理状态</p>
+<p>终端服务程序</p>
+<p>清除中断标记</p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569485080963.png" alt="1569485080963"></p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569485101036.png" alt="1569485101036"></p>
+<p>异常  异常编号 </p>
+<p>保存  现场</p>
+<p>异常处理 </p>
+<p>  杀死异常的程序</p>
+<p>  重新执行异常指令</p>
+<p>恢复线程</p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569485194740.png" alt="1569485194740">接口</p>
+<p>接口  系统调用</p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569485269911.png" alt="1569485269911"></p>
+<p>应用程序</p>
+<p>成功  失败</p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569486884226.png" alt="1569486884226"></p>
+<p>程序访问使用</p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569486900168.png" alt="1569486900168"></p>
+<p>API实现相应的操作系统的服务</p>
+<p>定义哪些系统调用</p>
+<p>操作系统的实现<img src="/blog4/2019/05/12/OperatingSystem/1569486963487.png" alt="1569486963487"></p>
+<p>应用程序</p>
+<p>提供什么样的功能</p>
+<p>Library 访问系统调用的接口</p>
+<p>用户态 应用程序执行的特权级的状态  不能完全控制计算机 </p>
+<p>内核态 CPU运行状态  可以执行任何的指令 完全控制</p>
+<p>用户调用兄消退给你调用  CPU将系统调用的权利返回给用户</p>
+<p>函数调用</p>
+<p>系统调用</p>
+<p>用户态和内核态的转换</p>
+<p>开销 相应 的汇报  安全  可靠</p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569487195809.png" alt="1569487195809"></p>
+<p>跨越操作系统的边界</p>
+<p>操作系统 外设</p>
+<p>整个系统安全可靠 </p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569487234285.png" alt="1569487234285"></p>
+<p>正常的处理应用程序</p>
+<p>操作系统有自己的堆栈</p>
+<p>维护堆栈</p>
+<p>退出  堆栈保存</p>
+<p>进入  恢复</p>
+<p>应用程序</p>
+<p>操作系统不信任程序</p>
+<p>对参数做检查</p>
+<p>基于安全层面的考虑</p>
+<p>从内核态导入用户态  内存空间的数据拷贝</p>
+<h1 id="第三章-计算机操作系统及-内存分配体系"><a href="#第三章-计算机操作系统及-内存分配体系" class="headerlink" title="第三章 计算机操作系统及 内存分配体系"></a>第三章 计算机操作系统及 内存分配体系</h1><h2 id="3-1-计算机操作系统及-内存分配体系"><a href="#3-1-计算机操作系统及-内存分配体系" class="headerlink" title="3.1  计算机操作系统及 内存分配体系"></a>3.1  计算机操作系统及 内存分配体系</h2><p>主要的3部分</p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569487489649.png" alt="1569487489649"></p>
+<p>CPU</p>
+<p> 内存        程序代码</p>
+<p>  IO         外设</p>
+<p>内存的层次结构</p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569487581364.png" alt="1569487581364"></p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569487621914.png" alt="1569487621914"></p>
+<p>抽象</p>
+<p>内存中运行不用考虑底层的细节</p>
+<p>访问一个联系的地址空间</p>
+<p>逻辑地址空间</p>
+<p>保护</p>
+<p>有个不同的应用程序</p>
+<p>隔离的机制的实现</p>
+<p>进程之间的交互</p>
+<p>当内存中放了很多应用程序 </p>
+<p>最需要内存的数据放在内存中</p>
+<p>其余临时放到磁盘上去</p>
+<p>应用程序透明</p>
+<p>P1  P2 P3  P4 </p>
+<p>P4的数据没必要放到内存</p>
+<p> 逻辑地址空间</p>
+<p>物理地址空间</p>
+<p>程序重定位</p>
+<p>分段</p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569487913965.png" alt="1569487913965"></p>
+<p>虚拟内存</p>
+<p>按需分页虚拟内存<img src="/blog4/2019/05/12/OperatingSystem/1569487935436.png" alt="1569487935436"></p>
+<h2 id="3-2-地址空间与地址生成"><a href="#3-2-地址空间与地址生成" class="headerlink" title="3.2 地址空间与地址生成"></a>3.2 地址空间与地址生成</h2><p>地址空间  地址生成</p>
+<p>、地址空间定义</p>
+<p>地址生成</p>
+<p>安全检查</p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569487993791.png" alt="1569487993791"></p>
+<p>地址空间</p>
+<p>物理  硬件   内存条  磁盘</p>
+<p>逻辑地址</p>
+<p>一维线性</p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569488041565.png" alt="1569488041565"></p>
+<p>映射空间</p>
+<p>C程序 汇编程序</p>
+<p>C程序  变量的名字  地址</p>
+<p>汇编程序</p>
+<p>符号  代表函数和名字</p>
+<p>汇编器  机器语言</p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569488121413.png" alt="1569488121413"></p>
+<p>大的程序  小的程序</p>
+<p>Linker</p>
+<p>小的变成大的程序</p>
+<p>Loader</p>
+<p>符号的地址   —–》》》》  具体的逻辑地址</p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569488227256.png" alt="1569488227256"></p>
+<p>指令取出来</p>
+<p>逻辑地址</p>
+<p>查找逻辑地址</p>
+<p>MMU 存在着映射关系</p>
+<p>具体的物理地址在什么地方</p>
+<p>一个指令</p>
+<p>MMU 查找逻辑地址映射表</p>
+<p>找到</p>
+<p>主存     —-》》总线—-》》》CPU</p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569488370979.png" alt="1569488370979"></p>
+<p>起始地址</p>
+<p>长度</p>
+<p>cpu执行指令</p>
+<p>逻辑地址是否满足区域的限制</p>
+<p>地址安全监测</p>
+<h2 id="3-3-连续内存分配-3个内存分配算法"><a href="#3-3-连续内存分配-3个内存分配算法" class="headerlink" title="3.3 连续内存分配 3个内存分配算法"></a>3.3 连续内存分配 3个内存分配算法</h2><p>内存的碎片空间</p>
+<p>内部碎片 </p>
+<p>外部碎片</p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569488447288.png" alt="1569488447288"></p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569488501994.png" alt="1569488501994"></p>
+<p>数据分配空间</p>
+<p>分配算法</p>
+<p>首次适配算法</p>
+<p>最优分配算法</p>
+<p>最差分配算法</p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569488560128.png" alt="1569488560128"></p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569488624431.png" alt="1569488624431"></p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569488666438.png" alt="1569488666438"></p>
+<p>最优适配算法那</p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569488701990.png" alt="1569488701990"></p>
+<p>避免了</p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569488737775.png" alt="1569488737775"></p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569488831363.png" alt="1569488831363"></p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569488837600.png" alt="1569488837600"></p>
+<h2 id="3-4-连续分配空间-压缩式和交换式碎片"><a href="#3-4-连续分配空间-压缩式和交换式碎片" class="headerlink" title="3.4 连续分配空间 压缩式和交换式碎片"></a>3.4 连续分配空间 压缩式和交换式碎片</h2><p><img src="/blog4/2019/05/12/OperatingSystem/1569490171200.png" alt="1569490171200"></p>
+<p>非连续分配和连续分配</p>
+<p>非连续分配的缺点</p>
+<p>如何建立虚拟地址和物理地址之间的转换</p>
+<p> 软件方案  </p>
+<p>硬件方案</p>
+<p>分段机制</p>
+<p>分页机制</p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569490260377.png" alt="1569490260377"></p>
+<p>分段的管理机制</p>
+<p>计算机程序 各种各样的段组成</p>
+<p>各种子程序</p>
+<p>程序的分段地址空间</p>
+<p>分段的寻址方案</p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569490334932.png" alt="1569490334932"></p>
+<p>段</p>
+<p>更好的分离和共享</p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569490384026.png" alt="1569490384026"></p>
+<p>相应的分离代码段</p>
+<p>数据的相对的隔离</p>
+<p>左边连续的逻辑地址</p>
+<p>右边分散的物理地址</p>
+<p>逻辑地址空间  连续的字节流</p>
+<p>代码  数据  堆  栈</p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569490474315.png" alt="1569490474315"></p>
+<p>软件实现 软件进行映射 开销很大  通过硬件的知识</p>
+<p>分段地址方案</p>
+<p>地址  一维的逻辑地址</p>
+<p>表示的方法</p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569490529507.png" alt="1569490529507"></p>
+<p>段</p>
+<p>Segment</p>
+<p>段机制寻址的方式</p>
+<p>Segment number</p>
+<p>段寄存器和地址寄存器</p>
+<p>都可以存在 </p>
+<p>映射机制 </p>
+<p>一维线性</p>
+<p>映射到多为的物理地址</p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569490690564.png" alt="1569490690564"></p>
+<p>段的起始地址   段的长度</p>
+<p>一般 地址在一个合法的空间之内的</p>
+<p>段地址   + offsett</p>
+<p>CPU为了寻址做了很多工作</p>
+<h1 id="第四章-虚拟内存"><a href="#第四章-虚拟内存" class="headerlink" title="第四章  虚拟内存"></a>第四章  虚拟内存</h1><h2 id="5-1-虚拟内存的起因"><a href="#5-1-虚拟内存的起因" class="headerlink" title="5.1 虚拟内存的起因"></a>5.1 虚拟内存的起因</h2><p><img src="/blog4/2019/05/12/OperatingSystem/1569490881891.png" alt="1569490881891"></p>
+<p>起因 </p>
+<p>程序运行的时候越来越不够用</p>
+<p>电子游戏          小游戏 —》》 大游戏  计算机性能</p>
+<p>想办法  更多程序跑在有限的内存中去</p>
+<p>很大的存储器</p>
+<p>更大 更快  更便宜的非易失性存储器</p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569491094308.png" alt="1569491094308"></p>
+<p>更有效的管理物理内训</p>
+<p>更大  更快  更便宜</p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569491142243.png" alt="1569491142243"></p>
+<p>受限于内存的特质</p>
+<p>新的内存 满足这个条件</p>
+<p>更大 更快 更便宜  更不容易丢失内存</p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569491254175.png" alt="1569491254175"></p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569491300988.png" alt="1569491300988"></p>
+<h2 id="5-2-覆盖技术"><a href="#5-2-覆盖技术" class="headerlink" title="5.2 覆盖技术"></a>5.2 覆盖技术</h2><p>80年代产生</p>
+<p>小的内存 运行大的程序</p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569491451755.png" alt="1569491451755"></p>
+<p>640k的大小</p>
+<p>虚拟出更大的空间</p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569491510359.png" alt="1569491510359"></p>
+<p>常用功能</p>
+<p>必选部分</p>
+<p>可选部分</p>
+<p>不存在调用关系</p>
+<p>分时</p>
+<p>例子</p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569491599860.png" alt="1569491599860"></p>
+<p>代码  只读  释放那空间</p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569491818657.png" alt="1569491818657"></p>
+<p>程序员进行管理</p>
+<p>高出</p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569491889109.png" alt="1569491889109"></p>
+<p>开销</p>
+<p>程序员  设计的开销</p>
+<p>换入 换出操作 </p>
+<p>时间的开销 </p>
+<p>时间</p>
+<p>早期的时候 使得大型软件的使用得以实现</p>
+<p>Dos</p>
+<p>各种各样的东西</p>
+<h2 id="5-3交换技术"><a href="#5-3交换技术" class="headerlink" title="5.3交换技术"></a>5.3交换技术</h2><p>目标</p>
+<p>内存管理单元</p>
+<p>进程的地址空间</p>
+<p>换出</p>
+<p>外存中的数据</p>
+<p> <strong>换出</strong></p>
+<p>进程的地址空间 内存到外存 </p>
+<p><strong>换入</strong></p>
+<p>外存进内存</p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569845933399.png" alt="1569845933399"></p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569845960216.png" alt="1569845960216"></p>
+<p>内存导出去</p>
+<p>后端存储 硬盘</p>
+<p>硬盘中的数据导回来</p>
+<p>具体的实现复杂</p>
+<p><strong>交换技术考虑什么问题</strong></p>
+<ol>
+<li>交换时机的确定</li>
+</ol>
+<p>​            内存空间不够的时候</p>
+<ol start="2">
+<li>多大的内存空间</li>
+</ol>
+<p>​          换出空间被占用了</p>
+<ol start="3">
+<li>程序换入的重定位</li>
+</ol>
+<p>动态地址映射</p>
+<ol start="3">
+<li><img src="/blog4/2019/05/12/OperatingSystem/1569846201695.png" alt="1569846201695"></li>
+</ol>
+<p>覆盖技术和交换技术</p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569846245436.png" alt="1569846245436"></p>
+<p>覆盖   共享一块内存区域 代价程序员的手动指定</p>
+<p>交换  程序之间  换入换出一个程序</p>
+<p>操作系统的内部完成 开销比较大</p>
+<h2 id="5-4虚拟技术"><a href="#5-4虚拟技术" class="headerlink" title="5.4虚拟技术"></a>5.4虚拟技术</h2><p>覆盖技术的问题</p>
+<p>程序员的管理 分析  告诉相应的处理技术</p>
+<p>粒度太大</p>
+<p>交换技术  进程的地址空间都交换出来 </p>
+<p>增加了处理器的开销</p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569846414158.png" alt="1569846414158"></p>
+<p>虚拟技术—目标</p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569846472464.png" alt="1569846472464"></p>
+<p>进程的部分内容 交换</p>
+<p>不需要程序员的干涉</p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569846564843.png" alt="1569846564843"></p>
+<p>操作系统和MMU</p>
+<p>程序具有局部性</p>
+<p>程序在较短的时间范围之内</p>
+<p>指令地址和指令的操作数地址  </p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569846632246.png" alt="1569846632246"></p>
+<p>时间局部性</p>
+<p>空间局部性</p>
+<p>程序的局部性很好</p>
+<p>程序的效率很高</p>
+<p>操作系统利用局部性 虚拟内存的理想的管理状态</p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569846827471.png" alt="1569846827471"></p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569846871213.png" alt="1569846871213"></p>
+<p>什么是缺页中断</p>
+<h1 id="第七章-进程"><a href="#第七章-进程" class="headerlink" title="第七章 进程"></a>第七章 进程</h1><p>进程的描述</p>
+<p>进程的状态</p>
+<p>线程</p>
+<p>进程间通信</p>
+<p>线程互斥与同步</p>
+<p>死锁问题</p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569847389853.png" alt="1569847389853"></p>
+<p>进程 </p>
+<p>什么是进程</p>
+<p>为什么用进程</p>
+<p>执行的程序执行过程</p>
+<p>跑一个程序</p>
+<p>跑多个程序</p>
+<p>程序的概念表示</p>
+<p>多个程序的实例</p>
+<p>更好的表示程序的执行的过程</p>
+<p><img src="/blog4/2019/05/12/OperatingSystem/1569847535749.png" alt="1569847535749"></p>
+<p>编译  执行程序   代码段  数据段</p>
+<p>执行文件的形式存在</p>
+<p>动态执行的过程</p>
+<h2 id="7-1-进程的组成"><a href="#7-1-进程的组成" class="headerlink" title="7.1 进程的组成"></a>7.1 进程的组成</h2><p>进程执行的功能</p>
+<p>程序是产生进程的基础</p>
+<p>多次执行程序</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+      <div>
+        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/blog4/images/pp.png" alt="MaLingZhao wechat" style="width: 200px; max-width: 100%;">
+    <div>扫一扫上面的二维码 加qq群共同学习</div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/blog4/images/zf.png
+" alt="MaLingZhao 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/blog4/images/zfb.png" alt="MaLingZhao 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+      <div id="bitcoin" style="display: inline-block">
+        <img id="bitcoin_qr" src="/images/bitcoin.png" alt="MaLingZhao 比特币">
+        <p>比特币</p>
+      </div>
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    MaLingZhao
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/" title="操作系统">https://malingzhao.github.io/blog4/2019/05/12/OperatingSystem/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/blog4/tags/计算机/" rel="tag"># 计算机</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/blog4/2019/04/13/springboot/" rel="next" title="springboot">
+                <i class="fa fa-chevron-left"></i> springboot
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/blog4/2019/05/16/MachineLearning/" rel="prev" title="MachineLearning">
+                MachineLearning <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_fav">收藏夹</a>
+<a class="jiathis_button_copy">复制网址</a>
+<a class="jiathis_button_email">邮件</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone">QQ空间</a>
+<a class="jiathis_button_tqq">腾讯微博</a>
+<a class="jiathis_button_douban">豆瓣</a>
+<a class="jiathis_button_share">一键分享</a>
+
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript">
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/blog4/images/dongman.png" alt="MaLingZhao">
+            
+              <p class="site-author-name" itemprop="name">MaLingZhao</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/blog4/archives/">
+              
+                  <span class="site-state-item-count">52</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/blog4/categories/index.html">
+                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/blog4/tags/index.html">
+                  <span class="site-state-item-count">38</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+
+
+
+          
+
+
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/malingzhao" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://weibo.com/u/7279469056/home" target="_blank" title="weibo">
+                      
+                        <i class="fa fa-fw fa-weibo"></i>weibo</a>
+                  </span>
+                
+            </div>
+
+          
+
+
+
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://malingzhao.github.io/blog4" title="Title" target="_blank">Title</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://malingzhao.github.io/blog4" title="我的博客" target="_blank">我的博客</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#操作系统"><span class="nav-number">1.</span> <span class="nav-text">操作系统</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第一章-概述"><span class="nav-number">2.</span> <span class="nav-text">第一章 概述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1课程概述"><span class="nav-number">3.</span> <span class="nav-text">1课程概述</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-课程介绍"><span class="nav-number">3.1.</span> <span class="nav-text">1.1  课程介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-操作系统实验"><span class="nav-number">3.2.</span> <span class="nav-text">1.2 操作系统实验</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-预备知识"><span class="nav-number">3.3.</span> <span class="nav-text">1.3 预备知识</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-什么是操作系统"><span class="nav-number">4.</span> <span class="nav-text">2 什么是操作系统</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-功能"><span class="nav-number">4.1.</span> <span class="nav-text">2.1 功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-功能的抽象"><span class="nav-number">4.2.</span> <span class="nav-text">2.2 功能的抽象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-操作系统的层次架构"><span class="nav-number">4.3.</span> <span class="nav-text">2.3 操作系统的层次架构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-4-操作系统的特征"><span class="nav-number">4.4.</span> <span class="nav-text">2.4 操作系统的特征</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-为什么学习操作系统"><span class="nav-number">5.</span> <span class="nav-text">3 为什么学习操作系统</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1综合课程"><span class="nav-number">5.1.</span> <span class="nav-text">3.1综合课程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-已经有何很多操作系统-要不要学"><span class="nav-number">5.2.</span> <span class="nav-text">3.2 已经有何很多操作系统  要不要学</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-3-操作系统-计算机研究的基石之一"><span class="nav-number">5.3.</span> <span class="nav-text">3.3 操作系统 计算机研究的基石之一</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-如何学习操作系统"><span class="nav-number">6.</span> <span class="nav-text">4 如何学习操作系统</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-操作系统实例"><span class="nav-number">7.</span> <span class="nav-text">5 操作系统实例</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-操作系统的历史和发展"><span class="nav-number">8.</span> <span class="nav-text">6 操作系统的历史和发展</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#6-1-早期的计算机"><span class="nav-number">8.1.</span> <span class="nav-text">6.1  早期的计算机</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-2-顺序执行和批处理"><span class="nav-number">8.2.</span> <span class="nav-text">6.2 顺序执行和批处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-3-内存容量增大-CPU执行多个程序"><span class="nav-number">8.3.</span> <span class="nav-text">6.3 内存容量增大  CPU执行多个程序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-4-个人电脑操作系统"><span class="nav-number">8.4.</span> <span class="nav-text">6.4 个人电脑操作系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-5-计算机的未来的发展趋势"><span class="nav-number">8.5.</span> <span class="nav-text">6.5 计算机的未来的发展趋势</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#7-操作系统结构"><span class="nav-number">9.</span> <span class="nav-text">7 操作系统结构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#8-小结"><span class="nav-number">10.</span> <span class="nav-text">8 小结</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第二章"><span class="nav-number">11.</span> <span class="nav-text">第二章</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-启动-中断-异常-和-系统调用"><span class="nav-number">11.1.</span> <span class="nav-text">2.1  启动 中断  异常  和  系统调用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-中断-异常和系统调用"><span class="nav-number">11.2.</span> <span class="nav-text">2.2 中断  异常和系统调用</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第三章-计算机操作系统及-内存分配体系"><span class="nav-number">12.</span> <span class="nav-text">第三章 计算机操作系统及 内存分配体系</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-计算机操作系统及-内存分配体系"><span class="nav-number">12.1.</span> <span class="nav-text">3.1  计算机操作系统及 内存分配体系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-地址空间与地址生成"><span class="nav-number">12.2.</span> <span class="nav-text">3.2 地址空间与地址生成</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-3-连续内存分配-3个内存分配算法"><span class="nav-number">12.3.</span> <span class="nav-text">3.3 连续内存分配 3个内存分配算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-4-连续分配空间-压缩式和交换式碎片"><span class="nav-number">12.4.</span> <span class="nav-text">3.4 连续分配空间 压缩式和交换式碎片</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第四章-虚拟内存"><span class="nav-number">13.</span> <span class="nav-text">第四章  虚拟内存</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#5-1-虚拟内存的起因"><span class="nav-number">13.1.</span> <span class="nav-text">5.1 虚拟内存的起因</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-2-覆盖技术"><span class="nav-number">13.2.</span> <span class="nav-text">5.2 覆盖技术</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-3交换技术"><span class="nav-number">13.3.</span> <span class="nav-text">5.3交换技术</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-4虚拟技术"><span class="nav-number">13.4.</span> <span class="nav-text">5.4虚拟技术</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第七章-进程"><span class="nav-number">14.</span> <span class="nav-text">第七章 进程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#7-1-进程的组成"><span class="nav-number">14.1.</span> <span class="nav-text">7.1 进程的组成</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">MaLingZhao</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">200.8k</span>
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/blog4/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog4/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog4/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog4/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog4/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog4/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog4/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog4/lib/three/three-waves.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/blog4/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/blog4/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/blog4/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/blog4/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/blog4/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/blog4/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/blog4/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: '8TOqOwTzIDHvfpCddf1zIWum-gzGzoHsz',
+        appKey: 'EQrtySSrAvcKm4R7okLaXIIP',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/blog4/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
