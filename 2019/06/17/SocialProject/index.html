@@ -550,7 +550,7 @@
 <p>IdWorkder</p>
 <p>基础微服务</p>
 <p>增删改查</p>
-<h2 id="1-7-跨预处理CrossJoin"><a href="#1-7-跨预处理CrossJoin" class="headerlink" title="1.7 跨预处理CrossJoin"></a>1.7 跨预处理CrossJoin</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@SpringBootApplication</span></span><br><span class="line"><span class="meta">@CrossOrigin</span> <span class="comment">//跨预处理</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BaseAppApplication</span> </span>&#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        SpringApplication.run(BaseAppApplication<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="1-7-跨预处理CrossJoin"><a href="#1-7-跨预处理CrossJoin" class="headerlink" title="1.7 跨预处理CrossJoin"></a>1.7 跨预处理CrossJoin</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@SpringBootApplication</span></span><br><span class="line"><span class="meta">@CrossOrigin</span> <span class="comment">//跨预处理</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BaseAppApplication</span> </span>&#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        SpringApplication.run(BaseAppApplication.class);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h2 id="1-8-docker-安装mysql5-6"><a href="#1-8-docker-安装mysql5-6" class="headerlink" title="1.8 docker 安装mysql5.6"></a>1.8 docker 安装mysql5.6</h2><p>前提 centos7</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">docker search mysql</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">docker pull mysql:5.6</span><br><span class="line"></span><br><span class="line">docker run -p 3306:3306 --name mysql -v /mysql/conf:/etc/mysql/conf.d -v /mysql/logs:/logs -v /mysql/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 -d mysql:5.6</span><br></pre></td></tr></table></figure>
@@ -1025,7 +1025,7 @@ var jiathis_config={
               
                 <a href="/blog4/archives/">
               
-                  <span class="site-state-item-count">58</span>
+                  <span class="site-state-item-count">45</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1036,7 +1036,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-categories">
                 <a href="/blog4/categories/index.html">
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -1159,7 +1159,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">203.1k</span>
+    <span title="Site words total count">204.7k</span>
   
 </div>
 

@@ -86,18 +86,23 @@
 
 
 
-<meta name="description" content="​         分布式账本与区块链​        比特币为核心的加密货币​        以区块链为基础的分布式账本​        IOC，资本关注 部分的落地项目​​区块链：  一种分布式数据库技术 狭义： 以区块为单位的链式存储结构 适合分布式记账场景下的放醋安凯金额可扩展性的要求 广义： 基于区块链技术实现的分布式记账技术，还包括分布式共识，隐私与安全保护，点对点通信技术 交易 一次">
+<meta name="description" content="​    网络数据传输威胁  数据窃取 数据篡改 身份伪装  1 密码学基础加密三要素 明文： 你要发送的数据  加密算法 ： 一身那么样的方式进行加密（des  3des  aes）  密钥： 双方规定的钥匙 会根据算法的不同，长度不同   解密三要素： 密文 解密算法： 可能和加密算法相同，也可能不同（亦或加密=》 算法相同，凯撒密码=》》算法不同） 秘钥  一定与加密的密钥相同  凯撒密码h">
 <meta name="keywords" content="区块链,go">
 <meta property="og:type" content="article">
 <meta property="og:title" content="区块链">
 <meta property="og:url" content="https://malingzhao.github.io/blog4/2019/12/15/区块链/index.html">
 <meta property="og:site_name" content="我的个人博客">
-<meta property="og:description" content="​         分布式账本与区块链​        比特币为核心的加密货币​        以区块链为基础的分布式账本​        IOC，资本关注 部分的落地项目​​区块链：  一种分布式数据库技术 狭义： 以区块为单位的链式存储结构 适合分布式记账场景下的放醋安凯金额可扩展性的要求 广义： 基于区块链技术实现的分布式记账技术，还包括分布式共识，隐私与安全保护，点对点通信技术 交易 一次">
+<meta property="og:description" content="​    网络数据传输威胁  数据窃取 数据篡改 身份伪装  1 密码学基础加密三要素 明文： 你要发送的数据  加密算法 ： 一身那么样的方式进行加密（des  3des  aes）  密钥： 双方规定的钥匙 会根据算法的不同，长度不同   解密三要素： 密文 解密算法： 可能和加密算法相同，也可能不同（亦或加密=》 算法相同，凯撒密码=》》算法不同） 秘钥  一定与加密的密钥相同  凯撒密码h">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-12-15T10:52:21.487Z">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/12/15/区块链/%E5%8C%BA%E5%9D%97%E9%93%BE/image-20191220175500921.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/12/15/区块链/%E5%8C%BA%E5%9D%97%E9%93%BE/image-20191220180310238.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/12/15/区块链/%E5%8C%BA%E5%9D%97%E9%93%BE/image-20191228163347837.png">
+<meta property="og:image" content="https://malingzhao.github.io/blog4/2019/12/15/区块链/%E5%8C%BA%E5%9D%97%E9%93%BE/image-20200115001504389.png">
+<meta property="og:updated_time" content="2020-03-22T04:05:09.734Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="区块链">
-<meta name="twitter:description" content="​         分布式账本与区块链​        比特币为核心的加密货币​        以区块链为基础的分布式账本​        IOC，资本关注 部分的落地项目​​区块链：  一种分布式数据库技术 狭义： 以区块为单位的链式存储结构 适合分布式记账场景下的放醋安凯金额可扩展性的要求 广义： 基于区块链技术实现的分布式记账技术，还包括分布式共识，隐私与安全保护，点对点通信技术 交易 一次">
+<meta name="twitter:description" content="​    网络数据传输威胁  数据窃取 数据篡改 身份伪装  1 密码学基础加密三要素 明文： 你要发送的数据  加密算法 ： 一身那么样的方式进行加密（des  3des  aes）  密钥： 双方规定的钥匙 会根据算法的不同，长度不同   解密三要素： 密文 解密算法： 可能和加密算法相同，也可能不同（亦或加密=》 算法相同，凯撒密码=》》算法不同） 秘钥  一定与加密的密钥相同  凯撒密码h">
+<meta name="twitter:image" content="https://malingzhao.github.io/blog4/2019/12/15/区块链/%E5%8C%BA%E5%9D%97%E9%93%BE/image-20191220175500921.png">
 
 
 
@@ -403,7 +408,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  730
+                  1.8k
                 </span>
               
 
@@ -419,7 +424,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  2
+                  6
                 </span>
               
             </div>
@@ -440,21 +445,248 @@
       
 
       
-        <p>​         分布式账本与区块链<br>​        比特币为核心的加密货币<br>​        以区块链为基础的分布式账本<br>​        IOC，资本关注 部分的落地项目<br>​<br>​<br>区块链：  一种分布式数据库技术</p>
-<p>狭义： 以区块为单位的链式存储结构 适合分布式记账场景下的放醋安凯金额可扩展性的要求</p>
-<p>广义： 基于区块链技术实现的分布式记账技术，还包括分布式共识，隐私与安全保护，点对点通信技术</p>
-<p>交易 一次对账本的操作<br>区块 ： 记录一段时间里发生的交易记录，是对当前账本状态的一次共识<br>链：  整个账本状态变化的日志记录</p>
-<p>​      </p>
-<p>区块链<br>  – 一个个的区块组成的链<br>    –每个区块<br>      – 区块头<br>        存放前一个区块的hash（prevHash）和用于计算挖矿难度的随机数<br>        – 区块体</p>
-<p>共识机制<br>   PoW PoS  DPoS 分布式一致性算法<br>   PoW<br>      比特币的挖矿机制  尚未提交的交易的记录打包成一个区块，不断的遍历尝试<br>      获取一个随机数  是的新的区块加上随机数满足一定的难度的条件</p>
-<pre><code>优点： 完全去中心化 节点自由进出 避免了简历和维护中心化信用机构的成本
-缺点： 比特币的挖矿造成大量的资源的浪费</code></pre><p>   Pos<br>      分布式共识机制 以太坊的Pos机制采用节点下赌注来赌下一个区块<br>      赌中的话会有以太币的奖励 赌不中的话被以扣比特币的方式达成下一个区块的共识</p>
-<p>   DPos<br>      类似于董事会的投票<br>   分布式一致性算法</p>
-<p>​      </p>
-<p> 什么是以太坊<br>   以太坊是一个通用的全球性的区块链，可以管理金融类型和非金融类型的状态<br>   以太坊是一个个平台和编程语言包括数字货币和以太币Ether，以及构建和发布分布式应用的脚本<br>   在最底层的角度看的话，以太坊是一个多层的基于密码学的开源技术协议</p>
-<p>   以太坊是区块链与智能合约的完美结合 是智能合约的完整的解决方案，<br>   被设计成了一个通用的去中心化的平台，拥有一套完整的可以扩展的工具，在P2P网络，加密，HttpClient<br>   等技术的支持下实现了一个机遇类似于比特币的区块链<br>   在以太坊上部署的智能合约运行在以太坊的特有的虚拟上，通过智能合约实现强大的功能</p>
-<p>   DAPP                      DAO<br>   智        能      合          同<br>Solidity/Serpent  账户管理 区块链管理   校验模块<br>EVM        密码模块    共识模块       挖矿模块<br>网络管理   P2P    网络    数据库</p>
+        <p>​    网络数据传输威胁</p>
+<ol>
+<li>数据窃取</li>
+<li>数据篡改</li>
+<li>身份伪装</li>
+</ol>
+<h1 id="1-密码学基础"><a href="#1-密码学基础" class="headerlink" title="1 密码学基础"></a>1 密码学基础</h1><h2 id="加密三要素"><a href="#加密三要素" class="headerlink" title="加密三要素"></a>加密三要素</h2><ol>
+<li><p>明文： 你要发送的数据</p>
+</li>
+<li><p>加密算法 ： 一身那么样的方式进行加密（des  3des  aes）</p>
+</li>
+<li><p>密钥： 双方规定的钥匙 会根据算法的不同，长度不同</p>
+</li>
+</ol>
+<h2 id="解密三要素："><a href="#解密三要素：" class="headerlink" title="解密三要素："></a>解密三要素：</h2><ol>
+<li>密文</li>
+<li>解密算法： 可能和加密算法相同，也可能不同（亦或加密=》 算法相同，凯撒密码=》》算法不同）</li>
+<li>秘钥  一定与加密的密钥相同</li>
+</ol>
+<h2 id="凯撒密码"><a href="#凯撒密码" class="headerlink" title="凯撒密码"></a>凯撒密码</h2><p>hello world -》 加密_—&gt; khoor zrug—&gt;&gt;解密–》hello world</p>
+<p>加密过程：</p>
+<ol>
+<li>明文： hello world</li>
+<li>算法 ： 向右移动</li>
+<li>密钥： 3 </li>
+</ol>
+<p>解密过程：</p>
+<ol>
+<li>密文： khoor  zrug</li>
+<li>算法： 向左移动（与加密算法不同）</li>
+<li>密钥 ：3</li>
+</ol>
+<h1 id="2-加密方式"><a href="#2-加密方式" class="headerlink" title="2 加密方式"></a>2 加密方式</h1><h2 id="对称加密-vs-非对称加密"><a href="#对称加密-vs-非对称加密" class="headerlink" title="对称加密 vs 非对称加密"></a>对称加密 vs 非对称加密</h2><p>对称加密：</p>
+<ol>
+<li><p>密钥的数量 1个</p>
+</li>
+<li><p>特点： </p>
+<ol>
+<li>加密效率高</li>
+<li>双方使用的密钥相同</li>
+</ol>
+</li>
+<li><p>安全性</p>
+<p>1 不安全 （相对于非对称加密）</p>
+</li>
+<li><p>使用情况</p>
+<ol>
+<li>主流的加密方式</li>
+</ol>
+</li>
+</ol>
+<p>非对称加密：</p>
+<ol>
+<li><p>密钥数量：2个</p>
+<ol>
+<li><p>公钥</p>
+<ul>
+<li><p>任何人都可以持有</p>
+</li>
+<li><p>一般用于加密作用</p>
+</li>
+</ul>
+</li>
+<li><p>私钥</p>
+<ul>
+<li>只有自己持有</li>
+<li>一半呢不用于加密，而是用于签名</li>
+<li>签名的数据可以证明是私钥的持有人发送数据</li>
+<li>私钥签名的数据，私钥的持有人无法否认自己发送过这个消息</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>特点</p>
+<ol>
+<li>公钥加密的只有自己的私钥能解开</li>
+<li>加密解密效率低一般不做大量的数据使用</li>
+</ol>
+</li>
+<li><p>安全性</p>
+<ol>
+<li>安全性高 </li>
+</ol>
+</li>
+<li><p>使用情况</p>
+<ol>
+<li>一般配合对称加密使用</li>
+<li>建立连接之初，先使用非对称加密协商好对称加密算法和密钥</li>
+<li>然后使用对称加密进行后续的解密</li>
+</ol>
+</li>
+</ol>
+<h1 id="三、-秘密信息安全常识与威胁"><a href="#三、-秘密信息安全常识与威胁" class="headerlink" title="三、 秘密信息安全常识与威胁"></a>三、 秘密信息安全常识与威胁</h1><h2 id="密码信息安全常识"><a href="#密码信息安全常识" class="headerlink" title="密码信息安全常识"></a>密码信息安全常识</h2><ul>
+<li><p>不要使用保密的密码算法</p>
+</li>
+<li><p>使用低强度的密码比不进行任何加密更加危险</p>
+</li>
+<li><p>任何密码都有被破解的一天（分对称加密算法由英国安全局1973年发明，后RSA发布于1977年）</p>
+</li>
+<li><p>密码知识信息安全的因部分</p>
+</li>
+</ul>
+<h1 id="四、-编码与解密的关系"><a href="#四、-编码与解密的关系" class="headerlink" title="四、 编码与解密的关系"></a>四、 编码与解密的关系</h1><h2 id="1-计算机单位介绍"><a href="#1-计算机单位介绍" class="headerlink" title="1   计算机单位介绍"></a>1   计算机单位介绍</h2><p>位： bit  0或1  最小的单位</p>
+<p>字节： Byte  1Byte = 8 bit</p>
+<p>千字节 1K =1024B  硬盘里面1k=1000</p>
+<p>TB</p>
+<p>GB</p>
+<p>PB</p>
+<p>收集的下载速度一般是Mbit ，</p>
+<p>这个速度不是我们电脑上常说的 除以8</p>
+<h2 id="2-编码解码"><a href="#2-编码解码" class="headerlink" title="2 编码解码"></a>2 编码解码</h2><p>常用的编码方式：</p>
+<ol>
+<li>gob包-》》go内置的编解码</li>
+<li>html编码</li>
+<li>json编解码</li>
+<li>binary包-》》go语言的内置包</li>
+</ol>
+<h2 id="3-加密解密"><a href="#3-加密解密" class="headerlink" title="3 加密解密"></a>3 加密解密</h2><ul>
+<li><p>加密，就是对比特流进行编解码</p>
+</li>
+<li><p>加密： 对明文的比特序列进行编码，得到密文的比特系列</p>
+</li>
+</ul>
+<h1 id="五-常用的加密算法"><a href="#五-常用的加密算法" class="headerlink" title="五 常用的加密算法"></a>五 常用的加密算法</h1><h1 id="1-DES"><a href="#1-DES" class="headerlink" title="1 DES"></a>1 DES</h1><p><img src="/blog4/2019/12/15/区块链/%E5%8C%BA%E5%9D%97%E9%93%BE/image-20191220175500921.png" alt="image-20191220175500921"></p>
+<p>Data Encryption Standard </p>
+<p>特点：</p>
+<ol>
+<li>不安全，不建议使用</li>
+<li>密钥：8字节64bit（其实只使用了56位，每7个bit就会设置一个校验位 ）</li>
+<li>加密的时候会对明文进行分组，分组长度是8bytes 加密之后得到的密文也是8byte</li>
+</ol>
+<h2 id="2-3DES"><a href="#2-3DES" class="headerlink" title="2 3DES"></a>2 3DES</h2><p>Triple Data Encryption </p>
+<ol>
+<li>加密过程：</li>
+</ol>
+<p>​     加密-》解密-》加密</p>
+<p>特点： </p>
+<p>​      A 中间使用解密的原因是为了兼容以前的DES</p>
+<p>​      B 解密过程是以解密的方式进行加密 整体还是三次加密</p>
+<p>​      C 密钥： 8byte * 3 = 24bytes =&gt; 24 * 8 = 192bit </p>
+<p>​      D 数据分组从航都： 与DES相同，8Byte</p>
+<p>​      E: 复杂的加密算法  效率低（过渡的加密算法）</p>
+<p>​      F 少用</p>
+<ol start="2">
+<li>解密过程</li>
+</ol>
+<p>解密 -》加密-》解密</p>
+<ol start="3">
+<li><p>3个密钥</p>
+<ul>
+<li><p>如果密钥1 和密钥1相同，或者密钥2与密钥三相同 就相当于DES 与前面进行兼容</p>
+</li>
+<li><p>如果密钥1密钥3相同，相当于有两个密钥 专业名字：3des-EDE3</p>
+</li>
+<li><p>如果三个密钥都不相同的，专业名字 3des-EDE3</p>
+</li>
+</ul>
+</li>
+</ol>
+<p>   <img src="/blog4/2019/12/15/区块链/%E5%8C%BA%E5%9D%97%E9%93%BE/image-20191220180310238.png" alt="image-20191220180310238"></p>
+<h2 id="3-AES"><a href="#3-AES" class="headerlink" title="3 AES"></a>3 AES</h2><p>Advacnced Encryption Standard</p>
+<p>替代传统的DES算法</p>
+<p>AES规格 128  192   256 </p>
+<p>特点：</p>
+<ol>
+<li>密钥的长度： 可以选择的  16bytes 24bytes 32bytes传统的des是8bytes， 3des 24bytes</li>
+<li>分组长大衣： 16bytes    （des和3des： 8bytes）</li>
+<li>加密解密效率高（推荐使用）</li>
+</ol>
+<h1 id="五、小结"><a href="#五、小结" class="headerlink" title="五、小结"></a>五、小结</h1><h2 id="1、-对称加密特点"><a href="#1、-对称加密特点" class="headerlink" title="1、 对称加密特点"></a>1、 对称加密特点</h2><p>加密与解密的密钥相同</p>
+<p>在一定的程度上实现了数据的机密性 简单快速</p>
+<p>但是由于算法一般都是公开的 ，因此机密性完全依赖于密钥</p>
+<h2 id="2、牢记知识点"><a href="#2、牢记知识点" class="headerlink" title="2、牢记知识点"></a>2、牢记知识点</h2><p>des ： 分组 key</p>
+<p>3des  分组  key</p>
+<p>aes     分组   key</p>
+<h2 id="3-存在的问题"><a href="#3-存在的问题" class="headerlink" title="3 存在的问题"></a>3 存在的问题</h2><p>1 当需要加密的明文长度超过分组长度的时候，如何加密</p>
+<p>2 用对称密码进行通信的时候，还会出现密钥的配送问题，</p>
+<p>​    即如何将密钥安全的发送给接收者</p>
+<h1 id="六-5种分组方式"><a href="#六-5种分组方式" class="headerlink" title="六 5种分组方式"></a>六 5种分组方式</h1><h2 id="为什么要进行分组"><a href="#为什么要进行分组" class="headerlink" title="为什么要进行分组"></a>为什么要进行分组</h2><p>被加密的数据可能很大</p>
+<p>需要对数据进行迭代的加密，所以对数据进行分组</p>
+<h2 id="明文分组与密文分组"><a href="#明文分组与密文分组" class="headerlink" title="明文分组与密文分组"></a>明文分组与密文分组</h2><ul>
+<li>密文分组的长度与密文分组移植</li>
+</ul>
+<h2 id="一共有五种分组模式"><a href="#一共有五种分组模式" class="headerlink" title="一共有五种分组模式"></a>一共有五种分组模式</h2><p>ECB  Ekectronic Coding Book 电子密码本模式 ===》淘汰</p>
+<p>CBC  Cypher Block Chaining  密文分组连接模式===》》 常用的</p>
+<p>CFB  Cyper Feedback 图文反馈模式，建议使用CTR</p>
+<p>OFB Output FeedBack 输出反馈模式，建议使用CTR</p>
+<p>CTR Count 计数器模式</p>
+<p>加密算法与语言是没有关系的</p>
+<h1 id="七、具体的模式"><a href="#七、具体的模式" class="headerlink" title="七、具体的模式"></a>七、具体的模式</h1><h2 id="1-ECB模式-Electronic-Coding-Block-电子"><a href="#1-ECB模式-Electronic-Coding-Block-电子" class="headerlink" title="1 ECB模式  Electronic Coding Block 电子"></a>1 ECB模式  Electronic Coding Block 电子</h2><p>一个被攻克了之后 后面就全被破解了</p>
+<p>特点：</p>
+<ul>
+<li>加密效率高但是不安全 加密不彻底</li>
+<li>需要对数据分组后进行填充</li>
+<li>每一个分组独立的进行加密解密</li>
+<li>不用 使用，go语言没有支持这种模式</li>
+<li>只要一个分组被破解，那么后面所有的分组都被破解</li>
+<li>分组的长度由加密算法决定</li>
+</ul>
+<p>​          des: 8byte                aes:16byte</p>
+<h2 id="2-CBC-密文分组连接模式-Cypher-Block-Chaining"><a href="#2-CBC-密文分组连接模式-Cypher-Block-Chaining" class="headerlink" title="2 CBC 密文分组连接模式 (Cypher  Block Chaining)"></a>2 CBC 密文分组连接模式 (Cypher  Block Chaining)</h2><h1 id="分组模式的总结"><a href="#分组模式的总结" class="headerlink" title="分组模式的总结"></a>分组模式的总结</h1><p><img src="/blog4/2019/12/15/区块链/%E5%8C%BA%E5%9D%97%E9%93%BE/image-20191228163347837.png" alt="image-20191228163347837"></p>
+<p>消息认证存在的问题</p>
+<ol>
+<li>无法有效的配发密钥</li>
+<li>无法进行地上那方证明</li>
+<li>无法防止对方否认</li>
+</ol>
+<p>解决办法 ： 数字签名</p>
+<h1 id="数字签名（Digital-Signature）"><a href="#数字签名（Digital-Signature）" class="headerlink" title="数字签名（Digital Signature）"></a>数字签名（Digital Signature）</h1><p>消息到底是谁签的</p>
+<p>公钥</p>
+<p>私钥</p>
+<p>公钥： 加密</p>
+<p>私钥： </p>
+<p>原文（1G）文件</p>
+<p>哈希运算（sha256）</p>
+<p>哈希值（256位）</p>
+<p>私钥签名—-》》将原文和签名一起发送给对方 </p>
+<h1 id="HTTPS-HTTP、-SSL、TLS"><a href="#HTTPS-HTTP、-SSL、TLS" class="headerlink" title="HTTPS  HTTP、 SSL、TLS"></a>HTTPS  HTTP、 SSL、TLS</h1><p>早期的版本 SSL （3.0之后叫做TLS） </p>
+<p>现在： TLS</p>
+<p>1.0的TLS = 3.0 SSL</p>
+<p>1.1 TLS = 3.1 SSL， 目前版本1.2TLS</p>
+<p>HTTPS = HTTP + SSL/TLS</p>
+<p><img src="/blog4/2019/12/15/区块链/%E5%8C%BA%E5%9D%97%E9%93%BE/image-20200115001504389.png" alt="image-20200115001504389"></p>
+<p>https 不等于ssl</p>
+<p>ssl是一个安全协议承载http的请求的时候  http变成https</p>
+<p>其他的应用协议也可以由ssl承载</p>
+<p>SSL两层协议  </p>
+<ol>
+<li>握手记录</li>
+<li>数据记录</li>
+</ol>
+<h1 id="http-server单向认证"><a href="#http-server单向认证" class="headerlink" title="http server单向认证"></a>http server单向认证</h1><ul>
+<li><p>客户端认证服务器</p>
+</li>
+<li><p>服务器不认证客户端</p>
+</li>
+<li><p>服务器的整数使用openssl自签名（我们使用server的crt就可以当做ca证书）</p>
+</li>
+</ul>
+<h2 id="1、-服务器端"><a href="#1、-服务器端" class="headerlink" title="1、 服务器端"></a>1、 服务器端</h2><h3 id="分析流程"><a href="#分析流程" class="headerlink" title="-分析流程"></a>-分析流程</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1. 创建http Server</span><br><span class="line"></span><br><span class="line">2. 启动httpServer，启动的时候架子啊自己的证书，启动的时候使用cls</span><br></pre></td></tr></table></figure>
 
+<h3 id="生成服务器证书"><a href="#生成服务器证书" class="headerlink" title="生成服务器证书"></a>生成服务器证书</h3><h2 id="2、-客户端"><a href="#2、-客户端" class="headerlink" title="2、 客户端"></a>2、 客户端</h2>
       
     </div>
     
@@ -557,8 +789,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/blog4/2019/12/15/网络爬虫/" rel="prev" title="网络爬虫">
-                网络爬虫 <i class="fa fa-chevron-right"></i>
+              <a href="/blog4/2020/02/04/Mysql/" rel="prev" title>
+                 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -642,8 +874,17 @@ var jiathis_config={
 
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -660,7 +901,7 @@ var jiathis_config={
               
                 <a href="/blog4/archives/">
               
-                  <span class="site-state-item-count">58</span>
+                  <span class="site-state-item-count">45</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -671,7 +912,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-categories">
                 <a href="/blog4/categories/index.html">
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -751,6 +992,22 @@ var jiathis_config={
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-密码学基础"><span class="nav-number">1.</span> <span class="nav-text">1 密码学基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#加密三要素"><span class="nav-number">1.1.</span> <span class="nav-text">加密三要素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解密三要素："><span class="nav-number">1.2.</span> <span class="nav-text">解密三要素：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#凯撒密码"><span class="nav-number">1.3.</span> <span class="nav-text">凯撒密码</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-加密方式"><span class="nav-number">2.</span> <span class="nav-text">2 加密方式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#对称加密-vs-非对称加密"><span class="nav-number">2.1.</span> <span class="nav-text">对称加密 vs 非对称加密</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三、-秘密信息安全常识与威胁"><span class="nav-number">3.</span> <span class="nav-text">三、 秘密信息安全常识与威胁</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#密码信息安全常识"><span class="nav-number">3.1.</span> <span class="nav-text">密码信息安全常识</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#四、-编码与解密的关系"><span class="nav-number">4.</span> <span class="nav-text">四、 编码与解密的关系</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-计算机单位介绍"><span class="nav-number">4.1.</span> <span class="nav-text">1   计算机单位介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-编码解码"><span class="nav-number">4.2.</span> <span class="nav-text">2 编码解码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-加密解密"><span class="nav-number">4.3.</span> <span class="nav-text">3 加密解密</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#五-常用的加密算法"><span class="nav-number">5.</span> <span class="nav-text">五 常用的加密算法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-DES"><span class="nav-number">6.</span> <span class="nav-text">1 DES</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3DES"><span class="nav-number">6.1.</span> <span class="nav-text">2 3DES</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-AES"><span class="nav-number">6.2.</span> <span class="nav-text">3 AES</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#五、小结"><span class="nav-number">7.</span> <span class="nav-text">五、小结</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、-对称加密特点"><span class="nav-number">7.1.</span> <span class="nav-text">1、 对称加密特点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、牢记知识点"><span class="nav-number">7.2.</span> <span class="nav-text">2、牢记知识点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-存在的问题"><span class="nav-number">7.3.</span> <span class="nav-text">3 存在的问题</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#六-5种分组方式"><span class="nav-number">8.</span> <span class="nav-text">六 5种分组方式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么要进行分组"><span class="nav-number">8.1.</span> <span class="nav-text">为什么要进行分组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#明文分组与密文分组"><span class="nav-number">8.2.</span> <span class="nav-text">明文分组与密文分组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一共有五种分组模式"><span class="nav-number">8.3.</span> <span class="nav-text">一共有五种分组模式</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#七、具体的模式"><span class="nav-number">9.</span> <span class="nav-text">七、具体的模式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-ECB模式-Electronic-Coding-Block-电子"><span class="nav-number">9.1.</span> <span class="nav-text">1 ECB模式  Electronic Coding Block 电子</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-CBC-密文分组连接模式-Cypher-Block-Chaining"><span class="nav-number">9.2.</span> <span class="nav-text">2 CBC 密文分组连接模式 (Cypher  Block Chaining)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#分组模式的总结"><span class="nav-number">10.</span> <span class="nav-text">分组模式的总结</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数字签名（Digital-Signature）"><span class="nav-number">11.</span> <span class="nav-text">数字签名（Digital Signature）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#HTTPS-HTTP、-SSL、TLS"><span class="nav-number">12.</span> <span class="nav-text">HTTPS  HTTP、 SSL、TLS</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#http-server单向认证"><span class="nav-number">13.</span> <span class="nav-text">http server单向认证</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、-服务器端"><span class="nav-number">13.1.</span> <span class="nav-text">1、 服务器端</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分析流程"><span class="nav-number">13.1.1.</span> <span class="nav-text">-分析流程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#生成服务器证书"><span class="nav-number">13.1.2.</span> <span class="nav-text">生成服务器证书</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、-客户端"><span class="nav-number">13.2.</span> <span class="nav-text">2、 客户端</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -778,7 +1035,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">203.1k</span>
+    <span title="Site words total count">204.7k</span>
   
 </div>
 
