@@ -724,7 +724,7 @@
 <p>添加静态moudle</p>
 <p><img src="/blog4/2019/10/13/mageMall/1570950686840.png" alt="1570950686840"></p>
 <p><img src="/blog4/2019/10/13/mageMall/1570950694401.png" alt="1570950694401"></p>
-<h3 id="4-3-2-let-和-const-命令"><a href="#4-3-2-let-和-const-命令" class="headerlink" title="4.3.2.let 和 const 命令"></a>4.3.2.let 和 const 命令</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">for</span> (<span class="keyword">let</span> i=<span class="number">0</span>;i&lt;<span class="number">5</span>;i++)</span></span><br><span class="line">    &#123;</span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(i);</span></span><br><span class="line">    &#125;</span><br><span class="line"><span class="javascript">    mageMall<span class="comment">//console.log("我在循环外:"+ i);</span></span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="4-3-2-let-和-const-命令"><a href="#4-3-2-let-和-const-命令" class="headerlink" title="4.3.2.let 和 const 命令"></a>4.3.2.let 和 const 命令</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line">    for (let i=0;i&lt;5;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        console.log(i);</span><br><span class="line">    &#125;</span><br><span class="line">    mageMall//console.log("我在循环外:"+ i);</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>测试var和let的区别</p>
 <p>var的变量在循环外仍然生效</p>
@@ -1495,7 +1495,7 @@ var jiathis_config={
               
                 <a href="/blog4/archives/">
               
-                  <span class="site-state-item-count">45</span>
+                  <span class="site-state-item-count">44</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1517,7 +1517,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-tags">
                 <a href="/blog4/tags/index.html">
-                  <span class="site-state-item-count">40</span>
+                  <span class="site-state-item-count">33</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -1629,7 +1629,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">204.7k</span>
+    <span title="Site words total count">205.7k</span>
   
 </div>
 
